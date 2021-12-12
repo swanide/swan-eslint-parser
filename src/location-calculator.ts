@@ -174,13 +174,13 @@ export class LocationCalculator {
      */
     public fixErrorLocation(error: ParseError) {
         const {shiftOffset} = this;
-        const gap = this._getGap(error.offset + shiftOffset);
+        const gap = this._getGap(error.index + shiftOffset);
         const diff = this.baseOffset + Math.max(0, gap) + shiftOffset;
 
-        error.offset += diff;
+        error.index += diff;
 
-        const loc = this._getLocation(error.offset);
-        error.line = loc.line;
+        const loc = this._getLocation(error.index);
+        error.lineNumber = loc.line;
         error.column = loc.column;
     }
 }

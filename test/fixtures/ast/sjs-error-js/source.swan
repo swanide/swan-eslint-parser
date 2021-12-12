@@ -1,0 +1,12 @@
+<import-sjs module="sjs">
+const hello = true;
+const world = function () {
+    return 'hello world sjs';
+};
+module.exports = {
+    hello: hello,
+    world: world
+};
+</import-sjs>
+
+<import-sjs module="sjs"></import-sjs>

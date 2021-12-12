@@ -23,9 +23,9 @@ function isAcornStyleParseError(
 export class ParseError extends SyntaxError {
     public code?: ErrorCode;
 
-    public offset: number;
+    public index: number;
 
-    public line: number;
+    public lineNumber: number;
 
     public column: number;
 
@@ -69,21 +69,21 @@ export class ParseError extends SyntaxError {
      * Initialize this ParseError instance.
      * @param message The error message.
      * @param code The error code. See also: https://html.spec.whatwg.org/multipage/parsing.html#parse-errors
-     * @param offset The offset number of this error.
+     * @param index The offset number of this error.
      * @param line The line number of this error.
      * @param column The column number of this error.
      */
     public constructor(
         message: string,
         code: ErrorCode | undefined,
-        offset: number,
-        line: number,
+        index: number,
+        lineNumber: number,
         column: number,
     ) {
         super(message);
         this.code = code;
-        this.offset = offset;
-        this.line = line;
+        this.index = index;
+        this.lineNumber = lineNumber;
         this.column = column;
     }
 

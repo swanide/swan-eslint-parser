@@ -11,6 +11,8 @@ import SwanTokenizer from './tokenizer';
 import {parseScript} from './script';
 import * as services from './parser-services';
 
+export {traverseNodes} from './script/traverse';
+
 type XDocumentFragment = ast.XDocument;
 type ESLintExtendedProgram = script.ExtendedProgram;
 

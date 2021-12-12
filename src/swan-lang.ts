@@ -7,7 +7,7 @@ import { sortedIndexBy, sortedLastIndexBy } from 'lodash';
 import { 
     ControlDirectivePrefix, EventDirectivePrefix, HasParent, SwanForExpression, 
     Token, XAttribute, XDirective, XDirectiveKey, XDocument, XElement, XExpression,
-    XIdentifier, XModule, XMustache, XNode 
+    XIdentifier, XModule, XMustache, XNode, XStartTag 
 } from '../types/ast';
 import { ScriptParserOptions } from '../types/parser';
 import { Identifier, Reference, ArrayExpression} from '../types/script';
@@ -80,7 +80,7 @@ function byRange1(x: HasRange): number {
  * @returns `x.pos`.
  */
 function byIndex(x: ParseError): number {
-    return x.offset;
+    return x.index;
 }
 
 /**
@@ -203,11 +203,19 @@ export function processMustache(
     parserOptions: ScriptParserOptions,
     globalLocationCalculator: LocationCalculator,
     node: XMustache,
-    mustache: Mustache,
-    isSpreadObject = false
+    mustache: Mustache
 ): void {
     debug('[template] convert mustache {{%s}} %j', mustache.value, (mustache as any).range);
     let code = mustache.value;
+    
+    // TODO: template bindings use object model
+    // except is expression
+    let isSpreadObject = false;
+    if ((node.parent.parent?.parent as XElement)?.name === 'template' 
+        && node.parent.type === 'XAttribute' 
+        && (node.parent as XAttribute).key.name === 'data') {
+        isSpreadObject = true;
+    }
 
     if (isSpreadObject) {
         code = `{${code}}`;
@@ -248,7 +256,7 @@ export function processMustache(
             parserOptions, 
             globalLocationCalculator, 
             node.value,
-            mustache.value
+            code
         );
     }
     else {
@@ -256,7 +264,7 @@ export function processMustache(
             parserOptions, 
             globalLocationCalculator, 
             node.value,
-            mustache.value
+            code
         );
     }
 }

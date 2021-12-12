@@ -1,0 +1,13 @@
+<import-sjs module="sjs">
+var hello = true;
+var world = function () {
+    return 'hello world sjs';
+};
+module.exports = {
+    hello: hello,
+    world: world
+};
+</import-sjs>
+<import-sjs src="./module.wxs" module="sjsModule"/>
+<view s-if="{{sjs.hello}}">{{sjs.world()}}</view>
+<view s-if="{{sjsModule.hello}}">{{sjsModule.world()}}</view>

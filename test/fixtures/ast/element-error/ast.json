@@ -1,0 +1,1271 @@
+{
+    "type": "XDocument",
+    "range": [
+        0,
+        131
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 13,
+            "column": 8
+        }
+    },
+    "children": [
+        {
+            "type": "XElement",
+            "range": [
+                0,
+                27
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 3,
+                    "column": 8
+                }
+            },
+            "name": "block",
+            "rawName": "block",
+            "startTag": {
+                "type": "XStartTag",
+                "range": [
+                    0,
+                    7
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 7
+                    }
+                },
+                "selfClosing": false,
+                "attributes": []
+            },
+            "children": [
+                {
+                    "type": "XText",
+                    "range": [
+                        7,
+                        12
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 1,
+                            "column": 7
+                        },
+                        "end": {
+                            "line": 2,
+                            "column": 4
+                        }
+                    },
+                    "value": "\n    "
+                },
+                {
+                    "type": "XElement",
+                    "range": [
+                        12,
+                        19
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 2,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 3,
+                            "column": 0
+                        }
+                    },
+                    "name": "view",
+                    "rawName": "view",
+                    "startTag": {
+                        "type": "XStartTag",
+                        "range": [
+                            12,
+                            18
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 2,
+                                "column": 4
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 10
+                            }
+                        },
+                        "selfClosing": false,
+                        "attributes": []
+                    },
+                    "children": [
+                        {
+                            "type": "XText",
+                            "range": [
+                                18,
+                                19
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 2,
+                                    "column": 10
+                                },
+                                "end": {
+                                    "line": 3,
+                                    "column": 0
+                                }
+                            },
+                            "value": "\n"
+                        }
+                    ],
+                    "variables": [],
+                    "endTag": null
+                }
+            ],
+            "variables": [],
+            "endTag": {
+                "type": "XEndTag",
+                "range": [
+                    19,
+                    27
+                ],
+                "loc": {
+                    "start": {
+                        "line": 3,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 8
+                    }
+                }
+            }
+        },
+        {
+            "type": "XText",
+            "range": [
+                27,
+                29
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 8
+                },
+                "end": {
+                    "line": 5,
+                    "column": 0
+                }
+            },
+            "value": "\n\n"
+        },
+        {
+            "type": "XElement",
+            "range": [
+                29,
+                77
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 0
+                },
+                "end": {
+                    "line": 8,
+                    "column": 8
+                }
+            },
+            "name": "block",
+            "rawName": "block",
+            "startTag": {
+                "type": "XStartTag",
+                "range": [
+                    29,
+                    36
+                ],
+                "loc": {
+                    "start": {
+                        "line": 5,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 5,
+                        "column": 7
+                    }
+                },
+                "selfClosing": false,
+                "attributes": []
+            },
+            "children": [
+                {
+                    "type": "XText",
+                    "range": [
+                        36,
+                        41
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 5,
+                            "column": 7
+                        },
+                        "end": {
+                            "line": 6,
+                            "column": 4
+                        }
+                    },
+                    "value": "\n    "
+                },
+                {
+                    "type": "XElement",
+                    "range": [
+                        41,
+                        69
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 6,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 8,
+                            "column": 0
+                        }
+                    },
+                    "name": "view",
+                    "rawName": "view",
+                    "startTag": {
+                        "type": "XStartTag",
+                        "range": [
+                            41,
+                            47
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 6,
+                                "column": 4
+                            },
+                            "end": {
+                                "line": 6,
+                                "column": 10
+                            }
+                        },
+                        "selfClosing": false,
+                        "attributes": []
+                    },
+                    "children": [
+                        {
+                            "type": "XText",
+                            "range": [
+                                47,
+                                52
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 6,
+                                    "column": 10
+                                },
+                                "end": {
+                                    "line": 7,
+                                    "column": 4
+                                }
+                            },
+                            "value": "\n    "
+                        },
+                        {
+                            "type": "XElement",
+                            "range": [
+                                52,
+                                68
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 7,
+                                    "column": 4
+                                },
+                                "end": {
+                                    "line": 7,
+                                    "column": 20
+                                }
+                            },
+                            "name": "image",
+                            "rawName": "image",
+                            "startTag": {
+                                "type": "XStartTag",
+                                "range": [
+                                    52,
+                                    59
+                                ],
+                                "loc": {
+                                    "start": {
+                                        "line": 7,
+                                        "column": 4
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 11
+                                    }
+                                },
+                                "selfClosing": false,
+                                "attributes": []
+                            },
+                            "children": [],
+                            "variables": [],
+                            "endTag": {
+                                "type": "XEndTag",
+                                "range": [
+                                    59,
+                                    68
+                                ],
+                                "loc": {
+                                    "start": {
+                                        "line": 7,
+                                        "column": 11
+                                    },
+                                    "end": {
+                                        "line": 7,
+                                        "column": 20
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "type": "XText",
+                            "range": [
+                                68,
+                                69
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 7,
+                                    "column": 20
+                                },
+                                "end": {
+                                    "line": 8,
+                                    "column": 0
+                                }
+                            },
+                            "value": "\n"
+                        }
+                    ],
+                    "variables": [],
+                    "endTag": null
+                }
+            ],
+            "variables": [],
+            "endTag": {
+                "type": "XEndTag",
+                "range": [
+                    69,
+                    77
+                ],
+                "loc": {
+                    "start": {
+                        "line": 8,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 8,
+                        "column": 8
+                    }
+                }
+            }
+        },
+        {
+            "type": "XText",
+            "range": [
+                77,
+                79
+            ],
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 8
+                },
+                "end": {
+                    "line": 10,
+                    "column": 0
+                }
+            },
+            "value": "\n\n"
+        },
+        {
+            "type": "XElement",
+            "range": [
+                79,
+                131
+            ],
+            "loc": {
+                "start": {
+                    "line": 10,
+                    "column": 0
+                },
+                "end": {
+                    "line": 13,
+                    "column": 8
+                }
+            },
+            "name": "block",
+            "rawName": "block",
+            "startTag": {
+                "type": "XStartTag",
+                "range": [
+                    79,
+                    86
+                ],
+                "loc": {
+                    "start": {
+                        "line": 10,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 10,
+                        "column": 7
+                    }
+                },
+                "selfClosing": false,
+                "attributes": []
+            },
+            "children": [
+                {
+                    "type": "XText",
+                    "range": [
+                        86,
+                        91
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 10,
+                            "column": 7
+                        },
+                        "end": {
+                            "line": 11,
+                            "column": 4
+                        }
+                    },
+                    "value": "\n    "
+                },
+                {
+                    "type": "XElement",
+                    "range": [
+                        91,
+                        123
+                    ],
+                    "loc": {
+                        "start": {
+                            "line": 11,
+                            "column": 4
+                        },
+                        "end": {
+                            "line": 13,
+                            "column": 0
+                        }
+                    },
+                    "name": "image",
+                    "rawName": "image",
+                    "startTag": {
+                        "type": "XStartTag",
+                        "range": [
+                            91,
+                            101
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 11,
+                                "column": 4
+                            },
+                            "end": {
+                                "line": 11,
+                                "column": 14
+                            }
+                        },
+                        "selfClosing": false,
+                        "attributes": []
+                    },
+                    "children": [
+                        {
+                            "type": "XText",
+                            "range": [
+                                101,
+                                106
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 11,
+                                    "column": 14
+                                },
+                                "end": {
+                                    "line": 12,
+                                    "column": 4
+                                }
+                            },
+                            "value": "\n    "
+                        },
+                        {
+                            "type": "XElement",
+                            "range": [
+                                106,
+                                123
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 12,
+                                    "column": 4
+                                },
+                                "end": {
+                                    "line": 13,
+                                    "column": 0
+                                }
+                            },
+                            "name": "image",
+                            "rawName": "image",
+                            "startTag": {
+                                "type": "XStartTag",
+                                "range": [
+                                    106,
+                                    113
+                                ],
+                                "loc": {
+                                    "start": {
+                                        "line": 12,
+                                        "column": 4
+                                    },
+                                    "end": {
+                                        "line": 12,
+                                        "column": 11
+                                    }
+                                },
+                                "selfClosing": false,
+                                "attributes": []
+                            },
+                            "children": [
+                                {
+                                    "type": "XText",
+                                    "range": [
+                                        122,
+                                        123
+                                    ],
+                                    "loc": {
+                                        "start": {
+                                            "line": 12,
+                                            "column": 20
+                                        },
+                                        "end": {
+                                            "line": 13,
+                                            "column": 0
+                                        }
+                                    },
+                                    "value": "\n"
+                                }
+                            ],
+                            "variables": [],
+                            "endTag": null
+                        }
+                    ],
+                    "variables": [],
+                    "endTag": null
+                }
+            ],
+            "variables": [],
+            "endTag": {
+                "type": "XEndTag",
+                "range": [
+                    123,
+                    131
+                ],
+                "loc": {
+                    "start": {
+                        "line": 13,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 13,
+                        "column": 8
+                    }
+                }
+            }
+        }
+    ],
+    "tokens": [
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                0,
+                6
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 6
+                }
+            },
+            "value": "block"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                6,
+                7
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 6
+                },
+                "end": {
+                    "line": 1,
+                    "column": 7
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                7,
+                12
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 7
+                },
+                "end": {
+                    "line": 2,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                12,
+                17
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 4
+                },
+                "end": {
+                    "line": 2,
+                    "column": 9
+                }
+            },
+            "value": "view"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                17,
+                18
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 9
+                },
+                "end": {
+                    "line": 2,
+                    "column": 10
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                18,
+                19
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 10
+                },
+                "end": {
+                    "line": 3,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLEndTagOpen",
+            "range": [
+                19,
+                26
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 0
+                },
+                "end": {
+                    "line": 3,
+                    "column": 7
+                }
+            },
+            "value": "block"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                26,
+                27
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 7
+                },
+                "end": {
+                    "line": 3,
+                    "column": 8
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                27,
+                29
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 8
+                },
+                "end": {
+                    "line": 5,
+                    "column": 0
+                }
+            },
+            "value": "\n\n"
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                29,
+                35
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 0
+                },
+                "end": {
+                    "line": 5,
+                    "column": 6
+                }
+            },
+            "value": "block"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                35,
+                36
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 6
+                },
+                "end": {
+                    "line": 5,
+                    "column": 7
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                36,
+                41
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 7
+                },
+                "end": {
+                    "line": 6,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                41,
+                46
+            ],
+            "loc": {
+                "start": {
+                    "line": 6,
+                    "column": 4
+                },
+                "end": {
+                    "line": 6,
+                    "column": 9
+                }
+            },
+            "value": "view"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                46,
+                47
+            ],
+            "loc": {
+                "start": {
+                    "line": 6,
+                    "column": 9
+                },
+                "end": {
+                    "line": 6,
+                    "column": 10
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                47,
+                52
+            ],
+            "loc": {
+                "start": {
+                    "line": 6,
+                    "column": 10
+                },
+                "end": {
+                    "line": 7,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                52,
+                58
+            ],
+            "loc": {
+                "start": {
+                    "line": 7,
+                    "column": 4
+                },
+                "end": {
+                    "line": 7,
+                    "column": 10
+                }
+            },
+            "value": "image"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                58,
+                59
+            ],
+            "loc": {
+                "start": {
+                    "line": 7,
+                    "column": 10
+                },
+                "end": {
+                    "line": 7,
+                    "column": 11
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLEndTagOpen",
+            "range": [
+                59,
+                66
+            ],
+            "loc": {
+                "start": {
+                    "line": 7,
+                    "column": 11
+                },
+                "end": {
+                    "line": 7,
+                    "column": 18
+                }
+            },
+            "value": "image"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                67,
+                68
+            ],
+            "loc": {
+                "start": {
+                    "line": 7,
+                    "column": 19
+                },
+                "end": {
+                    "line": 7,
+                    "column": 20
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                68,
+                69
+            ],
+            "loc": {
+                "start": {
+                    "line": 7,
+                    "column": 20
+                },
+                "end": {
+                    "line": 8,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLEndTagOpen",
+            "range": [
+                69,
+                76
+            ],
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 0
+                },
+                "end": {
+                    "line": 8,
+                    "column": 7
+                }
+            },
+            "value": "block"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                76,
+                77
+            ],
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 7
+                },
+                "end": {
+                    "line": 8,
+                    "column": 8
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                77,
+                79
+            ],
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 8
+                },
+                "end": {
+                    "line": 10,
+                    "column": 0
+                }
+            },
+            "value": "\n\n"
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                79,
+                85
+            ],
+            "loc": {
+                "start": {
+                    "line": 10,
+                    "column": 0
+                },
+                "end": {
+                    "line": 10,
+                    "column": 6
+                }
+            },
+            "value": "block"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                85,
+                86
+            ],
+            "loc": {
+                "start": {
+                    "line": 10,
+                    "column": 6
+                },
+                "end": {
+                    "line": 10,
+                    "column": 7
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                86,
+                91
+            ],
+            "loc": {
+                "start": {
+                    "line": 10,
+                    "column": 7
+                },
+                "end": {
+                    "line": 11,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                91,
+                97
+            ],
+            "loc": {
+                "start": {
+                    "line": 11,
+                    "column": 4
+                },
+                "end": {
+                    "line": 11,
+                    "column": 10
+                }
+            },
+            "value": "image"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                100,
+                101
+            ],
+            "loc": {
+                "start": {
+                    "line": 11,
+                    "column": 13
+                },
+                "end": {
+                    "line": 11,
+                    "column": 14
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                101,
+                106
+            ],
+            "loc": {
+                "start": {
+                    "line": 11,
+                    "column": 14
+                },
+                "end": {
+                    "line": 12,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                106,
+                112
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 4
+                },
+                "end": {
+                    "line": 12,
+                    "column": 10
+                }
+            },
+            "value": "image"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                112,
+                113
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 10
+                },
+                "end": {
+                    "line": 12,
+                    "column": 11
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                122,
+                123
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 20
+                },
+                "end": {
+                    "line": 13,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLEndTagOpen",
+            "range": [
+                123,
+                130
+            ],
+            "loc": {
+                "start": {
+                    "line": 13,
+                    "column": 0
+                },
+                "end": {
+                    "line": 13,
+                    "column": 7
+                }
+            },
+            "value": "block"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                130,
+                131
+            ],
+            "loc": {
+                "start": {
+                    "line": 13,
+                    "column": 7
+                },
+                "end": {
+                    "line": 13,
+                    "column": 8
+                }
+            },
+            "value": ""
+        }
+    ],
+    "comments": [
+        {
+            "type": "HTMLBogusComment",
+            "range": [
+                113,
+                122
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 11
+                },
+                "end": {
+                    "line": 12,
+                    "column": 20
+                }
+            },
+            "value": " image"
+        }
+    ],
+    "errors": [
+        {
+            "message": "missing-end-tag",
+            "index": 12,
+            "lineNumber": 2,
+            "column": 4
+        },
+        {
+            "message": "missing-end-tag",
+            "index": 41,
+            "lineNumber": 6,
+            "column": 4
+        },
+        {
+            "message": "unexpected-solidus-in-tag",
+            "index": 99,
+            "lineNumber": 11,
+            "column": 12
+        },
+        {
+            "message": "invalid-first-character-of-tag-name",
+            "index": 115,
+            "lineNumber": 12,
+            "column": 13
+        },
+        {
+            "message": "missing-end-tag",
+            "index": 106,
+            "lineNumber": 12,
+            "column": 4
+        },
+        {
+            "message": "missing-end-tag",
+            "index": 91,
+            "lineNumber": 11,
+            "column": 4
+        }
+    ],
+    "xmlType": "swan"
+}

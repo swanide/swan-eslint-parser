@@ -1,0 +1,14 @@
+<import-sjs module="sjs">
+var hello = true;
+var world = function () {
+    return 'hello world sjs';
+};
+module.exports = {
+    hello: hello,
+    world: world
+};
+</import-sjs>
+<import-sjs src="./module.sjs" module="sjsModule"/>
+<import-sjs src="./module.sjs" module="sjsModule"></import-sjs>
+<import-sjs></import-sjs>
+<import-sjs module="sjs"></import-sjs>

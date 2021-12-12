@@ -271,12 +271,6 @@ export default class Parser {
         }
         const values = node.value.map(token => {
             if (token.type === 'Mustache') {
-                // TODO: template bindings use object model
-                // except is expression
-                let isSpreadObject = false;
-                if (node.parent.parent.name === 'template' && node.type !== 'XAttribute' && node.key.name !== 'is') {
-                    isSpreadObject = true;
-                }
 
                 const mustacheNode: XMustache = {
                     type: 'XMustache',
@@ -292,8 +286,7 @@ export default class Parser {
                     this.parserOptions.script!,
                     this.locationCalculator,
                     mustacheNode,
-                    token,
-                    isSpreadObject
+                    token
                 );
                 return mustacheNode;
             }

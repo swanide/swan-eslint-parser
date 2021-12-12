@@ -1,0 +1,29 @@
+<block>
+    <view a="b"></view>
+
+    <view a="c{{b}}d"></view>
+
+    <view a="{{c}}{{b}}{{d}}"></view>
+
+    <view if="{{cond + '1'}}"></view>
+
+    <view s-if="{{cond + 1}}"></view>
+
+    <view s-for-items="{{[1,2,3,4]}}"></view>
+
+    <view
+        s-for-items="{{[1,2,3,4]}}"></view>
+    <view
+        s-for-items="{{list}}"
+    ></view>
+</block>
+<view>
+    <text class
+        =
+            "value"
+    ></text>
+    <text class
+        =
+            "abc-{{ cond ? 'class1' : 'class2' }}-def"
+    ></text>
+</view>

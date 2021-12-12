@@ -1,0 +1,433 @@
+{
+    "type": "XDocument",
+    "range": [
+        0,
+        39
+    ],
+    "loc": {
+        "start": {
+            "line": 1,
+            "column": 0
+        },
+        "end": {
+            "line": 2,
+            "column": 0
+        }
+    },
+    "children": [
+        {
+            "type": "XElement",
+            "range": [
+                0,
+                38
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 38
+                }
+            },
+            "name": "template",
+            "rawName": "template",
+            "startTag": {
+                "type": "XStartTag",
+                "range": [
+                    0,
+                    27
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 27
+                    }
+                },
+                "selfClosing": false,
+                "attributes": [
+                    {
+                        "type": "XAttribute",
+                        "range": [
+                            10,
+                            26
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 10
+                            },
+                            "end": {
+                                "line": 1,
+                                "column": 26
+                            }
+                        },
+                        "key": {
+                            "type": "XIdentifier",
+                            "range": [
+                                10,
+                                12
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 1,
+                                    "column": 10
+                                },
+                                "end": {
+                                    "line": 1,
+                                    "column": 12
+                                }
+                            },
+                            "name": "is",
+                            "rawName": "is"
+                        },
+                        "value": [
+                            {
+                                "type": "XMustache",
+                                "range": [
+                                    14,
+                                    25
+                                ],
+                                "loc": {
+                                    "start": {
+                                        "line": 1,
+                                        "column": 14
+                                    },
+                                    "end": {
+                                        "line": 1,
+                                        "column": 25
+                                    }
+                                },
+                                "value": {
+                                    "type": "XExpression",
+                                    "range": [
+                                        16,
+                                        23
+                                    ],
+                                    "loc": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 17
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 23
+                                        }
+                                    },
+                                    "expression": null,
+                                    "references": []
+                                },
+                                "startToken": {
+                                    "type": "XMustacheStart",
+                                    "range": [
+                                        14,
+                                        16
+                                    ],
+                                    "loc": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 14
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 16
+                                        }
+                                    },
+                                    "value": "{{"
+                                },
+                                "endToken": {
+                                    "type": "XMustacheEnd",
+                                    "range": [
+                                        23,
+                                        25
+                                    ],
+                                    "loc": {
+                                        "start": {
+                                            "line": 1,
+                                            "column": 23
+                                        },
+                                        "end": {
+                                            "line": 1,
+                                            "column": 25
+                                        }
+                                    },
+                                    "value": "}}"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "children": [],
+            "variables": [],
+            "endTag": {
+                "type": "XEndTag",
+                "range": [
+                    27,
+                    38
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 27
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 38
+                    }
+                }
+            }
+        },
+        {
+            "type": "XText",
+            "range": [
+                38,
+                39
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 38
+                },
+                "end": {
+                    "line": 2,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        }
+    ],
+    "tokens": [
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                0,
+                9
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 9
+                }
+            },
+            "value": "template"
+        },
+        {
+            "type": "HTMLIdentifier",
+            "range": [
+                10,
+                12
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 10
+                },
+                "end": {
+                    "line": 1,
+                    "column": 12
+                }
+            },
+            "value": "is"
+        },
+        {
+            "type": "HTMLAssociation",
+            "range": [
+                12,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 12
+                },
+                "end": {
+                    "line": 1,
+                    "column": 13
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                13,
+                14
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 13
+                },
+                "end": {
+                    "line": 1,
+                    "column": 14
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "XMustacheStart",
+            "range": [
+                14,
+                16
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 14
+                },
+                "end": {
+                    "line": 1,
+                    "column": 16
+                }
+            },
+            "value": "{{"
+        },
+        {
+            "type": "HTMLLiteralText",
+            "range": [
+                16,
+                23
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 16
+                },
+                "end": {
+                    "line": 1,
+                    "column": 23
+                }
+            },
+            "value": "...data"
+        },
+        {
+            "type": "XMustacheEnd",
+            "range": [
+                23,
+                25
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 23
+                },
+                "end": {
+                    "line": 1,
+                    "column": 25
+                }
+            },
+            "value": "}}"
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                25,
+                26
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 25
+                },
+                "end": {
+                    "line": 1,
+                    "column": 26
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                26,
+                27
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 26
+                },
+                "end": {
+                    "line": 1,
+                    "column": 27
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLEndTagOpen",
+            "range": [
+                27,
+                37
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 27
+                },
+                "end": {
+                    "line": 1,
+                    "column": 37
+                }
+            },
+            "value": "template"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                37,
+                38
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 37
+                },
+                "end": {
+                    "line": 1,
+                    "column": 38
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                38,
+                39
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 38
+                },
+                "end": {
+                    "line": 2,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        }
+    ],
+    "comments": [],
+    "errors": [
+        {
+            "message": "Unexpected token '...'.",
+            "index": 23,
+            "lineNumber": 1,
+            "column": 23
+        }
+    ],
+    "xmlType": "swan"
+}

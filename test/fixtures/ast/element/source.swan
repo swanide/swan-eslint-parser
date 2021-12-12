@@ -1,0 +1,8 @@
+<block>
+    <view>1</view>
+    <image />
+    <image
+    />
+    <scroll-view><view>1</view>
+    </scroll-view>
+</block>

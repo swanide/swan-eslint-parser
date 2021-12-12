@@ -1,0 +1,17 @@
+<block>
+    <view s-if="{{}}"></view>
+    <view s-for="abc"></view>
+    <view s-for-index="abc"></view>
+    <view s-for-item="abc"></view>
+
+    <view bindtap="tap"></view>
+    <view bind:tap="tap"></view>
+    <view onTap="tap"></view>
+    <view catchtap="tap"></view>
+    <view catch:tap="tap"></view>
+    <view capture-bind:tap="tap"></view>
+    <view capture-catch:tap="tap"></view>
+    <view mut-bind:tap="tap"></view>
+
+    <input model:value="{{value}}" />
+</block>

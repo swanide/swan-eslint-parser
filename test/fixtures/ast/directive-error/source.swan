@@ -1,0 +1,4 @@
+<block>
+    <view bind: ="{{cond}}"></view>
+    <view s-="{{cond}}"></view>
+</block>

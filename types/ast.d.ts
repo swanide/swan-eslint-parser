@@ -120,8 +120,8 @@ export interface XText extends HasLocation, HasParent {
 
 export interface ParseError extends SyntaxError {
     code?: ErrorCode;
-    offset: number;
-    line: number;
+    index: number;
+    lineNumber: number;
     column: number;
 }
 

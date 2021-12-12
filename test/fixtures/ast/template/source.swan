@@ -1,0 +1,12 @@
+<template name="msgItem">
+    <div class="id-{{className}}-value"></div>
+</template>
+
+<import src="item.wxml" />
+<include src="header.wxml" />
+
+<template is="msgItem" data="{{...data}}"></template>
+<template is="msgItem" data="{{data, data1}}"></template>
+<template is="{{'msgItem'}}" data="{{data}}"></template>
+
+<template data="{{item}}"></template>

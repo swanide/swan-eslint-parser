@@ -1,0 +1,16 @@
+<block>
+    {{a.b.c}}
+    <view>{{b ? c : d}}</view>
+    {{e}}{{f}}{{g}}
+    <view></view>{{h || 'text'}}
+    {{
+        i === j ? true: false
+    }}
+
+    {{i &lt; 2}}
+    {{i &lt;&lt; 2}}
+
+    {{i > 2}}
+    {{i >> 2}}
+    {{i >>> 2}}
+</block>

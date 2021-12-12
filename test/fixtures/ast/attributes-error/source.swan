@@ -1,0 +1,18 @@
+<view>
+    <text style=1></text>
+    <text style="{{"123"}}"></text>
+    <text style='{{'123'}}'></text>
+    <text class
+        =
+            "
+            abc-{{ cond ? 'class1' : 'class2' }}-def"
+    ></text>
+    <text class
+        =
+            "abc-{{
+                cond
+                ? 'class1'
+                : 'class2'
+            }}-def"
+    ></text>
+</view>

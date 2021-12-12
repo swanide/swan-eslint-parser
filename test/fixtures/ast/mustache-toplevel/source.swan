@@ -1,0 +1,5 @@
+{{abc}}
+
+--{{def}}--
+
+<view class="{{expr}}">{{ghi}}</view>

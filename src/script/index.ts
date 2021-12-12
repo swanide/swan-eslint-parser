@@ -147,7 +147,7 @@ function throwErrorAsAdjustingOutsideOfCode(
 ): never {
     if (ParseError.isParseError(e)) {
         const endOffset = locationCalculator.getOffsetWithGap(code.length);
-        if (e.offset >= endOffset) {
+        if (e.index >= endOffset) {
             e.message = 'Unexpected end of expression.';
         }
     }
@@ -180,61 +180,6 @@ function parseScriptFragment(
             throw perr;
         }
         throw e;
-    }
-}
-
-
-/**
- * Parse the source code of inline scripts.
- * @param code The source code of inline scripts.
- * @param locationCalculator The location calculator for the inline script.
- * @param parserOptions The parser options.
- * @returns The result of parsing.
- */
-function parseExpressionBody(
-    code: string,
-    locationCalculator: LocationCalculator,
-    parserOptions: ScriptParserOptions,
-    allowEmpty = false,
-): ExpressionParseResult<Expression> {
-    debug('[script] parse expression: "0(%s)"', code);
-
-    try {
-        const {ast} = parseScriptFragment(
-            `0(${code})`,
-            locationCalculator.getSubCalculatorShift(-2),
-            parserOptions,
-        );
-        const tokens = ast.tokens || [];
-        const comments = ast.comments || [];
-        const references = analyzeExternalReferences(ast, parserOptions);
-        const statement = ast.body[0] as ExpressionStatement;
-        const callExpression = statement.expression as CallExpression;
-        const expression = callExpression.arguments[0] as Expression;
-
-        if (!allowEmpty && !expression) {
-            return throwEmptyError(locationCalculator, 'an expression');
-        }
-        if ((expression as unknown as SpreadElement).type === 'SpreadElement') {
-            return throwUnexpectedTokenError('...', expression as HasLocation);
-        }
-        if (callExpression.arguments[1]) {
-            const node = callExpression.arguments[1];
-            return throwUnexpectedTokenError(
-                ',',
-                (getCommaTokenBeforeNode(tokens, node) || node) as HasLocation,
-            );
-        }
-
-        // Remove parens.
-        tokens.shift();
-        tokens.shift();
-        tokens.pop();
-
-        return {expression, tokens, comments, references, variables: []};
-    }
-    catch (e) {
-        return throwErrorAsAdjustingOutsideOfCode(e, code, locationCalculator);
     }
 }
 
@@ -320,10 +265,43 @@ export function parseExpression(
 ): ExpressionParseResult<Expression> {
     debug('[script] parse expression: "%s"', code);
 
-    return parseExpressionBody(
-        code,
-        locationCalculator,
-        parserOptions,
-        allowEmpty,
-    );
+ debug('[script] parse expression: "0(%s)"', code);
+
+    try {
+        const {ast} = parseScriptFragment(
+            `0(${code})`,
+            locationCalculator.getSubCalculatorShift(-2),
+            parserOptions,
+        );
+        const tokens = ast.tokens || [];
+        const comments = ast.comments || [];
+        const references = analyzeExternalReferences(ast, parserOptions);
+        const statement = ast.body[0] as ExpressionStatement;
+        const callExpression = statement.expression as CallExpression;
+        const expression = callExpression.arguments[0] as Expression;
+
+        if (!allowEmpty && !expression) {
+            return throwEmptyError(locationCalculator, 'an expression');
+        }
+        if ((expression as unknown as SpreadElement).type === 'SpreadElement') {
+            return throwUnexpectedTokenError('...', expression as HasLocation);
+        }
+        if (callExpression.arguments[1]) {
+            const node = callExpression.arguments[1];
+            return throwUnexpectedTokenError(
+                ',',
+                (getCommaTokenBeforeNode(tokens, node) || node) as HasLocation,
+            );
+        }
+
+        // Remove parens.
+        tokens.shift();
+        tokens.shift();
+        tokens.pop();
+
+        return {expression, tokens, comments, references, variables: []};
+    }
+    catch (e) {
+        return throwErrorAsAdjustingOutsideOfCode(e, code, locationCalculator);
+    }
 }
