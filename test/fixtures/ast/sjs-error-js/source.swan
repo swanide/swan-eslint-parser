@@ -4,7 +4,7 @@ const world = function () {
     return 'hello world sjs';
 };
 module.exports = {
-    hello: hello,
+    hello:,
     world: world
 };
 </import-sjs>

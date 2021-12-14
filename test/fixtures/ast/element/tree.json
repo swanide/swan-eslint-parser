@@ -1,1 +1,139 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<block>\n    <view>1</view>\n    <image />\n    <image\n    />\n    <scroll-view><view>1</view>\n    </scroll-view>\n</block>\n",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<block>\n    <view>1</view>\n    <image />\n    <image\n    />\n    <scroll-view><view>1</view>\n    </scroll-view>\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view>1</view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view>",
+                                "children": []
+                            },
+                            {
+                                "type": "XText",
+                                "text": "1",
+                                "children": []
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<image />",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<image />",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<image\n    />",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<image\n    />",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<scroll-view><view>1</view>\n    </scroll-view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<scroll-view>",
+                                "children": []
+                            },
+                            {
+                                "type": "XElement",
+                                "text": "<view>1</view>",
+                                "children": [
+                                    {
+                                        "type": "XStartTag",
+                                        "text": "<view>",
+                                        "children": []
+                                    },
+                                    {
+                                        "type": "XText",
+                                        "text": "1",
+                                        "children": []
+                                    },
+                                    {
+                                        "type": "XEndTag",
+                                        "text": "</view>",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XText",
+                                "text": "\n    ",
+                                "children": []
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</scroll-view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            }
+        ]
+    }
+]

@@ -1,16 +1,18 @@
 {
-  "name": "swan-xml-parser",
+  "name": "swan-eslint-parser",
   "version": "0.0.1",
-  "description": "swan xml parser",
+  "description": "swan eslint parser",
   "main": "index.js",
   "files": [
+    "types",
     "index.*"
   ],
   "scripts": {
+    "prepublish": "npm run build",
     "prebuild": "npm run -s clean",
     "build:es": "tsc --module es2015",
-    "build": "tsc --module es2015 && rollup -c -o index.js && dts-bundle --name swan-xml-parser --main .temp/index.d.ts --out ../index.d.ts",
-    "clean": "rm -rf .nyc_output .temp coverage index.*",
+    "build": "tsc --module es2015 && rollup -c -o index.js",
+    "clean": "rm -rf .nyc_output .temp coverage index.js",
     "pretest": "npm run -s build",
     "test": "npm run -s test:mocha",
     "test:mocha": "nyc mocha \"test/spec/*.js\" --reporter dot --timeout 10000",

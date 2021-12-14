@@ -28,29 +28,33 @@ function isInlineSjsModule(node: ast.XElement) {
         && node.children[0].type === 'XModule';
 }
 
-export function parse(code: string, options: ParserOptions): ast.XDocument {
-    const tokenizer = new SwanTokenizer(code);
-    const rootAST = new SwanParser(tokenizer, options).parse();
-    return rootAST;
-}
-
-export function parseForESLint(code: string, parserOptions: ParserOptions): ESLintExtendedProgram {
-    
-    parserOptions = Object.assign(
+function resolveParserOptions(options: ParserOptions) {
+    return Object.assign(
         {
-            noOpenTag: true,
+            noOpenTag: false,
             script: {
                 parser: 'espree',
                 sourceType: 'module',
                 ecmaVersion: 2018,
                 range: true,
                 loc: true,
-                tokens: true,
-                comment: true
+                // tokens: true,
+                // comment: true
             }
         },
-        parserOptions
+        options
     );
+}
+
+export function parse(code: string, options: ParserOptions): ast.XDocument {
+    const tokenizer = new SwanTokenizer(code);
+    const rootAST = new SwanParser(tokenizer, resolveParserOptions(options)).parse();
+    return rootAST;
+}
+
+export function parseForESLint(code: string, options: ParserOptions): ESLintExtendedProgram {
+    
+    const parserOptions = resolveParserOptions(options);
 
     // eslint-disable-next-line no-param-reassign
     let result: ESLintExtendedProgram;
@@ -61,18 +65,12 @@ export function parseForESLint(code: string, parserOptions: ParserOptions): ESLi
     if (xmlType === 'swan') {
         const tokenizer = new SwanTokenizer(code);
         const rootAST = new SwanParser(tokenizer, parserOptions).parse();
-        const concreteInfo: ast.HasConcreteInfo = {
-            tokens: rootAST.tokens,
-            comments: rootAST.comments,
-            errors: rootAST.errors,
-        };
-        const templateBody = rootAST != null
-            ? Object.assign(rootAST, {xmlType}, concreteInfo)
-            : void 0;
-
         result = parseScript('', parserOptions.script);
-        result.ast.templateBody = templateBody;
-
+        result.ast.templateBody = rootAST;
+        result.ast.range = rootAST.range;
+        result.ast.tokens = rootAST.tokens;
+        result.ast.comments = rootAST.comments;
+        
         const sjsModules = rootAST.children
             .filter(node => node.type === 'XElement' && isInlineSjsModule(node)) as ast.XElement[];
         const moduleBody: (script.Statement | script.ModuleDeclaration)[] = [];
@@ -87,8 +85,6 @@ export function parseForESLint(code: string, parserOptions: ParserOptions): ESLi
         if (moduleBody.length) {
             result.ast.sourceType = 'module';
             result.ast.body = moduleBody;
-            result.ast.range = rootAST.range;
-            result.ast.tokens = rootAST.tokens;
         }
 
         document = rootAST;

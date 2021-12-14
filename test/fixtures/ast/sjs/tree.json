@@ -1,1 +1,379 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<import-sjs module=\"sjs\">\nvar hello = true;\nvar world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n</import-sjs>\n\n<import-sjs src=\"./module.sjs\" module=\"sjsModule\"/>\n<import-sjs src=\"./module.sjs\" module=\"sjsModule\"></import-sjs>\n<import-sjs></import-sjs>\n<import-sjs module=\"sjs\"></import-sjs>\n\n<filter module=\"sjs\">\n    module.exports = 1;\n</filter>",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<import-sjs module=\"sjs\">\nvar hello = true;\nvar world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n</import-sjs>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<import-sjs module=\"sjs\">",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "module=\"sjs\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "sjs",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XModule",
+                        "text": "\nvar hello = true;\nvar world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n",
+                        "children": [
+                            {
+                                "type": "VariableDeclaration",
+                                "text": "var hello = true;",
+                                "children": [
+                                    {
+                                        "type": "VariableDeclarator",
+                                        "text": "hello = true",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "hello",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "true",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "VariableDeclaration",
+                                "text": "var world = function () {\n    return 'hello world sjs';\n};",
+                                "children": [
+                                    {
+                                        "type": "VariableDeclarator",
+                                        "text": "world = function () {\n    return 'hello world sjs';\n}",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "world",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "FunctionExpression",
+                                                "text": "function () {\n    return 'hello world sjs';\n}",
+                                                "children": [
+                                                    {
+                                                        "type": "BlockStatement",
+                                                        "text": "{\n    return 'hello world sjs';\n}",
+                                                        "children": [
+                                                            {
+                                                                "type": "ReturnStatement",
+                                                                "text": "return 'hello world sjs';",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "'hello world sjs'",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "ExpressionStatement",
+                                "text": "module.exports = {\n    hello: hello,\n    world: world\n};",
+                                "children": [
+                                    {
+                                        "type": "AssignmentExpression",
+                                        "text": "module.exports = {\n    hello: hello,\n    world: world\n}",
+                                        "children": [
+                                            {
+                                                "type": "MemberExpression",
+                                                "text": "module.exports",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "module",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "exports",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "ObjectExpression",
+                                                "text": "{\n    hello: hello,\n    world: world\n}",
+                                                "children": [
+                                                    {
+                                                        "type": "Property",
+                                                        "text": "hello: hello",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "hello",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "hello",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "Property",
+                                                        "text": "world: world",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "world",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "world",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</import-sjs>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<import-sjs src=\"./module.sjs\" module=\"sjsModule\"/>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<import-sjs src=\"./module.sjs\" module=\"sjsModule\"/>",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "src=\"./module.sjs\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "./module.sjs",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XAttribute",
+                                "text": "module=\"sjsModule\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "sjsModule",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<import-sjs src=\"./module.sjs\" module=\"sjsModule\"></import-sjs>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<import-sjs src=\"./module.sjs\" module=\"sjsModule\">",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "src=\"./module.sjs\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "./module.sjs",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XAttribute",
+                                "text": "module=\"sjsModule\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "sjsModule",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</import-sjs>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<import-sjs></import-sjs>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<import-sjs>",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</import-sjs>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<import-sjs module=\"sjs\"></import-sjs>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<import-sjs module=\"sjs\">",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "module=\"sjs\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "sjs",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</import-sjs>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<filter module=\"sjs\">\n    module.exports = 1;\n</filter>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<filter module=\"sjs\">",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "module=\"sjs\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "sjs",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XModule",
+                        "text": "\n    module.exports = 1;\n",
+                        "children": [
+                            {
+                                "type": "ExpressionStatement",
+                                "text": "module.exports = 1;",
+                                "children": [
+                                    {
+                                        "type": "AssignmentExpression",
+                                        "text": "module.exports = 1",
+                                        "children": [
+                                            {
+                                                "type": "MemberExpression",
+                                                "text": "module.exports",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "module",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "exports",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "1",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</filter>",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

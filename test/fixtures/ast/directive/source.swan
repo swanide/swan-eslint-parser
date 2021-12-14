@@ -12,6 +12,7 @@
     <view capture-bind:tap="tap"></view>
     <view capture-catch:tap="tap"></view>
     <view mut-bind:tap="tap"></view>
-
+    <view bind:touchmove.stop="stop"></view>
+    <view bind:touch-move.stop="stop"></view>
     <input model:value="{{value}}" />
 </block>

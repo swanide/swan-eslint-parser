@@ -1,1 +1,406 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "\n<block>\n    <view a='b'></view>\n\n    <view a='c{{b}}d'></view>\n\n    <view a='{{c}}-{{b}}-{{d}}'></view>\n\n    <view if='{{cond + \"1\"}}'></view>\n\n    <view s-if='{{cond + 1}}'></view>\n\n    <view s-for-items='{{[1,2,3,4]}}'></view>\n\n    <view\n        s-for-items='{{[1,2,3,4]}}'></view>\n    <view\n        s-for-items='{{list}}'\n    ></view>\n</block>\n\n<view>\n    <text class\n        =\n            'value'\n    ></text>\n    <text class\n        =\n            'abc-{{ cond ? \"class1\" : \"class2\" }}-def'\n    ></text>\n</view>",
+        "children": [
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<block>\n    <view a='b'></view>\n\n    <view a='c{{b}}d'></view>\n\n    <view a='{{c}}-{{b}}-{{d}}'></view>\n\n    <view if='{{cond + \"1\"}}'></view>\n\n    <view s-if='{{cond + 1}}'></view>\n\n    <view s-for-items='{{[1,2,3,4]}}'></view>\n\n    <view\n        s-for-items='{{[1,2,3,4]}}'></view>\n    <view\n        s-for-items='{{list}}'\n    ></view>\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view a='b'></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view a='b'>",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "a='b'",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "b",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view a='c{{b}}d'></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view a='c{{b}}d'>",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "a='c{{b}}d'",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "c",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{b}}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "d",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view a='{{c}}-{{b}}-{{d}}'></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view a='{{c}}-{{b}}-{{d}}'>",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "a='{{c}}-{{b}}-{{d}}'",
+                                        "children": [
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{c}}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "-",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{b}}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "-",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{d}}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view if='{{cond + \"1\"}}'></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view if='{{cond + \"1\"}}'>",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "if='{{cond + \"1\"}}'",
+                                        "children": [
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{cond + \"1\"}}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-if='{{cond + 1}}'></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-if='{{cond + 1}}'>",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-if='{{cond + 1}}'",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-for-items='{{[1,2,3,4]}}'></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-for-items='{{[1,2,3,4]}}'>",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for-items='{{[1,2,3,4]}}'",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view\n        s-for-items='{{[1,2,3,4]}}'></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view\n        s-for-items='{{[1,2,3,4]}}'>",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for-items='{{[1,2,3,4]}}'",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view\n        s-for-items='{{list}}'\n    ></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view\n        s-for-items='{{list}}'\n    >",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for-items='{{list}}'",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<view>\n    <text class\n        =\n            'value'\n    ></text>\n    <text class\n        =\n            'abc-{{ cond ? \"class1\" : \"class2\" }}-def'\n    ></text>\n</view>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<view>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text class\n        =\n            'value'\n    ></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text class\n        =\n            'value'\n    >",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "class\n        =\n            'value'",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "value",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text class\n        =\n            'abc-{{ cond ? \"class1\" : \"class2\" }}-def'\n    ></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text class\n        =\n            'abc-{{ cond ? \"class1\" : \"class2\" }}-def'\n    >",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "class\n        =\n            'abc-{{ cond ? \"class1\" : \"class2\" }}-def'",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "abc-",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{ cond ? \"class1\" : \"class2\" }}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "-def",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</view>",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

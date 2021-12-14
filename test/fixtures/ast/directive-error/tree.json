@@ -1,1 +1,100 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<block>\n    <view bind:-=\"{{cond}}\"></view>\n    <view s-=\"{{cond}}\"></view>\n</block>\n",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<block>\n    <view bind:-=\"{{cond}}\"></view>\n    <view s-=\"{{cond}}\"></view>\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view bind:-=\"{{cond}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view bind:-=\"{{cond}}\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "bind:-=\"{{cond}}\"",
+                                        "children": [
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{cond}}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-=\"{{cond}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-=\"{{cond}}\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "s-=\"{{cond}}\"",
+                                        "children": [
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{cond}}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            }
+        ]
+    }
+]

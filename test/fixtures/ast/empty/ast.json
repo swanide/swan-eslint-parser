@@ -1,9 +1,7 @@
 {
-    "type": "XDocument",
-    "range": [
-        0,
-        0
-    ],
+    "type": "Program",
+    "start": 0,
+    "end": 0,
     "loc": {
         "start": {
             "line": 1,
@@ -14,9 +12,34 @@
             "column": 0
         }
     },
-    "children": [],
+    "range": [
+        0,
+        0
+    ],
+    "body": [],
+    "sourceType": "module",
+    "templateBody": {
+        "type": "XDocument",
+        "range": [
+            0,
+            0
+        ],
+        "loc": {
+            "start": {
+                "line": 1,
+                "column": 0
+            },
+            "end": {
+                "line": 1,
+                "column": 0
+            }
+        },
+        "children": [],
+        "tokens": [],
+        "comments": [],
+        "errors": [],
+        "xmlType": "swan"
+    },
     "tokens": [],
-    "comments": [],
-    "errors": [],
-    "xmlType": "swan"
+    "comments": []
 }

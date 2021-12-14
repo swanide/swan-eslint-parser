@@ -1,1 +1,206 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<view>\n    <text style=1></text>\n    <text style=\"{{\"123\"}}\"></text>\n    <text style='{{'123'}}'></text>\n    <text class\n        =\n            \"\n            abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>\n    <text class\n        =\n            \"abc-{{\n                cond\n                ? 'class1'\n                : 'class2'\n            }}-def\"\n    ></text>\n</view>\n",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<view>\n    <text style=1></text>\n    <text style=\"{{\"123\"}}\"></text>\n    <text style='{{'123'}}'></text>\n    <text class\n        =\n            \"\n            abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>\n    <text class\n        =\n            \"abc-{{\n                cond\n                ? 'class1'\n                : 'class2'\n            }}-def\"\n    ></text>\n</view>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<view>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text style=1></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text style=1>",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "style=1",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "1",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text style=\"{{\"123\"}}\"></text>\n    <text style='{{'123'}}'></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text style=\"{{\"123\"}}\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "style=\"{{\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "{{",
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "123\"}}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XText",
+                                "text": "</text>\n    <text style='",
+                                "children": []
+                            },
+                            {
+                                "type": "XMustache",
+                                "text": "{{'123'}}",
+                                "children": []
+                            },
+                            {
+                                "type": "XText",
+                                "text": "'>",
+                                "children": []
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text class\n        =\n            \"\n            abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text class\n        =\n            \"\n            abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    >",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "class\n        =\n            \"\n            abc-{{ cond ? 'class1' : 'class2' }}-def\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "\n            abc-",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{ cond ? 'class1' : 'class2' }}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "-def",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text class\n        =\n            \"abc-{{\n                cond\n                ? 'class1'\n                : 'class2'\n            }}-def\"\n    ></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text class\n        =\n            \"abc-{{\n                cond\n                ? 'class1'\n                : 'class2'\n            }}-def\"\n    >",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "class\n        =\n            \"abc-{{\n                cond\n                ? 'class1'\n                : 'class2'\n            }}-def\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "abc-",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{\n                cond\n                ? 'class1'\n                : 'class2'\n            }}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "-def",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</view>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            }
+        ]
+    }
+]

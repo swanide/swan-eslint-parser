@@ -9,8 +9,7 @@ import {
     ErrorCode,
     HasLocation,
     Token,
-    XAttribute,
-    XMustache
+    XAttribute
 } from '../types/ast';
 import {debug, ParseError} from './common';
 import Tokenizer, {TokenizerState, TokenType} from './tokenizer';
@@ -213,7 +212,7 @@ export default class IntermediateTokenizer {
         );
         this.errors.push(error);
 
-        debug('[html] syntax error:', error.message);
+        debug('[swan] syntax error:', error.message);
     }
 
     /**
@@ -450,11 +449,11 @@ export default class IntermediateTokenizer {
     }
 
     /**
-     * Process a HTMLLiteralText token.
+     * Process a HTMLAttrLiteral token.
      * @param token The token to process.
      */
-    protected HTMLLiteralText(token: Token): IntermediateToken | null {
-        // TODO HTMLLiteralText
+    protected HTMLAttrLiteral(token: Token): IntermediateToken | null {
+        // TODO HTMLAttrLiteral
         this.tokens.push(token);
         const result: IntermediateToken | null = null;
 

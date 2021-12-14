@@ -5,17 +5,17 @@
 /* eslint-disable import/unambiguous, @typescript-eslint/no-var-requires, import/no-commonjs */
 const path = require('path');
 const {Linter} = require('eslint');
-const {readXmlFile, fixturesDir} = require('./util');
+const {readXmlFile} = require('./util');
 
 const PARSER_PATH = path.resolve(__dirname, '../../src/index.ts');
 
 function lint() {
-    const mpxmlFile = readXmlFile(`${fixturesDir}/expression.swan`);
+    const mpxmlFile = readXmlFile(`${__dirname}/expression.swan`);
     const code = mpxmlFile.content;
     const config = {
         parser: PARSER_PATH,
         rules: {
-            'test-rule': 'error',
+            'no-parsing-error': 'error',
             'no-useless-mustache': 'error',
             'no-duplicate-attributes': 'error'
         },
@@ -24,17 +24,18 @@ function lint() {
     // eslint-disable-next-line import/no-dynamic-require
     linter.defineParser(PARSER_PATH, require(PARSER_PATH));
 
-    linter.defineRule('test-rule', {
-        create(context) {
-            return context.parserServices.defineTemplateBodyVisitor({
-                'XElement[name=\'view\']': function (node) {
-                    // console.log(node)
-                    context.report({node, message: 'OK'});
-                },
-            });
-        }
-    });
+    // linter.defineRule('test-rule', {
+    //     create(context) {
+    //         return context.parserServices.defineTemplateBodyVisitor({
+    //             'XElement[name=\'view\']': function (node) {
+    //                 // console.log(node)
+    //                 context.report({node, message: 'OK'});
+    //             },
+    //         });
+    //     }
+    // });
 
+    linter.defineRule('no-parsing-error', require('./rules/no-parsing-error'));
     linter.defineRule('no-useless-mustache', require('./rules/no-useless-mustache'));
     linter.defineRule('no-duplicate-attributes', require('./rules/no-duplicate-attributes'));
 

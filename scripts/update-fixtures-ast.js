@@ -102,17 +102,17 @@ for (const name of TARGETS) {
     const treePath = path.join(ROOT, `${name}/tree.json`);
     const source = fs.readFileSync(sourcePath, 'utf8');
     console.log('Updating:', name);
-    const actual = parser.parse(
+    const actual = parser.parseForESLint(
         source,
         {filePath: sourcePath}
     );
-    const tokenRanges = getAllTokens(actual).map(t =>
+    const tokenRanges = getAllTokens(actual.ast).map(t => 
         source.slice(t.range[0], t.range[1]));
-    const tree = getTree(source, actual);
+    const tree = getTree(source, actual.ast);
 
     console.log('done');
 
-    fs.writeFileSync(astPath, JSON.stringify(actual, replacer, 4));
+    fs.writeFileSync(astPath, JSON.stringify(actual.ast, replacer, 4));
     fs.writeFileSync(tokenRangesPath, JSON.stringify(tokenRanges, replacer, 4));
     fs.writeFileSync(treePath, JSON.stringify(tree, replacer, 4));
 }

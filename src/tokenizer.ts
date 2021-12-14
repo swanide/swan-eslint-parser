@@ -47,7 +47,7 @@ export type TokenType =
     | 'HTMLEndTagOpen'
     | 'HTMLIdentifier'
     | 'HTMLLiteral'
-    | 'HTMLLiteralText'
+    | 'HTMLAttrLiteral'
     | 'HTMLQuote'
     | 'HTMLRCDataText'
     | 'HTMLRawText'
@@ -159,11 +159,16 @@ export default class Tokenizer {
     public expressionEnabled: boolean;
 
     /**
+     * The flag which enables tag open tokens.
+     */
+    public tagOpenEnabled: boolean;
+
+    /**
      * Initialize this tokenizer.
      * @param text The source code to tokenize.
      */
     public constructor(text: string) {
-        debug('[html] the source code length: %d', text.length);
+        debug('[swan] the source code length: %d', text.length);
         this.text = text;
         this.gaps = [];
         this.lineTerminators = [];
@@ -184,6 +189,7 @@ export default class Tokenizer {
         this.tokenStartColumn = -1;
         this.tokenStartLine = 1;
         this.expressionEnabled = false;
+        this.tagOpenEnabled = true;
     }
 
     /**
@@ -211,7 +217,7 @@ export default class Tokenizer {
                 cp = this.consumeNextCodePoint();
             }
 
-            debug('[html] parse', cp, this.state);
+            debug('[swan] parse', cp, this.state);
             this.state = this[this.state](cp);
         }
 
@@ -333,7 +339,7 @@ export default class Tokenizer {
         );
         this.errors.push(error);
 
-        debug('[html] syntax error:', error.message);
+        debug('[swan] syntax error:', error.message);
     }
 
     /**
@@ -380,7 +386,7 @@ export default class Tokenizer {
             value: '',
         });
 
-        debug('[html] start token: %d %s', offset, token.type);
+        debug('[swan] start token: %d %s', offset, token.type);
         return this.currentToken;
     }
 
@@ -410,7 +416,7 @@ export default class Tokenizer {
 
         if (token.range[0] === offset && !provisional) {
             debug(
-                '[html] abandon token: %j %s %j',
+                '[swan] abandon token: %j %s %j',
                 token.range,
                 token.type,
                 token.value,
@@ -424,7 +430,7 @@ export default class Tokenizer {
             }
             this.provisionalToken = token;
             debug(
-                '[html] provisional-commit token: %j %s %j',
+                '[swan] provisional-commit token: %j %s %j',
                 token.range,
                 token.type,
                 token.value,
@@ -447,7 +453,7 @@ export default class Tokenizer {
             'Invalid state: the commited token existed already.',
         );
         debug(
-            '[html] commit token: %j %j %s %j',
+            '[swan] commit token: %j %j %s %j',
             token.range,
             token.loc,
             token.type,
@@ -496,7 +502,7 @@ export default class Tokenizer {
         assert(this.provisionalToken != null);
 
         const token = this.currentToken as Token;
-        debug('[html] rollback token: %d %s', token.range[0], token.type);
+        debug('[swan] rollback token: %d %s', token.range[0], token.type);
 
         this.currentToken = this.provisionalToken as Token;
         this.provisionalToken = null;
@@ -551,7 +557,7 @@ export default class Tokenizer {
                 this.startToken(type);
             }
 
-            if (cp === LESS_THAN_SIGN) {
+            if (cp === LESS_THAN_SIGN && this.tagOpenEnabled) {
                 this.setStartTokenMark();
                 return 'TAG_OPEN';
             }
@@ -640,7 +646,7 @@ export default class Tokenizer {
                 this.startToken(type);
             }
 
-            if (cp === LESS_THAN_SIGN) {
+            if (cp === LESS_THAN_SIGN && this.expressionEnabled) {
                 this.setStartTokenMark();
                 return 'RAWTEXT_LESS_THAN_SIGN';
             }
@@ -892,7 +898,7 @@ export default class Tokenizer {
                 this.endToken();
                 return 'BEFORE_ATTRIBUTE_NAME';
             }
-            if (!isLetter(cp)) {
+            if (!isLetter(cp) && cp !== HYPHEN_MINUS) {
                 this.rollbackProvisionalToken();
                 this.appendTokenValue(LESS_THAN_SIGN, 'HTMLRawText');
                 this.appendTokenValue(SOLIDUS, 'HTMLRawText');
@@ -1054,7 +1060,7 @@ export default class Tokenizer {
      */
     protected ATTRIBUTE_VALUE_DOUBLE_QUOTED(cp: number): TokenizerState {
         this.clearStartTokenMark();
-        const tokenType = 'HTMLLiteralText';
+        const tokenType = 'HTMLAttrLiteral';
 
         while (true) {
             if (this.currentToken != null && this.currentToken.type !== tokenType) {
@@ -1072,7 +1078,7 @@ export default class Tokenizer {
                 return 'X_EXPRESSION_START';
             }
 
-            if (cp === RIGHT_CURLY_BRACKET) {
+            if (cp === RIGHT_CURLY_BRACKET || cp === EQUALS_SIGN) {
                 this.setStartTokenMark();
                 this.returnState = 'ATTRIBUTE_VALUE_DOUBLE_QUOTED';
                 return 'X_EXPRESSION_END';
@@ -1109,7 +1115,7 @@ export default class Tokenizer {
      */
     protected ATTRIBUTE_VALUE_SINGLE_QUOTED(cp: number): TokenizerState {
         this.clearStartTokenMark();
-        const tokenType = 'HTMLLiteralText';
+        const tokenType = 'HTMLAttrLiteral';
 
         while (true) {
             if (this.currentToken != null && this.currentToken.type !== tokenType) {
@@ -1127,7 +1133,7 @@ export default class Tokenizer {
                 return 'X_EXPRESSION_START';
             }
 
-            if (cp === RIGHT_CURLY_BRACKET) {
+            if (cp === RIGHT_CURLY_BRACKET || cp === EQUALS_SIGN) {
                 this.setStartTokenMark();
                 this.returnState = 'ATTRIBUTE_VALUE_SINGLE_QUOTED';
                 return 'X_EXPRESSION_END';
@@ -1237,7 +1243,7 @@ export default class Tokenizer {
         if (cp === GREATER_THAN_SIGN) {
             this.startToken('HTMLSelfClosingTagClose');
 
-            // wxml supports self-closing elements.
+            // swan supports self-closing elements.
             // So don't switch to RCDATA/RAWTEXT from any elements.
             return 'DATA';
         }
@@ -1502,13 +1508,22 @@ export default class Tokenizer {
      * @returns The next state.
      */
     protected X_EXPRESSION_START(cp: number): TokenizerState {
+        // {{
         if (cp === LEFT_CURLY_BRACKET) {
             this.startToken('XMustacheStart');
             this.appendTokenValue(LEFT_CURLY_BRACKET, null);
             this.appendTokenValue(LEFT_CURLY_BRACKET, null);
+            this.tagOpenEnabled = false;
             return this.returnState;
         }
-
+        // {=
+        else if (cp === EQUALS_SIGN 
+            && (this.returnState === 'ATTRIBUTE_VALUE_DOUBLE_QUOTED' || this.returnState === 'ATTRIBUTE_VALUE_SINGLE_QUOTED')) {
+            this.startToken('XMustacheStart');
+            this.appendTokenValue(LEFT_CURLY_BRACKET, null);
+            this.appendTokenValue(EQUALS_SIGN, null);
+            return this.returnState;
+        }
         this.appendTokenValue(LEFT_CURLY_BRACKET, null);
         return this.reconsumeAs(this.returnState);
     }
@@ -1519,14 +1534,16 @@ export default class Tokenizer {
      * @returns The next state.
      */
     protected X_EXPRESSION_END(cp: number): TokenizerState {
-        if (cp === RIGHT_CURLY_BRACKET) {
+        // 匹配 style="{{{color: '#ccc'}}}"
+        if (cp === RIGHT_CURLY_BRACKET && this.text.codePointAt(this.offset + 1) !== RIGHT_CURLY_BRACKET) {
             this.startToken('XMustacheEnd');
+            this.appendTokenValue(this.text.codePointAt(this.offset - 1), null);
             this.appendTokenValue(RIGHT_CURLY_BRACKET, null);
-            this.appendTokenValue(RIGHT_CURLY_BRACKET, null);
+            this.tagOpenEnabled = true;
             return this.returnState;
         }
 
-        this.appendTokenValue(RIGHT_CURLY_BRACKET, null);
+        this.appendTokenValue(this.text.codePointAt(this.offset - 1), null);
         return this.reconsumeAs(this.returnState);
     }
 }

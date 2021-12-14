@@ -34,7 +34,7 @@ describe('parse', () => {
 
 describe('lint', () => {
     const linter = new Linter();
-    linter.defineParser('swan-xml-parser', {parseForESLint});
+    linter.defineParser('swan-eslint-parser', {parseForESLint});
     linter.defineRule(
         'swan/no-duplicate-attributes',
         require('../example/rules/no-duplicate-attributes')
@@ -43,7 +43,7 @@ describe('lint', () => {
     it('lint swan', () => {
         const code = '<view class="a" class="b">Hello</view>';
         const config = {
-            parser: 'swan-xml-parser',
+            parser: 'swan-eslint-parser',
             parserOptions: {
                 parser: false,
             },

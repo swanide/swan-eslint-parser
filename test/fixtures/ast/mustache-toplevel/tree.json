@@ -1,1 +1,61 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "{{abc}}\n\n--{{def}}--\n\n<view class=\"{{expr}}\">{{ghi}}</view>",
+        "children": [
+            {
+                "type": "XMustache",
+                "text": "{{abc}}",
+                "children": []
+            },
+            {
+                "type": "XText",
+                "text": "\n\n--",
+                "children": []
+            },
+            {
+                "type": "XMustache",
+                "text": "{{def}}",
+                "children": []
+            },
+            {
+                "type": "XText",
+                "text": "--\n\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<view class=\"{{expr}}\">{{ghi}}</view>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<view class=\"{{expr}}\">",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "class=\"{{expr}}\"",
+                                "children": [
+                                    {
+                                        "type": "XMustache",
+                                        "text": "{{expr}}",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{ghi}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</view>",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

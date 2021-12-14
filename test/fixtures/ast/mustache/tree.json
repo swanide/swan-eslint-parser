@@ -1,1 +1,176 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<block>\n    {{a.b.c}}\n    <view>{{b ? c : d}}</view>\n    {{e}}{{f}}{{g}}\n    <view></view>{{h || 'text'}}\n    {{\n        i === j ? true: false\n    }}\n\n    {{i < 2}}\n    {{i << 2}}\n\n    {{i > 2}}\n    {{i >> 2}}\n    {{i >>> 2}}\n</block>\n",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<block>\n    {{a.b.c}}\n    <view>{{b ? c : d}}</view>\n    {{e}}{{f}}{{g}}\n    <view></view>{{h || 'text'}}\n    {{\n        i === j ? true: false\n    }}\n\n    {{i < 2}}\n    {{i << 2}}\n\n    {{i > 2}}\n    {{i >> 2}}\n    {{i >>> 2}}\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{a.b.c}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view>{{b ? c : d}}</view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view>",
+                                "children": []
+                            },
+                            {
+                                "type": "XMustache",
+                                "text": "{{b ? c : d}}",
+                                "children": []
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{e}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{f}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{g}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view>",
+                                "children": []
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{h || 'text'}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{\n        i === j ? true: false\n    }}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{i < 2}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{i << 2}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{i > 2}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{i >> 2}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{i >>> 2}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            }
+        ]
+    }
+]

@@ -1,1 +1,78 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<view>\n    <text id=\"a\" id=\"b\"></text>\n</view>\n",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<view>\n    <text id=\"a\" id=\"b\"></text>\n</view>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<view>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text id=\"a\" id=\"b\"></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text id=\"a\" id=\"b\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "id=\"a\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "a",
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "id=\"b\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "b",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</view>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            }
+        ]
+    }
+]

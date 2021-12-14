@@ -1,1 +1,104 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<block>\n    Valid:\n    <!---a--->\n    <!---->\n    <!--< -->\n    <!--<<< -->\n    <!--<! -->\n    <!--<!- -->\n    <!--<!-->\n    <!-- - -->\n    <!-- -- -->\n    <!--a--!-->\n    <!--a--!b-->\n    Invalid:\n    <!-->\n    <!--->\n    <!--<!--->\n    <!--a--!>\n</block>",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<block>\n    Valid:\n    <!---a--->\n    <!---->\n    <!--< -->\n    <!--<<< -->\n    <!--<! -->\n    <!--<!- -->\n    <!--<!-->\n    <!-- - -->\n    <!-- -- -->\n    <!--a--!-->\n    <!--a--!b-->\n    Invalid:\n    <!-->\n    <!--->\n    <!--<!--->\n    <!--a--!>\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    Valid:\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    Invalid:\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

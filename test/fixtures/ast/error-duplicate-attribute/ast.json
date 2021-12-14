@@ -1,43 +1,45 @@
 {
-    "type": "XDocument",
-    "range": [
-        0,
-        47
-    ],
+    "type": "Program",
+    "start": 0,
+    "end": 0,
     "loc": {
         "start": {
             "line": 1,
             "column": 0
         },
         "end": {
-            "line": 4,
+            "line": 1,
             "column": 0
         }
     },
-    "children": [
-        {
-            "type": "XElement",
-            "range": [
-                0,
-                46
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 3,
-                    "column": 7
-                }
+    "range": [
+        0,
+        47
+    ],
+    "body": [],
+    "sourceType": "module",
+    "templateBody": {
+        "type": "XDocument",
+        "range": [
+            0,
+            47
+        ],
+        "loc": {
+            "start": {
+                "line": 1,
+                "column": 0
             },
-            "name": "view",
-            "rawName": "view",
-            "startTag": {
-                "type": "XStartTag",
+            "end": {
+                "line": 4,
+                "column": 0
+            }
+        },
+        "children": [
+            {
+                "type": "XElement",
                 "range": [
                     0,
-                    6
+                    46
                 ],
                 "loc": {
                     "start": {
@@ -45,55 +47,55 @@
                         "column": 0
                     },
                     "end": {
-                        "line": 1,
-                        "column": 6
+                        "line": 3,
+                        "column": 7
                     }
                 },
-                "selfClosing": false,
-                "attributes": []
-            },
-            "children": [
-                {
-                    "type": "XText",
+                "name": "view",
+                "rawName": "view",
+                "startTag": {
+                    "type": "XStartTag",
                     "range": [
-                        6,
-                        11
+                        0,
+                        6
                     ],
                     "loc": {
                         "start": {
                             "line": 1,
+                            "column": 0
+                        },
+                        "end": {
+                            "line": 1,
                             "column": 6
-                        },
-                        "end": {
-                            "line": 2,
-                            "column": 4
                         }
                     },
-                    "value": "\n    "
+                    "selfClosing": false,
+                    "attributes": []
                 },
-                {
-                    "type": "XElement",
-                    "range": [
-                        11,
-                        38
-                    ],
-                    "loc": {
-                        "start": {
-                            "line": 2,
-                            "column": 4
+                "children": [
+                    {
+                        "type": "XText",
+                        "range": [
+                            6,
+                            11
+                        ],
+                        "loc": {
+                            "start": {
+                                "line": 1,
+                                "column": 6
+                            },
+                            "end": {
+                                "line": 2,
+                                "column": 4
+                            }
                         },
-                        "end": {
-                            "line": 2,
-                            "column": 31
-                        }
+                        "value": "\n    "
                     },
-                    "name": "text",
-                    "rawName": "text",
-                    "startTag": {
-                        "type": "XStartTag",
+                    {
+                        "type": "XElement",
                         "range": [
                             11,
-                            31
+                            38
                         ],
                         "loc": {
                             "start": {
@@ -102,32 +104,34 @@
                             },
                             "end": {
                                 "line": 2,
-                                "column": 24
+                                "column": 31
                             }
                         },
-                        "selfClosing": false,
-                        "attributes": [
-                            {
-                                "type": "XAttribute",
-                                "range": [
-                                    17,
-                                    23
-                                ],
-                                "loc": {
-                                    "start": {
-                                        "line": 2,
-                                        "column": 10
-                                    },
-                                    "end": {
-                                        "line": 2,
-                                        "column": 16
-                                    }
+                        "name": "text",
+                        "rawName": "text",
+                        "startTag": {
+                            "type": "XStartTag",
+                            "range": [
+                                11,
+                                31
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 2,
+                                    "column": 4
                                 },
-                                "key": {
-                                    "type": "XIdentifier",
+                                "end": {
+                                    "line": 2,
+                                    "column": 24
+                                }
+                            },
+                            "selfClosing": false,
+                            "attributes": [
+                                {
+                                    "type": "XAttribute",
                                     "range": [
                                         17,
-                                        19
+                                        23
                                     ],
                                     "loc": {
                                         "start": {
@@ -136,54 +140,54 @@
                                         },
                                         "end": {
                                             "line": 2,
-                                            "column": 12
+                                            "column": 16
                                         }
                                     },
-                                    "name": "id",
-                                    "rawName": "id"
-                                },
-                                "value": [
-                                    {
-                                        "type": "XLiteral",
+                                    "key": {
+                                        "type": "XIdentifier",
                                         "range": [
-                                            21,
-                                            22
+                                            17,
+                                            19
                                         ],
                                         "loc": {
                                             "start": {
                                                 "line": 2,
-                                                "column": 14
+                                                "column": 10
                                             },
                                             "end": {
                                                 "line": 2,
-                                                "column": 15
+                                                "column": 12
                                             }
                                         },
-                                        "value": "a"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "XAttribute",
-                                "range": [
-                                    24,
-                                    30
-                                ],
-                                "loc": {
-                                    "start": {
-                                        "line": 2,
-                                        "column": 17
+                                        "name": "id",
+                                        "rawName": "id"
                                     },
-                                    "end": {
-                                        "line": 2,
-                                        "column": 23
-                                    }
+                                    "value": [
+                                        {
+                                            "type": "XLiteral",
+                                            "range": [
+                                                21,
+                                                22
+                                            ],
+                                            "loc": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 14
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 15
+                                                }
+                                            },
+                                            "value": "a"
+                                        }
+                                    ]
                                 },
-                                "key": {
-                                    "type": "XIdentifier",
+                                {
+                                    "type": "XAttribute",
                                     "range": [
                                         24,
-                                        26
+                                        30
                                     ],
                                     "loc": {
                                         "start": {
@@ -192,80 +196,458 @@
                                         },
                                         "end": {
                                             "line": 2,
-                                            "column": 19
+                                            "column": 23
                                         }
                                     },
-                                    "name": "id",
-                                    "rawName": "id"
-                                },
-                                "value": [
-                                    {
-                                        "type": "XLiteral",
+                                    "key": {
+                                        "type": "XIdentifier",
                                         "range": [
-                                            28,
-                                            29
+                                            24,
+                                            26
                                         ],
                                         "loc": {
                                             "start": {
                                                 "line": 2,
-                                                "column": 21
+                                                "column": 17
                                             },
                                             "end": {
                                                 "line": 2,
-                                                "column": 22
+                                                "column": 19
                                             }
                                         },
-                                        "value": "b"
-                                    }
-                                ]
+                                        "name": "id",
+                                        "rawName": "id"
+                                    },
+                                    "value": [
+                                        {
+                                            "type": "XLiteral",
+                                            "range": [
+                                                28,
+                                                29
+                                            ],
+                                            "loc": {
+                                                "start": {
+                                                    "line": 2,
+                                                    "column": 21
+                                                },
+                                                "end": {
+                                                    "line": 2,
+                                                    "column": 22
+                                                }
+                                            },
+                                            "value": "b"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "children": [],
+                        "variables": [],
+                        "endTag": {
+                            "type": "XEndTag",
+                            "range": [
+                                31,
+                                38
+                            ],
+                            "loc": {
+                                "start": {
+                                    "line": 2,
+                                    "column": 24
+                                },
+                                "end": {
+                                    "line": 2,
+                                    "column": 31
+                                }
                             }
-                        ]
+                        }
                     },
-                    "children": [],
-                    "variables": [],
-                    "endTag": {
-                        "type": "XEndTag",
+                    {
+                        "type": "XText",
                         "range": [
-                            31,
-                            38
+                            38,
+                            39
                         ],
                         "loc": {
                             "start": {
                                 "line": 2,
-                                "column": 24
+                                "column": 31
                             },
                             "end": {
-                                "line": 2,
-                                "column": 31
+                                "line": 3,
+                                "column": 0
                             }
-                        }
+                        },
+                        "value": "\n"
                     }
-                },
-                {
-                    "type": "XText",
+                ],
+                "variables": [],
+                "endTag": {
+                    "type": "XEndTag",
                     "range": [
-                        38,
-                        39
+                        39,
+                        46
                     ],
                     "loc": {
                         "start": {
-                            "line": 2,
-                            "column": 31
+                            "line": 3,
+                            "column": 0
                         },
                         "end": {
                             "line": 3,
-                            "column": 0
+                            "column": 7
                         }
-                    },
-                    "value": "\n"
+                    }
                 }
-            ],
-            "variables": [],
-            "endTag": {
-                "type": "XEndTag",
+            },
+            {
+                "type": "XText",
+                "range": [
+                    46,
+                    47
+                ],
+                "loc": {
+                    "start": {
+                        "line": 3,
+                        "column": 7
+                    },
+                    "end": {
+                        "line": 4,
+                        "column": 0
+                    }
+                },
+                "value": "\n"
+            }
+        ],
+        "tokens": [
+            {
+                "type": "HTMLTagOpen",
+                "range": [
+                    0,
+                    5
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 0
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 5
+                    }
+                },
+                "value": "view"
+            },
+            {
+                "type": "HTMLTagClose",
+                "range": [
+                    5,
+                    6
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 5
+                    },
+                    "end": {
+                        "line": 1,
+                        "column": 6
+                    }
+                },
+                "value": ""
+            },
+            {
+                "type": "HTMLWhitespace",
+                "range": [
+                    6,
+                    11
+                ],
+                "loc": {
+                    "start": {
+                        "line": 1,
+                        "column": 6
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 4
+                    }
+                },
+                "value": "\n    "
+            },
+            {
+                "type": "HTMLTagOpen",
+                "range": [
+                    11,
+                    16
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 4
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 9
+                    }
+                },
+                "value": "text"
+            },
+            {
+                "type": "HTMLIdentifier",
+                "range": [
+                    17,
+                    19
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 10
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 12
+                    }
+                },
+                "value": "id"
+            },
+            {
+                "type": "HTMLAssociation",
+                "range": [
+                    19,
+                    20
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 12
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 13
+                    }
+                },
+                "value": ""
+            },
+            {
+                "type": "HTMLQuote",
+                "range": [
+                    20,
+                    21
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 13
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 14
+                    }
+                },
+                "value": "\""
+            },
+            {
+                "type": "HTMLAttrLiteral",
+                "range": [
+                    21,
+                    22
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 14
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 15
+                    }
+                },
+                "value": "a"
+            },
+            {
+                "type": "HTMLQuote",
+                "range": [
+                    22,
+                    23
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 15
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 16
+                    }
+                },
+                "value": "\""
+            },
+            {
+                "type": "HTMLIdentifier",
+                "range": [
+                    24,
+                    26
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 17
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 19
+                    }
+                },
+                "value": "id"
+            },
+            {
+                "type": "HTMLAssociation",
+                "range": [
+                    26,
+                    27
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 19
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 20
+                    }
+                },
+                "value": ""
+            },
+            {
+                "type": "HTMLQuote",
+                "range": [
+                    27,
+                    28
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 20
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 21
+                    }
+                },
+                "value": "\""
+            },
+            {
+                "type": "HTMLAttrLiteral",
+                "range": [
+                    28,
+                    29
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 21
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 22
+                    }
+                },
+                "value": "b"
+            },
+            {
+                "type": "HTMLQuote",
+                "range": [
+                    29,
+                    30
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 22
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 23
+                    }
+                },
+                "value": "\""
+            },
+            {
+                "type": "HTMLTagClose",
+                "range": [
+                    30,
+                    31
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 23
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 24
+                    }
+                },
+                "value": ""
+            },
+            {
+                "type": "HTMLEndTagOpen",
+                "range": [
+                    31,
+                    37
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 24
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 30
+                    }
+                },
+                "value": "text"
+            },
+            {
+                "type": "HTMLTagClose",
+                "range": [
+                    37,
+                    38
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 30
+                    },
+                    "end": {
+                        "line": 2,
+                        "column": 31
+                    }
+                },
+                "value": ""
+            },
+            {
+                "type": "HTMLWhitespace",
+                "range": [
+                    38,
+                    39
+                ],
+                "loc": {
+                    "start": {
+                        "line": 2,
+                        "column": 31
+                    },
+                    "end": {
+                        "line": 3,
+                        "column": 0
+                    }
+                },
+                "value": "\n"
+            },
+            {
+                "type": "HTMLEndTagOpen",
                 "range": [
                     39,
-                    46
+                    45
                 ],
                 "loc": {
                     "start": {
@@ -274,30 +656,59 @@
                     },
                     "end": {
                         "line": 3,
+                        "column": 6
+                    }
+                },
+                "value": "view"
+            },
+            {
+                "type": "HTMLTagClose",
+                "range": [
+                    45,
+                    46
+                ],
+                "loc": {
+                    "start": {
+                        "line": 3,
+                        "column": 6
+                    },
+                    "end": {
+                        "line": 3,
                         "column": 7
                     }
-                }
-            }
-        },
-        {
-            "type": "XText",
-            "range": [
-                46,
-                47
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 7
                 },
-                "end": {
-                    "line": 4,
-                    "column": 0
-                }
+                "value": ""
             },
-            "value": "\n"
-        }
-    ],
+            {
+                "type": "HTMLWhitespace",
+                "range": [
+                    46,
+                    47
+                ],
+                "loc": {
+                    "start": {
+                        "line": 3,
+                        "column": 7
+                    },
+                    "end": {
+                        "line": 4,
+                        "column": 0
+                    }
+                },
+                "value": "\n"
+            }
+        ],
+        "comments": [],
+        "errors": [
+            {
+                "message": "duplicate-attribute",
+                "index": 24,
+                "lineNumber": 2,
+                "column": 17
+            }
+        ],
+        "xmlType": "swan"
+    },
     "tokens": [
         {
             "type": "HTMLTagOpen",
@@ -426,7 +837,7 @@
             "value": "\""
         },
         {
-            "type": "HTMLLiteralText",
+            "type": "HTMLAttrLiteral",
             "range": [
                 21,
                 22
@@ -516,7 +927,7 @@
             "value": "\""
         },
         {
-            "type": "HTMLLiteralText",
+            "type": "HTMLAttrLiteral",
             "range": [
                 28,
                 29
@@ -678,14 +1089,5 @@
             "value": "\n"
         }
     ],
-    "comments": [],
-    "errors": [
-        {
-            "message": "duplicate-attribute",
-            "index": 24,
-            "lineNumber": 2,
-            "column": 17
-        }
-    ],
-    "xmlType": "swan"
+    "comments": []
 }

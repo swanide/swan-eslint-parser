@@ -1,1 +1,187 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<block>\n    <!-- comment 1 -->\n    <view>a</view>\n    <!-- comment 2 -->\n    <view>b <!-- comment 3 --> </view>\n</block>\n<view>\n    Valid:\n    <!----->\n    <!------>\n    <!------->\n    <!-------->\n    <!-- - -->\n    <!-- -- -->\n    <!-- --- -->\n    <!-- ---- -->\n    <!--a-a-->\n    <!--a--a-->\n    <!--a---a-->\n    <!--a----a-->\n</view>\n",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<block>\n    <!-- comment 1 -->\n    <view>a</view>\n    <!-- comment 2 -->\n    <view>b <!-- comment 3 --> </view>\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view>a</view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view>",
+                                "children": []
+                            },
+                            {
+                                "type": "XText",
+                                "text": "a",
+                                "children": []
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view>b <!-- comment 3 --> </view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view>",
+                                "children": []
+                            },
+                            {
+                                "type": "XText",
+                                "text": "b ",
+                                "children": []
+                            },
+                            {
+                                "type": "XText",
+                                "text": " ",
+                                "children": []
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<view>\n    Valid:\n    <!----->\n    <!------>\n    <!------->\n    <!-------->\n    <!-- - -->\n    <!-- -- -->\n    <!-- --- -->\n    <!-- ---- -->\n    <!--a-a-->\n    <!--a--a-->\n    <!--a---a-->\n    <!--a----a-->\n</view>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<view>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    Valid:\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</view>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            }
+        ]
+    }
+]

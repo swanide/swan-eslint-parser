@@ -4,10 +4,10 @@
  */
 
 const parser = require('../../src/index.ts');
-const {readXmlFile, fixturesDir} = require('./util.js');
+const {readXmlFile} = require('./util.js');
 
 
-const mpxmlFile = readXmlFile(`${fixturesDir}/expression.swan`);
+const mpxmlFile = readXmlFile(`${__dirname}/expression.swan`);
 const code = mpxmlFile.content;
 
 const result = parser.parseForESLint(

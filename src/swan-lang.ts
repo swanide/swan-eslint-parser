@@ -20,7 +20,7 @@ export const SWAN_CAN_BE_LEFT_OPEN_TAGS = new Set(['_']);
 export const SWAN_VOID_ELEMENT_TAGS = new Set(['include']);
 export const SWAN_RAWTEXT_TAGS = new Set(['filter', 'import-sjs']);
 export const SWAN_RCDATA_TAGS = new Set(['textarea']);
-export const DIRECTIVE_NAME = /^(s-|bind:?|catch:?|capture-bind:|capture-catch:)([\w-]+)$/;
+export const DIRECTIVE_NAME = /^(s-|bind:?|catch:?|capture-bind:|capture-catch:)(\w[\w-.]+)$/;
 
 
 function getOwnerDocument(leafNode: XNode): XDocument | null {
@@ -132,7 +132,9 @@ function insertError(
     if (document == null) {
         return;
     }
-
+    if (!error.code) {
+        error.code = 'x-expression-error';
+    }
     const index = sortedIndexBy(document.errors, error, byIndex);
     document.errors.splice(index, 0, error);
 }
@@ -207,26 +209,6 @@ export function processMustache(
 ): void {
     debug('[template] convert mustache {{%s}} %j', mustache.value, (mustache as any).range);
     let code = mustache.value;
-    
-    // TODO: template bindings use object model
-    // except is expression
-    let isSpreadObject = false;
-    if ((node.parent.parent?.parent as XElement)?.name === 'template' 
-        && node.parent.type === 'XAttribute' 
-        && (node.parent as XAttribute).key.name === 'data') {
-        isSpreadObject = true;
-    }
-
-    if (isSpreadObject) {
-        code = `{${code}}`;
-        mustache.startToken.range[1] -= 1;
-        mustache.startToken.loc.end.column -= 1;
-        mustache.startToken.value = '{';
-
-        mustache.endToken.range[0] += 1;
-        mustache.endToken.loc.start.column += 1;
-        mustache.endToken.value = '}';
-    }
 
     node.value = {
         type: 'XExpression',
@@ -331,38 +313,33 @@ export function processForExpression(
     let forLeft = null as unknown as ForBlock;
     let forRight = null as unknown as ForBlock;
     let forTrackBy = null as unknown as ForBlock;
-    const operator = code.match(/\sin\s|\strackBy\s/);
-    if (operator) {
-        // list trackBy item.id
-        if (operator[0].includes('trackBy')) {
-            forRight = {
-                code: code.slice(0, operator.index),
-                range: [node.range[0], node.range[0] + operator.index!]
-            };
-            forTrackBy = {
-                code: code.slice(operator.index! + operator[0].length),
-                range: [node.range[0] + operator.index! + operator[0].length, node.range[1]]
-            };
-        }
+    const keyReg = /\s(in|trackBy)\s/g;
+    let match: RegExpMatchArray = null;
+    let forLeftEndIndex = 0;
+    let forTrackByStartIndex = code.length;
+    while (match = keyReg.exec(code)) {
         // item in list
         // item,index in list
-        else {
+        if (match[1] === 'in') {
             forLeft = {
-                code: code.slice(0, operator.index),
-                range: [node.range[0], node.range[0] + operator.index!]
+                code: code.slice(0, match.index),
+                range: [node.range[0], node.range[0] + match.index]
             };
-            forRight = {
-                code: code.slice(operator.index! + operator[0].length),
-                range: [node.range[0] + operator.index! + operator[0].length, node.range[1]]
+            forLeftEndIndex = match.index + match[0].length;
+        }
+        // list trackBy item.id
+        else if (match[1] === 'trackBy') {
+            forTrackBy = {
+                code: code.slice(match.index + match[0].length),
+                range: [node.range[0] + match.index + match[0].length, node.range[1]]
             };
+            forTrackByStartIndex = match.index;
         }
     }
-    else {
-        forRight = {
-            code: code,
-            range: [node.range[1], node.range[0]]
-        };
-    }
+    forRight = {
+        code: code.slice(forLeftEndIndex, forTrackByStartIndex),
+        range: [node.range[0] + forLeftEndIndex, node.range[0] + forTrackByStartIndex]
+    };
 
     const document = getOwnerDocument(node);
     try {

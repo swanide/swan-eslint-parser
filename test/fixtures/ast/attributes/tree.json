@@ -1,1 +1,850 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<block>\n    <view a=\"b\"></view>\n\n    <view a=\"c{{b}}d\"></view>\n\n    <view a=\"{{c}}{{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    \n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>\n<view>\n    <text class\n        =\n            \"value\"\n    ></text>\n    <text class\n        =\n            \"abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>\n    <text style=\"{{{color: '#ccc'}}}\"></text>\n    <view hover-class=\"{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}\"></view>\n</view>\n<view s-elif=\"a <b || c> 1\" s-if=\"{{a < b || c > 1}}\">{{a < b || c > 1}}</view>\n\n",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<block>\n    <view a=\"b\"></view>\n\n    <view a=\"c{{b}}d\"></view>\n\n    <view a=\"{{c}}{{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    \n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view a=\"b\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view a=\"b\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "a=\"b\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "b",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view a=\"c{{b}}d\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view a=\"c{{b}}d\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "a=\"c{{b}}d\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "c",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{b}}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "d",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view a=\"{{c}}{{b}}{{d}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view a=\"{{c}}{{b}}{{d}}\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "a=\"{{c}}{{b}}{{d}}\"",
+                                        "children": [
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{c}}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{b}}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{d}}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view if=\"{{cond + '1'}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view if=\"{{cond + '1'}}\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "if=\"{{cond + '1'}}\"",
+                                        "children": [
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{cond + '1'}}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-if=\"{{cond + 1}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-if=\"{{cond + 1}}\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-if=\"{{cond + 1}}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view if=\"cond < 1\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view if=\"cond < 1\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "if=\"cond < 1\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "cond < 1",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-for=\"{{[1,2,3,4]}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-for=\"{{[1,2,3,4]}}\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"{{[1,2,3,4]}}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-for=\"item in list\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-for=\"item in list\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"item in list\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"list\"",
+                                        "children": []
+                                    },
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for-item=\"item\"",
+                                        "children": []
+                                    },
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for-index=\"index\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-for=\"list trackBy item.id\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-for=\"list trackBy item.id\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"list trackBy item.id\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block s-for=\"item,index in list trackBy item\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block s-for=\"item,index in list trackBy item\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"item,index in list trackBy item\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block s-for=\"item in list trackBy item.id\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block s-for=\"item in list trackBy item.id\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"item in list trackBy item.id\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block s-for=\"list trackBy item.id\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block s-for=\"list trackBy item.id\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"list trackBy item.id\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block s-for=\"list\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block s-for=\"list\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"list\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block s-for=\"item,index in [1, 2, 3] trackBy item\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"item,index in [1, 2, 3] trackBy item\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block s-for=\"item in [1, 2, 3] trackBy item.id\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"item in [1, 2, 3] trackBy item.id\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block s-for=\"[1, 2, 3] trackBy item.id\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block s-for=\"[1, 2, 3] trackBy item.id\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"[1, 2, 3] trackBy item.id\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block s-for=\"[1, 2, 3]\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block s-for=\"[1, 2, 3]\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"[1, 2, 3]\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    \n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view scroll-top=\"{=scrollTop=}\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "scroll-top=\"{=scrollTop=}\"",
+                                        "children": [
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{=scrollTop=}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XText",
+                                "text": "{=scrollTop=}",
+                                "children": []
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view\n        s-for=\"{{list}}\"\n    ></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view\n        s-for=\"{{list}}\"\n    >",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"{{list}}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<view>\n    <text class\n        =\n            \"value\"\n    ></text>\n    <text class\n        =\n            \"abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>\n    <text style=\"{{{color: '#ccc'}}}\"></text>\n    <view hover-class=\"{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}\"></view>\n</view>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<view>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text class\n        =\n            \"value\"\n    ></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text class\n        =\n            \"value\"\n    >",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "class\n        =\n            \"value\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "value",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text class\n        =\n            \"abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text class\n        =\n            \"abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    >",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "class\n        =\n            \"abc-{{ cond ? 'class1' : 'class2' }}-def\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "abc-",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{ cond ? 'class1' : 'class2' }}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "-def",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<text style=\"{{{color: '#ccc'}}}\"></text>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<text style=\"{{{color: '#ccc'}}}\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "style=\"{{{color: '#ccc'}}}\"",
+                                        "children": [
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{{color: '#ccc'}}}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</text>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view hover-class=\"{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view hover-class=\"{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "hover-class=\"{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}\"",
+                                        "children": [
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</view>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<view s-elif=\"a <b || c> 1\" s-if=\"{{a < b || c > 1}}\">{{a < b || c > 1}}</view>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<view s-elif=\"a <b || c> 1\" s-if=\"{{a < b || c > 1}}\">",
+                        "children": [
+                            {
+                                "type": "XDirective",
+                                "text": "s-elif=\"a <b || c> 1\"",
+                                "children": []
+                            },
+                            {
+                                "type": "XDirective",
+                                "text": "s-if=\"{{a < b || c > 1}}\"",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{a < b || c > 1}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</view>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n\n",
+                "children": []
+            }
+        ]
+    }
+]

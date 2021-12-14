@@ -1,1 +1,166 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<block>\n    <view>\n</block>\n\n<block>\n    <view>\n    <image></image >\n</block>\n\n<block>\n    <image / >\n    <image></ image>\n</block>",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<block>\n    <view>\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view>\n",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view>",
+                                "children": []
+                            },
+                            {
+                                "type": "XText",
+                                "text": "\n",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<block>\n    <view>\n    <image></image >\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view>\n    <image></image >\n",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view>",
+                                "children": []
+                            },
+                            {
+                                "type": "XText",
+                                "text": "\n    ",
+                                "children": []
+                            },
+                            {
+                                "type": "XElement",
+                                "text": "<image></image >",
+                                "children": [
+                                    {
+                                        "type": "XStartTag",
+                                        "text": "<image>",
+                                        "children": []
+                                    },
+                                    {
+                                        "type": "XEndTag",
+                                        "text": "</image >",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XText",
+                                "text": "\n",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<block>\n    <image / >\n    <image></ image>\n</block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<image / >\n    <image></ image>\n",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<image / >",
+                                "children": []
+                            },
+                            {
+                                "type": "XText",
+                                "text": "\n    ",
+                                "children": []
+                            },
+                            {
+                                "type": "XElement",
+                                "text": "<image></ image>\n",
+                                "children": [
+                                    {
+                                        "type": "XStartTag",
+                                        "text": "<image>",
+                                        "children": []
+                                    },
+                                    {
+                                        "type": "XText",
+                                        "text": "\n",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

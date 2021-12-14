@@ -124,17 +124,7 @@ export default class Parser {
             tokenizer.gaps,
             tokenizer.lineTerminators,
         );
-        this.parserOptions = Object.assign({
-            noOpenTag: true,
-            script: {
-                parser: 'espree',
-                sourceType: 'module',
-                ecmaVersion: 2018,
-                range: true,
-                loc: true
-            },
-            parserOptions
-        });
+        this.parserOptions = parserOptions;
         this.document = {
             type: 'XDocument',
             range: [0, 0],
@@ -182,7 +172,7 @@ export default class Parser {
         );
         this.errors.push(error);
 
-        debug('[html] syntax error:', error.message);
+        debug('[swan] syntax error:', error.message);
     }
 
     /**
@@ -231,13 +221,11 @@ export default class Parser {
     /**
      * Adjust and validate the given attribute node.
      * @param node The attribute node to handle.
-     * @param namespace The current namespace.
      */
     private processAttribute(node: XAttribute): void {
         const attrName = node.key.name;
         if (DIRECTIVE_NAME.test(attrName)) {
             const directiveNode = convertToDirective(node);
-            // 转换控制语句, for 需要单独处理
             if (node.value.length === 1 && node.value[0].type === 'XLiteral') {
                 const token = node.value[0];
                 const expressionNode: XExpression = {
@@ -249,6 +237,7 @@ export default class Parser {
                     references: []
                 };
                 if (token.value.trim()) {
+                    // 转换控制语句, for 需要单独处理
                     if (directiveNode.key.name !== 'for') {
                         processExpression(
                             this.parserOptions.script!,
@@ -269,6 +258,10 @@ export default class Parser {
                 node.value[0] = expressionNode;
             }
         }
+        else if (attrName.startsWith('s-') || attrName.startsWith('bind:')) {
+            this.reportParseError(node.key, 'x-invalid-directive');
+        }
+
         const values = node.value.map(token => {
             if (token.type === 'Mustache') {
 
@@ -303,7 +296,7 @@ export default class Parser {
      */
     // eslint-disable-next-line complexity
     protected StartTag(token: StartTag): void {
-        debug('[html] StartTag %j', token);
+        debug('[swan] StartTag %j', token);
 
         this.closeCurrentElementIfNecessary(token.name);
         const parent = this.currentNode;
@@ -375,7 +368,7 @@ export default class Parser {
      * @param token The token to handle.
      */
     protected EndTag(token: EndTag): void {
-        debug('[html] EndTag %j', token);
+        debug('[swan] EndTag %j', token);
 
         const i = findLastIndex(
             this.elementStack,
@@ -402,7 +395,7 @@ export default class Parser {
      * @param token The token to handle.
      */
     protected Text(token: Text): void {
-        debug('[html] Text %j', token);
+        debug('[swan] Text %j', token);
         const parent = this.currentNode;
         parent.children.push({
             type: 'XText',
@@ -430,7 +423,7 @@ export default class Parser {
      * @param token The token to handle.
      */
     protected Mustache(token: Mustache): void {
-        debug('[html] Mustache %j', token);
+        debug('[swan] Mustache %j', token);
 
         const parent = this.currentNode;
         const mustacheNode: XMustache = {

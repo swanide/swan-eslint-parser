@@ -1,1 +1,74 @@
-[]
+[
+    {
+        "type": "XDocument",
+        "text": "<import-sjs module=\"sjs\">\nconst hello = true;\nconst world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello:,\n    world: world\n};\n</import-sjs>\n\n<import-sjs module=\"sjs\"></import-sjs>",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<import-sjs module=\"sjs\">\nconst hello = true;\nconst world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello:,\n    world: world\n};\n</import-sjs>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<import-sjs module=\"sjs\">",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "module=\"sjs\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "sjs",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\nconst hello = true;\nconst world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello:,\n    world: world\n};\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</import-sjs>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<import-sjs module=\"sjs\"></import-sjs>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<import-sjs module=\"sjs\">",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "module=\"sjs\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "sjs",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</import-sjs>",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

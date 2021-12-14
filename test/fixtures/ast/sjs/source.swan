@@ -8,7 +8,12 @@ module.exports = {
     world: world
 };
 </import-sjs>
+
 <import-sjs src="./module.sjs" module="sjsModule"/>
 <import-sjs src="./module.sjs" module="sjsModule"></import-sjs>
 <import-sjs></import-sjs>
 <import-sjs module="sjs"></import-sjs>
+
+<filter module="sjs">
+    module.exports = 1;
+</filter>

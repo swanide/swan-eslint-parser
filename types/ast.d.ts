@@ -232,9 +232,11 @@ export type ErrorCode =
     | 'duplicate-attribute'
     | 'end-tag-with-trailing-solidus'
     | 'non-void-html-element-start-tag-with-trailing-solidus'
-    | 'x-invalid-end-tag'
-    | 'x-invalid-namespace'
     | 'attribute-value-invalid-unquoted'
     | 'unexpected-line-break'
     | 'missing-expression-end-tag'
     | 'missing-end-tag'
+    | 'x-invalid-end-tag'
+    | 'x-invalid-namespace'
+    | 'x-invalid-directive'
+    | 'x-expression-error';

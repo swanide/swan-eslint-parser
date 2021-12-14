@@ -6,15 +6,25 @@
     <view a="{{c}}{{b}}{{d}}"></view>
 
     <view if="{{cond + '1'}}"></view>
-
     <view s-if="{{cond + 1}}"></view>
+    <view if="cond < 1"></view>
 
-    <view s-for-items="{{[1,2,3,4]}}"></view>
-
+    <view s-for="{{[1,2,3,4]}}"></view>
+    <view s-for="item in list"></view>
+    <view s-for="list" s-for-item="item" s-for-index="index"></view>
+    <view s-for="list trackBy item.id"></view>
+    <block s-for="item,index in list trackBy item"></block>
+    <block s-for="item in list trackBy item.id"></block>
+    <block s-for="list trackBy item.id"></block>
+    <block s-for="list"></block>
+    <block s-for="item,index in [1, 2, 3] trackBy item"></block>
+    <block s-for="item in [1, 2, 3] trackBy item.id"></block>
+    <block s-for="[1, 2, 3] trackBy item.id"></block>
+    <block s-for="[1, 2, 3]"></block>
+    
+    <view scroll-top="{=scrollTop=}">{=scrollTop=}</view>
     <view
-        s-for-items="{{[1,2,3,4]}}"></view>
-    <view
-        s-for-items="{{list}}"
+        s-for="{{list}}"
     ></view>
 </block>
 <view>
@@ -26,4 +36,8 @@
         =
             "abc-{{ cond ? 'class1' : 'class2' }}-def"
     ></text>
+    <text style="{{{color: '#ccc'}}}"></text>
+    <view hover-class="{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}"></view>
 </view>
+<view s-elif="a <b || c> 1" s-if="{{a < b || c > 1}}">{{a < b || c > 1}}</view>
+
