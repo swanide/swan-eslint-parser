@@ -407,21 +407,21 @@
                                     },
                                     "expression": {
                                         "type": "Literal",
-                                        "start": 93,
-                                        "end": 98,
+                                        "start": 88,
+                                        "end": 93,
                                         "loc": {
                                             "start": {
                                                 "line": 4,
-                                                "column": 24
+                                                "column": 19
                                             },
                                             "end": {
                                                 "line": 4,
-                                                "column": 29
+                                                "column": 24
                                             }
                                         },
                                         "range": [
-                                            93,
-                                            98
+                                            88,
+                                            93
                                         ],
                                         "value": "123",
                                         "raw": "'123'"
@@ -645,80 +645,80 @@
                                                 },
                                                 "expression": {
                                                     "type": "ConditionalExpression",
-                                                    "start": 192,
-                                                    "end": 218,
+                                                    "start": 164,
+                                                    "end": 190,
                                                     "loc": {
                                                         "start": {
                                                             "line": 8,
-                                                            "column": 47
+                                                            "column": 19
                                                         },
                                                         "end": {
-                                                            "line": 9,
-                                                            "column": 19
+                                                            "line": 8,
+                                                            "column": 45
                                                         }
                                                     },
                                                     "range": [
-                                                        192,
-                                                        218
+                                                        164,
+                                                        190
                                                     ],
                                                     "test": {
                                                         "type": "Identifier",
-                                                        "start": 192,
-                                                        "end": 196,
+                                                        "start": 164,
+                                                        "end": 168,
                                                         "loc": {
                                                             "start": {
                                                                 "line": 8,
-                                                                "column": 47
+                                                                "column": 19
                                                             },
                                                             "end": {
                                                                 "line": 8,
-                                                                "column": 51
+                                                                "column": 23
                                                             }
                                                         },
                                                         "range": [
-                                                            192,
-                                                            196
+                                                            164,
+                                                            168
                                                         ],
                                                         "name": "cond"
                                                     },
                                                     "consequent": {
                                                         "type": "Literal",
-                                                        "start": 199,
-                                                        "end": 207,
+                                                        "start": 171,
+                                                        "end": 179,
                                                         "loc": {
                                                             "start": {
-                                                                "line": 9,
-                                                                "column": 0
+                                                                "line": 8,
+                                                                "column": 26
                                                             },
                                                             "end": {
-                                                                "line": 9,
-                                                                "column": 8
+                                                                "line": 8,
+                                                                "column": 34
                                                             }
                                                         },
                                                         "range": [
-                                                            199,
-                                                            207
+                                                            171,
+                                                            179
                                                         ],
                                                         "value": "class1",
                                                         "raw": "'class1'"
                                                     },
                                                     "alternate": {
                                                         "type": "Literal",
-                                                        "start": 210,
-                                                        "end": 218,
+                                                        "start": 182,
+                                                        "end": 190,
                                                         "loc": {
                                                             "start": {
-                                                                "line": 9,
-                                                                "column": 11
+                                                                "line": 8,
+                                                                "column": 37
                                                             },
                                                             "end": {
-                                                                "line": 9,
-                                                                "column": 19
+                                                                "line": 8,
+                                                                "column": 45
                                                             }
                                                         },
                                                         "range": [
-                                                            210,
-                                                            218
+                                                            182,
+                                                            190
                                                         ],
                                                         "value": "class2",
                                                         "raw": "'class2'"
@@ -728,21 +728,21 @@
                                                     {
                                                         "id": {
                                                             "type": "Identifier",
-                                                            "start": 192,
-                                                            "end": 196,
+                                                            "start": 164,
+                                                            "end": 168,
                                                             "loc": {
                                                                 "start": {
                                                                     "line": 8,
-                                                                    "column": 47
+                                                                    "column": 19
                                                                 },
                                                                 "end": {
                                                                     "line": 8,
-                                                                    "column": 51
+                                                                    "column": 23
                                                                 }
                                                             },
                                                             "range": [
-                                                                192,
-                                                                196
+                                                                164,
+                                                                168
                                                             ],
                                                             "name": "cond"
                                                         },
@@ -971,80 +971,80 @@
                                                 },
                                                 "expression": {
                                                     "type": "ConditionalExpression",
-                                                    "start": 362,
-                                                    "end": 420,
+                                                    "start": 274,
+                                                    "end": 332,
                                                     "loc": {
                                                         "start": {
-                                                            "line": 17,
-                                                            "column": 9
+                                                            "line": 13,
+                                                            "column": 16
                                                         },
                                                         "end": {
-                                                            "line": 17,
-                                                            "column": 67
+                                                            "line": 15,
+                                                            "column": 26
                                                         }
                                                     },
                                                     "range": [
-                                                        362,
-                                                        420
+                                                        274,
+                                                        332
                                                     ],
                                                     "test": {
                                                         "type": "Identifier",
-                                                        "start": 362,
-                                                        "end": 366,
+                                                        "start": 274,
+                                                        "end": 278,
                                                         "loc": {
                                                             "start": {
-                                                                "line": 17,
-                                                                "column": 9
+                                                                "line": 13,
+                                                                "column": 16
                                                             },
                                                             "end": {
-                                                                "line": 17,
-                                                                "column": 13
+                                                                "line": 13,
+                                                                "column": 20
                                                             }
                                                         },
                                                         "range": [
-                                                            362,
-                                                            366
+                                                            274,
+                                                            278
                                                         ],
                                                         "name": "cond"
                                                     },
                                                     "consequent": {
                                                         "type": "Literal",
-                                                        "start": 385,
-                                                        "end": 393,
+                                                        "start": 297,
+                                                        "end": 305,
                                                         "loc": {
                                                             "start": {
-                                                                "line": 17,
-                                                                "column": 32
+                                                                "line": 14,
+                                                                "column": 18
                                                             },
                                                             "end": {
-                                                                "line": 17,
-                                                                "column": 40
+                                                                "line": 14,
+                                                                "column": 26
                                                             }
                                                         },
                                                         "range": [
-                                                            385,
-                                                            393
+                                                            297,
+                                                            305
                                                         ],
                                                         "value": "class1",
                                                         "raw": "'class1'"
                                                     },
                                                     "alternate": {
                                                         "type": "Literal",
-                                                        "start": 412,
-                                                        "end": 420,
+                                                        "start": 324,
+                                                        "end": 332,
                                                         "loc": {
                                                             "start": {
-                                                                "line": 17,
-                                                                "column": 59
+                                                                "line": 15,
+                                                                "column": 18
                                                             },
                                                             "end": {
-                                                                "line": 17,
-                                                                "column": 67
+                                                                "line": 15,
+                                                                "column": 26
                                                             }
                                                         },
                                                         "range": [
-                                                            412,
-                                                            420
+                                                            324,
+                                                            332
                                                         ],
                                                         "value": "class2",
                                                         "raw": "'class2'"
@@ -1054,21 +1054,21 @@
                                                     {
                                                         "id": {
                                                             "type": "Identifier",
-                                                            "start": 362,
-                                                            "end": 366,
+                                                            "start": 274,
+                                                            "end": 278,
                                                             "loc": {
                                                                 "start": {
-                                                                    "line": 17,
-                                                                    "column": 9
+                                                                    "line": 13,
+                                                                    "column": 16
                                                                 },
                                                                 "end": {
-                                                                    "line": 17,
-                                                                    "column": 13
+                                                                    "line": 13,
+                                                                    "column": 20
                                                                 }
                                                             },
                                                             "range": [
-                                                                362,
-                                                                366
+                                                                274,
+                                                                278
                                                             ],
                                                             "name": "cond"
                                                         },

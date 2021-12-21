@@ -1,2 +1,1 @@
-<view hover-class="{{status === 0 || status === 3 ? 'spin-hover-feedback' : '')}}">
-</view>
+<view></view/>

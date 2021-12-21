@@ -12,7 +12,7 @@ function main(projectDir) {
     const swanFiles = require('glob').sync('**/*.swan', {
         cwd: projectDir,
         ignore: [
-            'node_modules/**/*.swan'
+            // 'node_modules/**/*.swan'
         ]
     });
     let errorsCount = 0;

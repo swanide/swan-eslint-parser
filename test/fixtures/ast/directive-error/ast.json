@@ -197,21 +197,21 @@
                                                 },
                                                 "expression": {
                                                     "type": "Identifier",
-                                                    "start": 32,
-                                                    "end": 36,
+                                                    "start": 28,
+                                                    "end": 32,
                                                     "loc": {
                                                         "start": {
                                                             "line": 2,
-                                                            "column": 24
+                                                            "column": 20
                                                         },
                                                         "end": {
                                                             "line": 2,
-                                                            "column": 28
+                                                            "column": 24
                                                         }
                                                     },
                                                     "range": [
-                                                        32,
-                                                        36
+                                                        28,
+                                                        32
                                                     ],
                                                     "name": "cond"
                                                 },
@@ -219,21 +219,21 @@
                                                     {
                                                         "id": {
                                                             "type": "Identifier",
-                                                            "start": 32,
-                                                            "end": 36,
+                                                            "start": 28,
+                                                            "end": 32,
                                                             "loc": {
                                                                 "start": {
                                                                     "line": 2,
-                                                                    "column": 24
+                                                                    "column": 20
                                                                 },
                                                                 "end": {
                                                                     "line": 2,
-                                                                    "column": 28
+                                                                    "column": 24
                                                                 }
                                                             },
                                                             "range": [
-                                                                32,
-                                                                36
+                                                                28,
+                                                                32
                                                             ],
                                                             "name": "cond"
                                                         },
@@ -426,21 +426,21 @@
                                                 },
                                                 "expression": {
                                                     "type": "Identifier",
-                                                    "start": 64,
-                                                    "end": 68,
+                                                    "start": 60,
+                                                    "end": 64,
                                                     "loc": {
                                                         "start": {
                                                             "line": 3,
-                                                            "column": 20
+                                                            "column": 16
                                                         },
                                                         "end": {
                                                             "line": 3,
-                                                            "column": 24
+                                                            "column": 20
                                                         }
                                                     },
                                                     "range": [
-                                                        64,
-                                                        68
+                                                        60,
+                                                        64
                                                     ],
                                                     "name": "cond"
                                                 },
@@ -448,21 +448,21 @@
                                                     {
                                                         "id": {
                                                             "type": "Identifier",
-                                                            "start": 64,
-                                                            "end": 68,
+                                                            "start": 60,
+                                                            "end": 64,
                                                             "loc": {
                                                                 "start": {
                                                                     "line": 3,
-                                                                    "column": 20
+                                                                    "column": 16
                                                                 },
                                                                 "end": {
                                                                     "line": 3,
-                                                                    "column": 24
+                                                                    "column": 20
                                                                 }
                                                             },
                                                             "range": [
-                                                                64,
-                                                                68
+                                                                60,
+                                                                64
                                                             ],
                                                             "name": "cond"
                                                         },

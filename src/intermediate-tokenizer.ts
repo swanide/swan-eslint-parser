@@ -192,7 +192,7 @@ export default class IntermediateTokenizer {
                 token.value += value;
             }
             else {
-                throw new Error('unreachable');
+                this.throwParseError(token, 'unreachable');
             }
         }
 
@@ -213,6 +213,21 @@ export default class IntermediateTokenizer {
         this.errors.push(error);
 
         debug('[swan] syntax error:', error.message);
+    }
+
+    /**
+     * throw an parsing error.
+     * @param code The error code.
+     */
+    private throwParseError(token: HasLocation, code: ErrorCode): never {
+        const error = ParseError.fromCode(
+            code,
+            token.range[0],
+            token.loc.start.line,
+            token.loc.start.column,
+        );
+        debug('[swan] syntax error:', error.message);
+        throw error;
     }
 
     /**
@@ -286,7 +301,7 @@ export default class IntermediateTokenizer {
             this.attribute.loc.end = token.loc.end;
 
             if (this.currentStartTag == null) {
-                throw new Error('unreachable');
+                this.throwParseError(token, 'unreachable');
             }
 
             this.currentStartTag.range[1] = token.range[1];
@@ -344,7 +359,7 @@ export default class IntermediateTokenizer {
         this.tokens.push(token);
 
         if (this.currentStartTag == null) {
-            throw new Error('unreachable');
+            this.throwParseError(token, 'unreachable');
         }
 
         if (this.attributeNames.has(token.value)) {
@@ -439,7 +454,7 @@ export default class IntermediateTokenizer {
             });
 
             if (this.currentStartTag == null) {
-                throw new Error('unreachable');
+                this.throwParseError(token, 'unreachable');
             }
             this.currentStartTag.range[1] = token.range[1];
             this.currentStartTag.loc.end = token.loc.end;
@@ -458,7 +473,7 @@ export default class IntermediateTokenizer {
         const result: IntermediateToken | null = null;
 
         if (this.attribute == null) {
-            throw new Error('unreachable');
+            this.throwParseError(token, 'unreachable');
         }
 
         if (this.expressionStartToken != null) {
@@ -483,7 +498,7 @@ export default class IntermediateTokenizer {
             this.attribute.range[1] = token.range[1];
             this.attribute.loc.end = token.loc.end;
             if (this.currentStartTag == null) {
-                throw new Error('unreachable');
+                this.throwParseError(token, 'unreachable');
             }
             this.currentStartTag.range[1] = token.range[1];
             this.currentStartTag.loc.end = token.loc.end;
@@ -515,7 +530,7 @@ export default class IntermediateTokenizer {
         this.tokens.push(token);
 
         if (this.currentStartTag == null) {
-            throw new Error('unreachable');
+            this.throwParseError(token, 'unreachable');
         }
         const startTag = this.currentStartTag;
         this.currentStartTag = null;
@@ -543,7 +558,7 @@ export default class IntermediateTokenizer {
         }
 
         if (this.currentToken == null) {
-            throw new Error('unreachable');
+            this.throwParseError(token, 'unreachable');
         }
         this.currentToken.range[1] = token.range[1];
         this.currentToken.loc.end = token.loc.end;
@@ -640,7 +655,7 @@ export default class IntermediateTokenizer {
 
         if (this.currentStartTag != null) {
             if (this.attribute == null) {
-                throw new Error('unreachable');
+                this.throwParseError(token, 'unreachable');
             }
             const mustache: Mustache = {
                 type: 'Mustache',

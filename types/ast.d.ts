@@ -180,6 +180,8 @@ export type Node =
     | script.ScriptNode
     | XNode
 
+export type ScriptProgram = script.ScriptProgram;
+
 export interface XStartTag extends HasLocation, HasParent {
     type: 'XStartTag';
     parent: XElement;
@@ -201,10 +203,7 @@ export interface XEndTag extends HasLocation, HasParent {
  */
 export type ErrorCode =
     | 'abrupt-closing-of-empty-comment'
-    | 'absence-of-digits-in-numeric-character-reference'
-    | 'character-reference-outside-unicode-range'
     | 'control-character-in-input-stream'
-    | 'control-character-reference'
     | 'eof-before-tag-name'
     | 'eof-in-comment'
     | 'eof-in-tag'
@@ -213,13 +212,9 @@ export type ErrorCode =
     | 'invalid-first-character-of-tag-name'
     | 'missing-attribute-value'
     | 'missing-end-tag-name'
-    | 'missing-semicolon-after-character-reference'
     | 'missing-whitespace-between-attributes'
     | 'nested-comment'
-    | 'noncharacter-character-reference'
     | 'noncharacter-in-input-stream'
-    | 'null-character-reference'
-    | 'surrogate-character-reference'
     | 'surrogate-in-input-stream'
     | 'unexpected-character-in-attribute-name'
     | 'unexpected-character-in-unquoted-attribute-value'
@@ -227,16 +222,14 @@ export type ErrorCode =
     | 'unexpected-null-character'
     | 'unexpected-question-mark-instead-of-tag-name'
     | 'unexpected-solidus-in-tag'
-    | 'unknown-named-character-reference'
     | 'end-tag-with-attributes'
     | 'duplicate-attribute'
-    | 'end-tag-with-trailing-solidus'
     | 'non-void-html-element-start-tag-with-trailing-solidus'
     | 'attribute-value-invalid-unquoted'
     | 'unexpected-line-break'
     | 'missing-expression-end-tag'
     | 'missing-end-tag'
     | 'x-invalid-end-tag'
-    | 'x-invalid-namespace'
     | 'x-invalid-directive'
-    | 'x-expression-error';
+    | 'x-expression-error'
+    | 'unreachable';

@@ -88,7 +88,7 @@ function getCommaTokenBeforeNode(tokens: Token[], node: Node): Token | null {
 
     while (tokenIndex >= 0) {
         const token = tokens[tokenIndex];
-        if (token.type === 'Punctuator' && token.value === ',') {
+        if (token?.type === 'Punctuator' && token?.value === ',') {
             return token;
         }
         tokenIndex -= 1;
@@ -264,13 +264,11 @@ export function parseExpression(
     {allowEmpty = false} = {},
 ): ExpressionParseResult<Expression> {
     debug('[script] parse expression: "%s"', code);
-
- debug('[script] parse expression: "0(%s)"', code);
-
+    const codeLocationCalculator = locationCalculator.getSubCalculatorShift(-2);
     try {
         const {ast} = parseScriptFragment(
             `0(${code})`,
-            locationCalculator.getSubCalculatorShift(-2),
+            codeLocationCalculator,
             parserOptions,
         );
         const tokens = ast.tokens || [];

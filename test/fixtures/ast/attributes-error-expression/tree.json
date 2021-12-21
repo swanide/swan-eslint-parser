@@ -1,0 +1,30 @@
+[
+    {
+        "type": "XDocument",
+        "text": "<block s-if=\"ab cd\"></block>",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<block s-if=\"ab cd\"></block>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block s-if=\"ab cd\">",
+                        "children": [
+                            {
+                                "type": "XDirective",
+                                "text": "s-if=\"ab cd\"",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</block>",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

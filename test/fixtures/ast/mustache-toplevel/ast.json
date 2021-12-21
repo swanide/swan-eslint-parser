@@ -69,21 +69,21 @@
                     },
                     "expression": {
                         "type": "Identifier",
-                        "start": 5,
-                        "end": 8,
+                        "start": 2,
+                        "end": 5,
                         "loc": {
                             "start": {
                                 "line": 1,
-                                "column": 5
+                                "column": 2
                             },
                             "end": {
                                 "line": 1,
-                                "column": 8
+                                "column": 5
                             }
                         },
                         "range": [
-                            5,
-                            8
+                            2,
+                            5
                         ],
                         "name": "abc"
                     },
@@ -91,21 +91,21 @@
                         {
                             "id": {
                                 "type": "Identifier",
-                                "start": 5,
-                                "end": 8,
+                                "start": 2,
+                                "end": 5,
                                 "loc": {
                                     "start": {
                                         "line": 1,
-                                        "column": 5
+                                        "column": 2
                                     },
                                     "end": {
                                         "line": 1,
-                                        "column": 8
+                                        "column": 5
                                     }
                                 },
                                 "range": [
-                                    5,
-                                    8
+                                    2,
+                                    5
                                 ],
                                 "name": "abc"
                             },
@@ -202,21 +202,21 @@
                     },
                     "expression": {
                         "type": "Identifier",
-                        "start": 16,
-                        "end": 19,
+                        "start": 13,
+                        "end": 16,
                         "loc": {
                             "start": {
                                 "line": 3,
-                                "column": 7
+                                "column": 4
                             },
                             "end": {
                                 "line": 3,
-                                "column": 10
+                                "column": 7
                             }
                         },
                         "range": [
-                            16,
-                            19
+                            13,
+                            16
                         ],
                         "name": "def"
                     },
@@ -224,21 +224,21 @@
                         {
                             "id": {
                                 "type": "Identifier",
-                                "start": 16,
-                                "end": 19,
+                                "start": 13,
+                                "end": 16,
                                 "loc": {
                                     "start": {
                                         "line": 3,
-                                        "column": 7
+                                        "column": 4
                                     },
                                     "end": {
                                         "line": 3,
-                                        "column": 10
+                                        "column": 7
                                     }
                                 },
                                 "range": [
-                                    16,
-                                    19
+                                    13,
+                                    16
                                 ],
                                 "name": "def"
                             },
@@ -407,21 +407,21 @@
                                         },
                                         "expression": {
                                             "type": "Identifier",
-                                            "start": 41,
-                                            "end": 45,
+                                            "start": 37,
+                                            "end": 41,
                                             "loc": {
                                                 "start": {
                                                     "line": 5,
-                                                    "column": 19
+                                                    "column": 15
                                                 },
                                                 "end": {
                                                     "line": 5,
-                                                    "column": 23
+                                                    "column": 19
                                                 }
                                             },
                                             "range": [
-                                                41,
-                                                45
+                                                37,
+                                                41
                                             ],
                                             "name": "expr"
                                         },
@@ -429,21 +429,21 @@
                                             {
                                                 "id": {
                                                     "type": "Identifier",
-                                                    "start": 41,
-                                                    "end": 45,
+                                                    "start": 37,
+                                                    "end": 41,
                                                     "loc": {
                                                         "start": {
                                                             "line": 5,
-                                                            "column": 19
+                                                            "column": 15
                                                         },
                                                         "end": {
                                                             "line": 5,
-                                                            "column": 23
+                                                            "column": 19
                                                         }
                                                     },
                                                     "range": [
-                                                        41,
-                                                        45
+                                                        37,
+                                                        41
                                                     ],
                                                     "name": "expr"
                                                 },
@@ -527,21 +527,21 @@
                             },
                             "expression": {
                                 "type": "Identifier",
-                                "start": 50,
-                                "end": 53,
+                                "start": 47,
+                                "end": 50,
                                 "loc": {
                                     "start": {
                                         "line": 5,
-                                        "column": 28
+                                        "column": 25
                                     },
                                     "end": {
                                         "line": 5,
-                                        "column": 31
+                                        "column": 28
                                     }
                                 },
                                 "range": [
-                                    50,
-                                    53
+                                    47,
+                                    50
                                 ],
                                 "name": "ghi"
                             },
@@ -549,21 +549,21 @@
                                 {
                                     "id": {
                                         "type": "Identifier",
-                                        "start": 50,
-                                        "end": 53,
+                                        "start": 47,
+                                        "end": 50,
                                         "loc": {
                                             "start": {
                                                 "line": 5,
-                                                "column": 28
+                                                "column": 25
                                             },
                                             "end": {
                                                 "line": 5,
-                                                "column": 31
+                                                "column": 28
                                             }
                                         },
                                         "range": [
-                                            50,
-                                            53
+                                            47,
+                                            50
                                         ],
                                         "name": "ghi"
                                     },

@@ -1,0 +1,1 @@
+<block s-if="ab cd"></block>

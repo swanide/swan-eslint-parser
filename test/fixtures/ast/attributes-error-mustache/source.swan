@@ -1,4 +1,4 @@
 <block>
     <view a="{{cond}"></view>
     <view s-if="{{cond"></view>
-</view>
+</block>

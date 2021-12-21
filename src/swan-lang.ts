@@ -258,10 +258,7 @@ export function processExpression(
     code: string
 ): void {
     debug('[template] convert expression {{%s}} %j', code, node.range);
-    const range: [number, number] = [
-        node.range[1],
-        node.range[0],
-    ];
+    const range: [number, number] = [...node.range];
 
     const document = getOwnerDocument(node);
     try {
@@ -455,6 +452,10 @@ export function processScriptModule(
 ) {
     // TODO:
     debug('[template] parse import-sjs module %s %j', node.name, node.range);
+    parserOptions = Object.assign({
+        tokens: true,
+        comment: true
+    }, parserOptions)
     const document = getOwnerDocument(node);
     try {
         const {ast} = parseScriptElement(node, globalLocationCalculator, parserOptions);

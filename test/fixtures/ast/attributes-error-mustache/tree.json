@@ -1,11 +1,11 @@
 [
     {
         "type": "XDocument",
-        "text": "<block>\n    <view a=\"{{cond}\"></view>\n    <view s-if=\"{{cond\"></view>\n</view>",
+        "text": "<block>\n    <view a=\"{{cond}\"></view>\n    <view s-if=\"{{cond\"></view>\n</block>",
         "children": [
             {
                 "type": "XElement",
-                "text": "<block>\n    <view a=\"{{cond}\"></view>\n    <view s-if=\"{{cond\"></view>\n</view>",
+                "text": "<block>\n    <view a=\"{{cond}\"></view>\n    <view s-if=\"{{cond\"></view>\n</block>",
                 "children": [
                     {
                         "type": "XStartTag",
@@ -19,7 +19,7 @@
                     },
                     {
                         "type": "XElement",
-                        "text": "<view a=\"{{cond}\"></view>\n    <view s-if=\"{{cond\"></view>\n</view>",
+                        "text": "<view a=\"{{cond}\"></view>\n    <view s-if=\"{{cond\"></view>\n</block>",
                         "children": [
                             {
                                 "type": "XStartTag",
@@ -40,7 +40,7 @@
                             },
                             {
                                 "type": "XText",
-                                "text": "</view>\n    <view s-if=\"{{cond\"></view>\n</view>",
+                                "text": "</view>\n    <view s-if=\"{{cond\"></view>\n</block>",
                                 "children": []
                             }
                         ]

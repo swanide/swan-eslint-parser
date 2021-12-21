@@ -14,7 +14,7 @@
     },
     "range": [
         0,
-        77
+        78
     ],
     "body": [],
     "sourceType": "module",
@@ -22,7 +22,7 @@
         "type": "XDocument",
         "range": [
             0,
-            77
+            78
         ],
         "loc": {
             "start": {
@@ -31,7 +31,7 @@
             },
             "end": {
                 "line": 4,
-                "column": 7
+                "column": 8
             }
         },
         "children": [
@@ -39,7 +39,7 @@
                 "type": "XElement",
                 "range": [
                     0,
-                    77
+                    78
                 ],
                 "loc": {
                     "start": {
@@ -48,7 +48,7 @@
                     },
                     "end": {
                         "line": 4,
-                        "column": 7
+                        "column": 8
                     }
                 },
                 "name": "block",
@@ -95,7 +95,7 @@
                         "type": "XElement",
                         "range": [
                             12,
-                            77
+                            78
                         ],
                         "loc": {
                             "start": {
@@ -104,7 +104,7 @@
                             },
                             "end": {
                                 "line": 4,
-                                "column": 7
+                                "column": 8
                             }
                         },
                         "name": "view",
@@ -190,7 +190,7 @@
                                 "type": "XText",
                                 "range": [
                                     30,
-                                    77
+                                    78
                                 ],
                                 "loc": {
                                     "start": {
@@ -199,10 +199,10 @@
                                     },
                                     "end": {
                                         "line": 4,
-                                        "column": 7
+                                        "column": 8
                                     }
                                 },
-                                "value": "</view>\n    <view s-if=\"{{cond\"></view>\n</view>"
+                                "value": "</view>\n    <view s-if=\"{{cond\"></view>\n</block>"
                             }
                         ],
                         "variables": [],
@@ -560,7 +560,7 @@
                 "type": "HTMLText",
                 "range": [
                     70,
-                    77
+                    78
                 ],
                 "loc": {
                     "start": {
@@ -569,10 +569,10 @@
                     },
                     "end": {
                         "line": 4,
-                        "column": 7
+                        "column": 8
                     }
                 },
-                "value": "</view>"
+                "value": "</block>"
             }
         ],
         "comments": [],
@@ -939,7 +939,7 @@
             "type": "HTMLText",
             "range": [
                 70,
-                77
+                78
             ],
             "loc": {
                 "start": {
@@ -948,10 +948,10 @@
                 },
                 "end": {
                     "line": 4,
-                    "column": 7
+                    "column": 8
                 }
             },
-            "value": "</view>"
+            "value": "</block>"
         }
     ],
     "comments": []

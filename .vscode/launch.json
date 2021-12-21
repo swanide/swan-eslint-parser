@@ -48,6 +48,22 @@
                 "${workspaceFolder}/test/example/parse-swan.js"
             ],
             "protocol": "inspector"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch parse-swan-eslint",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "runtimeArgs": [
+                "-r",
+                "ts-node/register"
+            ],
+            "args": [
+                "${workspaceFolder}/test/example/parse-swan-eslint.js"
+            ],
+            "protocol": "inspector"
         }
     ]
 }
