@@ -18,6 +18,448 @@
     ],
     "body": [],
     "sourceType": "module",
+    "tokens": [
+        {
+            "type": "XMustacheStart",
+            "range": [
+                0,
+                2
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 2
+                }
+            },
+            "value": "{{"
+        },
+        {
+            "type": "Identifier",
+            "value": "abc",
+            "start": 2,
+            "end": 5,
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 2
+                },
+                "end": {
+                    "line": 1,
+                    "column": 5
+                }
+            },
+            "range": [
+                2,
+                5
+            ]
+        },
+        {
+            "type": "XMustacheEnd",
+            "range": [
+                5,
+                7
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 5
+                },
+                "end": {
+                    "line": 1,
+                    "column": 7
+                }
+            },
+            "value": "}}"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                7,
+                9
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 7
+                },
+                "end": {
+                    "line": 3,
+                    "column": 0
+                }
+            },
+            "value": "\n\n"
+        },
+        {
+            "type": "HTMLText",
+            "range": [
+                9,
+                11
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 0
+                },
+                "end": {
+                    "line": 3,
+                    "column": 2
+                }
+            },
+            "value": "--"
+        },
+        {
+            "type": "XMustacheStart",
+            "range": [
+                11,
+                13
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 2
+                },
+                "end": {
+                    "line": 3,
+                    "column": 4
+                }
+            },
+            "value": "{{"
+        },
+        {
+            "type": "Identifier",
+            "value": "def",
+            "start": 13,
+            "end": 16,
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 4
+                },
+                "end": {
+                    "line": 3,
+                    "column": 7
+                }
+            },
+            "range": [
+                13,
+                16
+            ]
+        },
+        {
+            "type": "XMustacheEnd",
+            "range": [
+                16,
+                18
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 7
+                },
+                "end": {
+                    "line": 3,
+                    "column": 9
+                }
+            },
+            "value": "}}"
+        },
+        {
+            "type": "HTMLText",
+            "range": [
+                18,
+                20
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 9
+                },
+                "end": {
+                    "line": 3,
+                    "column": 11
+                }
+            },
+            "value": "--"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                20,
+                22
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 11
+                },
+                "end": {
+                    "line": 5,
+                    "column": 0
+                }
+            },
+            "value": "\n\n"
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                22,
+                27
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 0
+                },
+                "end": {
+                    "line": 5,
+                    "column": 5
+                }
+            },
+            "value": "view"
+        },
+        {
+            "type": "HTMLIdentifier",
+            "range": [
+                28,
+                33
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 6
+                },
+                "end": {
+                    "line": 5,
+                    "column": 11
+                }
+            },
+            "value": "class"
+        },
+        {
+            "type": "HTMLAssociation",
+            "range": [
+                33,
+                34
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 11
+                },
+                "end": {
+                    "line": 5,
+                    "column": 12
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                34,
+                35
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 12
+                },
+                "end": {
+                    "line": 5,
+                    "column": 13
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "XMustacheStart",
+            "range": [
+                35,
+                37
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 13
+                },
+                "end": {
+                    "line": 5,
+                    "column": 15
+                }
+            },
+            "value": "{{"
+        },
+        {
+            "type": "Identifier",
+            "value": "expr",
+            "start": 37,
+            "end": 41,
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 15
+                },
+                "end": {
+                    "line": 5,
+                    "column": 19
+                }
+            },
+            "range": [
+                37,
+                41
+            ]
+        },
+        {
+            "type": "XMustacheEnd",
+            "range": [
+                41,
+                43
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 19
+                },
+                "end": {
+                    "line": 5,
+                    "column": 21
+                }
+            },
+            "value": "}}"
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                43,
+                44
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 21
+                },
+                "end": {
+                    "line": 5,
+                    "column": 22
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                44,
+                45
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 22
+                },
+                "end": {
+                    "line": 5,
+                    "column": 23
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "XMustacheStart",
+            "range": [
+                45,
+                47
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 23
+                },
+                "end": {
+                    "line": 5,
+                    "column": 25
+                }
+            },
+            "value": "{{"
+        },
+        {
+            "type": "Identifier",
+            "value": "ghi",
+            "start": 47,
+            "end": 50,
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 25
+                },
+                "end": {
+                    "line": 5,
+                    "column": 28
+                }
+            },
+            "range": [
+                47,
+                50
+            ]
+        },
+        {
+            "type": "XMustacheEnd",
+            "range": [
+                50,
+                52
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 28
+                },
+                "end": {
+                    "line": 5,
+                    "column": 30
+                }
+            },
+            "value": "}}"
+        },
+        {
+            "type": "HTMLEndTagOpen",
+            "range": [
+                52,
+                58
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 30
+                },
+                "end": {
+                    "line": 5,
+                    "column": 36
+                }
+            },
+            "value": "view"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                58,
+                59
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 36
+                },
+                "end": {
+                    "line": 5,
+                    "column": 37
+                }
+            },
+            "value": ""
+        }
+    ],
     "templateBody": {
         "type": "XDocument",
         "range": [
@@ -649,11 +1091,10 @@
                 "value": "{{"
             },
             {
-                "type": "HTMLText",
-                "range": [
-                    2,
-                    5
-                ],
+                "type": "Identifier",
+                "value": "abc",
+                "start": 2,
+                "end": 5,
                 "loc": {
                     "start": {
                         "line": 1,
@@ -664,7 +1105,10 @@
                         "column": 5
                     }
                 },
-                "value": "abc"
+                "range": [
+                    2,
+                    5
+                ]
             },
             {
                 "type": "XMustacheEnd",
@@ -739,11 +1183,10 @@
                 "value": "{{"
             },
             {
-                "type": "HTMLText",
-                "range": [
-                    13,
-                    16
-                ],
+                "type": "Identifier",
+                "value": "def",
+                "start": 13,
+                "end": 16,
                 "loc": {
                     "start": {
                         "line": 3,
@@ -754,7 +1197,10 @@
                         "column": 7
                     }
                 },
-                "value": "def"
+                "range": [
+                    13,
+                    16
+                ]
             },
             {
                 "type": "XMustacheEnd",
@@ -901,11 +1347,10 @@
                 "value": "{{"
             },
             {
-                "type": "HTMLAttrLiteral",
-                "range": [
-                    37,
-                    41
-                ],
+                "type": "Identifier",
+                "value": "expr",
+                "start": 37,
+                "end": 41,
                 "loc": {
                     "start": {
                         "line": 5,
@@ -916,7 +1361,10 @@
                         "column": 19
                     }
                 },
-                "value": "expr"
+                "range": [
+                    37,
+                    41
+                ]
             },
             {
                 "type": "XMustacheEnd",
@@ -991,11 +1439,10 @@
                 "value": "{{"
             },
             {
-                "type": "HTMLText",
-                "range": [
-                    47,
-                    50
-                ],
+                "type": "Identifier",
+                "value": "ghi",
+                "start": 47,
+                "end": 50,
                 "loc": {
                     "start": {
                         "line": 5,
@@ -1006,7 +1453,10 @@
                         "column": 28
                     }
                 },
-                "value": "ghi"
+                "range": [
+                    47,
+                    50
+                ]
             },
             {
                 "type": "XMustacheEnd",
@@ -1067,439 +1517,5 @@
         "errors": [],
         "xmlType": "swan"
     },
-    "tokens": [
-        {
-            "type": "XMustacheStart",
-            "range": [
-                0,
-                2
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 2
-                }
-            },
-            "value": "{{"
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                2,
-                5
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 2
-                },
-                "end": {
-                    "line": 1,
-                    "column": 5
-                }
-            },
-            "value": "abc"
-        },
-        {
-            "type": "XMustacheEnd",
-            "range": [
-                5,
-                7
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 5
-                },
-                "end": {
-                    "line": 1,
-                    "column": 7
-                }
-            },
-            "value": "}}"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                7,
-                9
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 7
-                },
-                "end": {
-                    "line": 3,
-                    "column": 0
-                }
-            },
-            "value": "\n\n"
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                9,
-                11
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 0
-                },
-                "end": {
-                    "line": 3,
-                    "column": 2
-                }
-            },
-            "value": "--"
-        },
-        {
-            "type": "XMustacheStart",
-            "range": [
-                11,
-                13
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 2
-                },
-                "end": {
-                    "line": 3,
-                    "column": 4
-                }
-            },
-            "value": "{{"
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                13,
-                16
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 4
-                },
-                "end": {
-                    "line": 3,
-                    "column": 7
-                }
-            },
-            "value": "def"
-        },
-        {
-            "type": "XMustacheEnd",
-            "range": [
-                16,
-                18
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 7
-                },
-                "end": {
-                    "line": 3,
-                    "column": 9
-                }
-            },
-            "value": "}}"
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                18,
-                20
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 9
-                },
-                "end": {
-                    "line": 3,
-                    "column": 11
-                }
-            },
-            "value": "--"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                20,
-                22
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 11
-                },
-                "end": {
-                    "line": 5,
-                    "column": 0
-                }
-            },
-            "value": "\n\n"
-        },
-        {
-            "type": "HTMLTagOpen",
-            "range": [
-                22,
-                27
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 0
-                },
-                "end": {
-                    "line": 5,
-                    "column": 5
-                }
-            },
-            "value": "view"
-        },
-        {
-            "type": "HTMLIdentifier",
-            "range": [
-                28,
-                33
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 6
-                },
-                "end": {
-                    "line": 5,
-                    "column": 11
-                }
-            },
-            "value": "class"
-        },
-        {
-            "type": "HTMLAssociation",
-            "range": [
-                33,
-                34
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 11
-                },
-                "end": {
-                    "line": 5,
-                    "column": 12
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "HTMLQuote",
-            "range": [
-                34,
-                35
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 12
-                },
-                "end": {
-                    "line": 5,
-                    "column": 13
-                }
-            },
-            "value": "\""
-        },
-        {
-            "type": "XMustacheStart",
-            "range": [
-                35,
-                37
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 13
-                },
-                "end": {
-                    "line": 5,
-                    "column": 15
-                }
-            },
-            "value": "{{"
-        },
-        {
-            "type": "HTMLAttrLiteral",
-            "range": [
-                37,
-                41
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 15
-                },
-                "end": {
-                    "line": 5,
-                    "column": 19
-                }
-            },
-            "value": "expr"
-        },
-        {
-            "type": "XMustacheEnd",
-            "range": [
-                41,
-                43
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 19
-                },
-                "end": {
-                    "line": 5,
-                    "column": 21
-                }
-            },
-            "value": "}}"
-        },
-        {
-            "type": "HTMLQuote",
-            "range": [
-                43,
-                44
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 21
-                },
-                "end": {
-                    "line": 5,
-                    "column": 22
-                }
-            },
-            "value": "\""
-        },
-        {
-            "type": "HTMLTagClose",
-            "range": [
-                44,
-                45
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 22
-                },
-                "end": {
-                    "line": 5,
-                    "column": 23
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "XMustacheStart",
-            "range": [
-                45,
-                47
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 23
-                },
-                "end": {
-                    "line": 5,
-                    "column": 25
-                }
-            },
-            "value": "{{"
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                47,
-                50
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 25
-                },
-                "end": {
-                    "line": 5,
-                    "column": 28
-                }
-            },
-            "value": "ghi"
-        },
-        {
-            "type": "XMustacheEnd",
-            "range": [
-                50,
-                52
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 28
-                },
-                "end": {
-                    "line": 5,
-                    "column": 30
-                }
-            },
-            "value": "}}"
-        },
-        {
-            "type": "HTMLEndTagOpen",
-            "range": [
-                52,
-                58
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 30
-                },
-                "end": {
-                    "line": 5,
-                    "column": 36
-                }
-            },
-            "value": "view"
-        },
-        {
-            "type": "HTMLTagClose",
-            "range": [
-                58,
-                59
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 36
-                },
-                "end": {
-                    "line": 5,
-                    "column": 37
-                }
-            },
-            "value": ""
-        }
-    ],
     "comments": []
 }

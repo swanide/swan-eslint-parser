@@ -2841,11 +2841,10 @@
             "value": "{{"
         },
         {
-            "type": "HTMLAttrLiteral",
-            "range": [
-                240,
-                249
-            ],
+            "type": "Identifier",
+            "value": "sjs",
+            "start": 240,
+            "end": 243,
             "loc": {
                 "start": {
                     "line": 12,
@@ -2853,10 +2852,53 @@
                 },
                 "end": {
                     "line": 12,
+                    "column": 17
+                }
+            },
+            "range": [
+                240,
+                243
+            ]
+        },
+        {
+            "type": "Punctuator",
+            "value": ".",
+            "start": 243,
+            "end": 244,
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 17
+                },
+                "end": {
+                    "line": 12,
+                    "column": 18
+                }
+            },
+            "range": [
+                243,
+                244
+            ]
+        },
+        {
+            "type": "Identifier",
+            "value": "hello",
+            "start": 244,
+            "end": 249,
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 18
+                },
+                "end": {
+                    "line": 12,
                     "column": 23
                 }
             },
-            "value": "sjs.hello"
+            "range": [
+                244,
+                249
+            ]
         },
         {
             "type": "XMustacheEnd",
@@ -2931,11 +2973,10 @@
             "value": "{{"
         },
         {
-            "type": "HTMLText",
-            "range": [
-                255,
-                266
-            ],
+            "type": "Identifier",
+            "value": "sjs",
+            "start": 255,
+            "end": 258,
             "loc": {
                 "start": {
                     "line": 12,
@@ -2943,10 +2984,93 @@
                 },
                 "end": {
                     "line": 12,
+                    "column": 32
+                }
+            },
+            "range": [
+                255,
+                258
+            ]
+        },
+        {
+            "type": "Punctuator",
+            "value": ".",
+            "start": 258,
+            "end": 259,
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 32
+                },
+                "end": {
+                    "line": 12,
+                    "column": 33
+                }
+            },
+            "range": [
+                258,
+                259
+            ]
+        },
+        {
+            "type": "Identifier",
+            "value": "world",
+            "start": 259,
+            "end": 264,
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 33
+                },
+                "end": {
+                    "line": 12,
+                    "column": 38
+                }
+            },
+            "range": [
+                259,
+                264
+            ]
+        },
+        {
+            "type": "Punctuator",
+            "value": "(",
+            "start": 264,
+            "end": 265,
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 38
+                },
+                "end": {
+                    "line": 12,
+                    "column": 39
+                }
+            },
+            "range": [
+                264,
+                265
+            ]
+        },
+        {
+            "type": "Punctuator",
+            "value": ")",
+            "start": 265,
+            "end": 266,
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 39
+                },
+                "end": {
+                    "line": 12,
                     "column": 40
                 }
             },
-            "value": "sjs.world()"
+            "range": [
+                265,
+                266
+            ]
         },
         {
             "type": "XMustacheEnd",
@@ -3111,11 +3235,10 @@
             "value": "{{"
         },
         {
-            "type": "HTMLAttrLiteral",
-            "range": [
-                290,
-                305
-            ],
+            "type": "Identifier",
+            "value": "sjsModule",
+            "start": 290,
+            "end": 299,
             "loc": {
                 "start": {
                     "line": 13,
@@ -3123,10 +3246,53 @@
                 },
                 "end": {
                     "line": 13,
+                    "column": 23
+                }
+            },
+            "range": [
+                290,
+                299
+            ]
+        },
+        {
+            "type": "Punctuator",
+            "value": ".",
+            "start": 299,
+            "end": 300,
+            "loc": {
+                "start": {
+                    "line": 13,
+                    "column": 23
+                },
+                "end": {
+                    "line": 13,
+                    "column": 24
+                }
+            },
+            "range": [
+                299,
+                300
+            ]
+        },
+        {
+            "type": "Identifier",
+            "value": "hello",
+            "start": 300,
+            "end": 305,
+            "loc": {
+                "start": {
+                    "line": 13,
+                    "column": 24
+                },
+                "end": {
+                    "line": 13,
                     "column": 29
                 }
             },
-            "value": "sjsModule.hello"
+            "range": [
+                300,
+                305
+            ]
         },
         {
             "type": "XMustacheEnd",
@@ -3201,11 +3367,10 @@
             "value": "{{"
         },
         {
-            "type": "HTMLText",
-            "range": [
-                311,
-                328
-            ],
+            "type": "Identifier",
+            "value": "sjsModule",
+            "start": 311,
+            "end": 320,
             "loc": {
                 "start": {
                     "line": 13,
@@ -3213,10 +3378,93 @@
                 },
                 "end": {
                     "line": 13,
+                    "column": 44
+                }
+            },
+            "range": [
+                311,
+                320
+            ]
+        },
+        {
+            "type": "Punctuator",
+            "value": ".",
+            "start": 320,
+            "end": 321,
+            "loc": {
+                "start": {
+                    "line": 13,
+                    "column": 44
+                },
+                "end": {
+                    "line": 13,
+                    "column": 45
+                }
+            },
+            "range": [
+                320,
+                321
+            ]
+        },
+        {
+            "type": "Identifier",
+            "value": "world",
+            "start": 321,
+            "end": 326,
+            "loc": {
+                "start": {
+                    "line": 13,
+                    "column": 45
+                },
+                "end": {
+                    "line": 13,
+                    "column": 50
+                }
+            },
+            "range": [
+                321,
+                326
+            ]
+        },
+        {
+            "type": "Punctuator",
+            "value": "(",
+            "start": 326,
+            "end": 327,
+            "loc": {
+                "start": {
+                    "line": 13,
+                    "column": 50
+                },
+                "end": {
+                    "line": 13,
+                    "column": 51
+                }
+            },
+            "range": [
+                326,
+                327
+            ]
+        },
+        {
+            "type": "Punctuator",
+            "value": ")",
+            "start": 327,
+            "end": 328,
+            "loc": {
+                "start": {
+                    "line": 13,
+                    "column": 51
+                },
+                "end": {
+                    "line": 13,
                     "column": 52
                 }
             },
-            "value": "sjsModule.world()"
+            "range": [
+                327,
+                328
+            ]
         },
         {
             "type": "XMustacheEnd",

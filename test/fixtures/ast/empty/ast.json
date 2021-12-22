@@ -18,6 +18,7 @@
     ],
     "body": [],
     "sourceType": "module",
+    "tokens": [],
     "templateBody": {
         "type": "XDocument",
         "range": [
@@ -40,6 +41,5 @@
         "errors": [],
         "xmlType": "swan"
     },
-    "tokens": [],
     "comments": []
 }

@@ -19,7 +19,8 @@ export interface ParserOptions {
 export interface ScriptParserOptions {
     parser: 'acorn' | 'espree' | string;
     ecmaVersion?: 2018 | 2019 | 2020;
-    range?: true;
-    loc?: true;
-    tokens?: true;
+    range?: boolean;
+    loc?: boolean;
+    tokens?: boolean;
+    comments?: boolean;
 }

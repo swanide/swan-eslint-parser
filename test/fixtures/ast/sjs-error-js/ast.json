@@ -18,6 +18,1160 @@
     ],
     "body": [],
     "sourceType": "module",
+    "tokens": [
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                0,
+                11
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 11
+                }
+            },
+            "value": "import-sjs"
+        },
+        {
+            "type": "HTMLIdentifier",
+            "range": [
+                12,
+                18
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 12
+                },
+                "end": {
+                    "line": 1,
+                    "column": 18
+                }
+            },
+            "value": "module"
+        },
+        {
+            "type": "HTMLAssociation",
+            "range": [
+                18,
+                19
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 18
+                },
+                "end": {
+                    "line": 1,
+                    "column": 19
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                19,
+                20
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 19
+                },
+                "end": {
+                    "line": 1,
+                    "column": 20
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "HTMLAttrLiteral",
+            "range": [
+                20,
+                23
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 20
+                },
+                "end": {
+                    "line": 1,
+                    "column": 23
+                }
+            },
+            "value": "sjs"
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                23,
+                24
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 23
+                },
+                "end": {
+                    "line": 1,
+                    "column": 24
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                24,
+                25
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 24
+                },
+                "end": {
+                    "line": 1,
+                    "column": 25
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                25,
+                26
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 25
+                },
+                "end": {
+                    "line": 2,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                26,
+                31
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 0
+                },
+                "end": {
+                    "line": 2,
+                    "column": 5
+                }
+            },
+            "value": "const"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                31,
+                32
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 5
+                },
+                "end": {
+                    "line": 2,
+                    "column": 6
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                32,
+                37
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 6
+                },
+                "end": {
+                    "line": 2,
+                    "column": 11
+                }
+            },
+            "value": "hello"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                37,
+                38
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 11
+                },
+                "end": {
+                    "line": 2,
+                    "column": 12
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                38,
+                39
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 12
+                },
+                "end": {
+                    "line": 2,
+                    "column": 13
+                }
+            },
+            "value": "="
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                39,
+                40
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 13
+                },
+                "end": {
+                    "line": 2,
+                    "column": 14
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                40,
+                45
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 14
+                },
+                "end": {
+                    "line": 2,
+                    "column": 19
+                }
+            },
+            "value": "true;"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                45,
+                46
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 19
+                },
+                "end": {
+                    "line": 3,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                46,
+                51
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 0
+                },
+                "end": {
+                    "line": 3,
+                    "column": 5
+                }
+            },
+            "value": "const"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                51,
+                52
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 5
+                },
+                "end": {
+                    "line": 3,
+                    "column": 6
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                52,
+                57
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 6
+                },
+                "end": {
+                    "line": 3,
+                    "column": 11
+                }
+            },
+            "value": "world"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                57,
+                58
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 11
+                },
+                "end": {
+                    "line": 3,
+                    "column": 12
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                58,
+                59
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 12
+                },
+                "end": {
+                    "line": 3,
+                    "column": 13
+                }
+            },
+            "value": "="
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                59,
+                60
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 13
+                },
+                "end": {
+                    "line": 3,
+                    "column": 14
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                60,
+                68
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 14
+                },
+                "end": {
+                    "line": 3,
+                    "column": 22
+                }
+            },
+            "value": "function"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                68,
+                69
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 22
+                },
+                "end": {
+                    "line": 3,
+                    "column": 23
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                69,
+                71
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 23
+                },
+                "end": {
+                    "line": 3,
+                    "column": 25
+                }
+            },
+            "value": "()"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                71,
+                72
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 25
+                },
+                "end": {
+                    "line": 3,
+                    "column": 26
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                72,
+                73
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 26
+                },
+                "end": {
+                    "line": 3,
+                    "column": 27
+                }
+            },
+            "value": "{"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                73,
+                78
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 27
+                },
+                "end": {
+                    "line": 4,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                78,
+                84
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 4
+                },
+                "end": {
+                    "line": 4,
+                    "column": 10
+                }
+            },
+            "value": "return"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                84,
+                85
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 10
+                },
+                "end": {
+                    "line": 4,
+                    "column": 11
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                85,
+                91
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 11
+                },
+                "end": {
+                    "line": 4,
+                    "column": 17
+                }
+            },
+            "value": "'hello"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                91,
+                92
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 17
+                },
+                "end": {
+                    "line": 4,
+                    "column": 18
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                92,
+                97
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 18
+                },
+                "end": {
+                    "line": 4,
+                    "column": 23
+                }
+            },
+            "value": "world"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                97,
+                98
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 23
+                },
+                "end": {
+                    "line": 4,
+                    "column": 24
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                98,
+                103
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 24
+                },
+                "end": {
+                    "line": 4,
+                    "column": 29
+                }
+            },
+            "value": "sjs';"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                103,
+                104
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 29
+                },
+                "end": {
+                    "line": 5,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                104,
+                106
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 0
+                },
+                "end": {
+                    "line": 5,
+                    "column": 2
+                }
+            },
+            "value": "};"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                106,
+                107
+            ],
+            "loc": {
+                "start": {
+                    "line": 5,
+                    "column": 2
+                },
+                "end": {
+                    "line": 6,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                107,
+                121
+            ],
+            "loc": {
+                "start": {
+                    "line": 6,
+                    "column": 0
+                },
+                "end": {
+                    "line": 6,
+                    "column": 14
+                }
+            },
+            "value": "module.exports"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                121,
+                122
+            ],
+            "loc": {
+                "start": {
+                    "line": 6,
+                    "column": 14
+                },
+                "end": {
+                    "line": 6,
+                    "column": 15
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                122,
+                123
+            ],
+            "loc": {
+                "start": {
+                    "line": 6,
+                    "column": 15
+                },
+                "end": {
+                    "line": 6,
+                    "column": 16
+                }
+            },
+            "value": "="
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                123,
+                124
+            ],
+            "loc": {
+                "start": {
+                    "line": 6,
+                    "column": 16
+                },
+                "end": {
+                    "line": 6,
+                    "column": 17
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                124,
+                125
+            ],
+            "loc": {
+                "start": {
+                    "line": 6,
+                    "column": 17
+                },
+                "end": {
+                    "line": 6,
+                    "column": 18
+                }
+            },
+            "value": "{"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                125,
+                130
+            ],
+            "loc": {
+                "start": {
+                    "line": 6,
+                    "column": 18
+                },
+                "end": {
+                    "line": 7,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                130,
+                137
+            ],
+            "loc": {
+                "start": {
+                    "line": 7,
+                    "column": 4
+                },
+                "end": {
+                    "line": 7,
+                    "column": 11
+                }
+            },
+            "value": "hello:,"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                137,
+                142
+            ],
+            "loc": {
+                "start": {
+                    "line": 7,
+                    "column": 11
+                },
+                "end": {
+                    "line": 8,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                142,
+                148
+            ],
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 4
+                },
+                "end": {
+                    "line": 8,
+                    "column": 10
+                }
+            },
+            "value": "world:"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                148,
+                149
+            ],
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 10
+                },
+                "end": {
+                    "line": 8,
+                    "column": 11
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                149,
+                154
+            ],
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 11
+                },
+                "end": {
+                    "line": 8,
+                    "column": 16
+                }
+            },
+            "value": "world"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                154,
+                155
+            ],
+            "loc": {
+                "start": {
+                    "line": 8,
+                    "column": 16
+                },
+                "end": {
+                    "line": 9,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLRawText",
+            "range": [
+                155,
+                157
+            ],
+            "loc": {
+                "start": {
+                    "line": 9,
+                    "column": 0
+                },
+                "end": {
+                    "line": 9,
+                    "column": 2
+                }
+            },
+            "value": "};"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                157,
+                158
+            ],
+            "loc": {
+                "start": {
+                    "line": 9,
+                    "column": 2
+                },
+                "end": {
+                    "line": 10,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLEndTagOpen",
+            "range": [
+                158,
+                170
+            ],
+            "loc": {
+                "start": {
+                    "line": 10,
+                    "column": 0
+                },
+                "end": {
+                    "line": 10,
+                    "column": 12
+                }
+            },
+            "value": "import-sjs"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                170,
+                171
+            ],
+            "loc": {
+                "start": {
+                    "line": 10,
+                    "column": 12
+                },
+                "end": {
+                    "line": 10,
+                    "column": 13
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                171,
+                173
+            ],
+            "loc": {
+                "start": {
+                    "line": 10,
+                    "column": 13
+                },
+                "end": {
+                    "line": 12,
+                    "column": 0
+                }
+            },
+            "value": "\n\n"
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                173,
+                184
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 0
+                },
+                "end": {
+                    "line": 12,
+                    "column": 11
+                }
+            },
+            "value": "import-sjs"
+        },
+        {
+            "type": "HTMLIdentifier",
+            "range": [
+                185,
+                191
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 12
+                },
+                "end": {
+                    "line": 12,
+                    "column": 18
+                }
+            },
+            "value": "module"
+        },
+        {
+            "type": "HTMLAssociation",
+            "range": [
+                191,
+                192
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 18
+                },
+                "end": {
+                    "line": 12,
+                    "column": 19
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                192,
+                193
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 19
+                },
+                "end": {
+                    "line": 12,
+                    "column": 20
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "HTMLAttrLiteral",
+            "range": [
+                193,
+                196
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 20
+                },
+                "end": {
+                    "line": 12,
+                    "column": 23
+                }
+            },
+            "value": "sjs"
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                196,
+                197
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 23
+                },
+                "end": {
+                    "line": 12,
+                    "column": 24
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                197,
+                198
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 24
+                },
+                "end": {
+                    "line": 12,
+                    "column": 25
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLEndTagOpen",
+            "range": [
+                198,
+                210
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 25
+                },
+                "end": {
+                    "line": 12,
+                    "column": 37
+                }
+            },
+            "value": "import-sjs"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                210,
+                211
+            ],
+            "loc": {
+                "start": {
+                    "line": 12,
+                    "column": 37
+                },
+                "end": {
+                    "line": 12,
+                    "column": 38
+                }
+            },
+            "value": ""
+        }
+    ],
     "templateBody": {
         "type": "XDocument",
         "range": [
@@ -1466,1159 +2620,5 @@
         ],
         "xmlType": "swan"
     },
-    "tokens": [
-        {
-            "type": "HTMLTagOpen",
-            "range": [
-                0,
-                11
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 11
-                }
-            },
-            "value": "import-sjs"
-        },
-        {
-            "type": "HTMLIdentifier",
-            "range": [
-                12,
-                18
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 12
-                },
-                "end": {
-                    "line": 1,
-                    "column": 18
-                }
-            },
-            "value": "module"
-        },
-        {
-            "type": "HTMLAssociation",
-            "range": [
-                18,
-                19
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 18
-                },
-                "end": {
-                    "line": 1,
-                    "column": 19
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "HTMLQuote",
-            "range": [
-                19,
-                20
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 19
-                },
-                "end": {
-                    "line": 1,
-                    "column": 20
-                }
-            },
-            "value": "\""
-        },
-        {
-            "type": "HTMLAttrLiteral",
-            "range": [
-                20,
-                23
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 20
-                },
-                "end": {
-                    "line": 1,
-                    "column": 23
-                }
-            },
-            "value": "sjs"
-        },
-        {
-            "type": "HTMLQuote",
-            "range": [
-                23,
-                24
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 23
-                },
-                "end": {
-                    "line": 1,
-                    "column": 24
-                }
-            },
-            "value": "\""
-        },
-        {
-            "type": "HTMLTagClose",
-            "range": [
-                24,
-                25
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 24
-                },
-                "end": {
-                    "line": 1,
-                    "column": 25
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                25,
-                26
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 25
-                },
-                "end": {
-                    "line": 2,
-                    "column": 0
-                }
-            },
-            "value": "\n"
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                26,
-                31
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 0
-                },
-                "end": {
-                    "line": 2,
-                    "column": 5
-                }
-            },
-            "value": "const"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                31,
-                32
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 5
-                },
-                "end": {
-                    "line": 2,
-                    "column": 6
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                32,
-                37
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 6
-                },
-                "end": {
-                    "line": 2,
-                    "column": 11
-                }
-            },
-            "value": "hello"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                37,
-                38
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 11
-                },
-                "end": {
-                    "line": 2,
-                    "column": 12
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                38,
-                39
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 12
-                },
-                "end": {
-                    "line": 2,
-                    "column": 13
-                }
-            },
-            "value": "="
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                39,
-                40
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 13
-                },
-                "end": {
-                    "line": 2,
-                    "column": 14
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                40,
-                45
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 14
-                },
-                "end": {
-                    "line": 2,
-                    "column": 19
-                }
-            },
-            "value": "true;"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                45,
-                46
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 19
-                },
-                "end": {
-                    "line": 3,
-                    "column": 0
-                }
-            },
-            "value": "\n"
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                46,
-                51
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 0
-                },
-                "end": {
-                    "line": 3,
-                    "column": 5
-                }
-            },
-            "value": "const"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                51,
-                52
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 5
-                },
-                "end": {
-                    "line": 3,
-                    "column": 6
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                52,
-                57
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 6
-                },
-                "end": {
-                    "line": 3,
-                    "column": 11
-                }
-            },
-            "value": "world"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                57,
-                58
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 11
-                },
-                "end": {
-                    "line": 3,
-                    "column": 12
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                58,
-                59
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 12
-                },
-                "end": {
-                    "line": 3,
-                    "column": 13
-                }
-            },
-            "value": "="
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                59,
-                60
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 13
-                },
-                "end": {
-                    "line": 3,
-                    "column": 14
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                60,
-                68
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 14
-                },
-                "end": {
-                    "line": 3,
-                    "column": 22
-                }
-            },
-            "value": "function"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                68,
-                69
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 22
-                },
-                "end": {
-                    "line": 3,
-                    "column": 23
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                69,
-                71
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 23
-                },
-                "end": {
-                    "line": 3,
-                    "column": 25
-                }
-            },
-            "value": "()"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                71,
-                72
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 25
-                },
-                "end": {
-                    "line": 3,
-                    "column": 26
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                72,
-                73
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 26
-                },
-                "end": {
-                    "line": 3,
-                    "column": 27
-                }
-            },
-            "value": "{"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                73,
-                78
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 27
-                },
-                "end": {
-                    "line": 4,
-                    "column": 4
-                }
-            },
-            "value": "\n    "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                78,
-                84
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 4
-                },
-                "end": {
-                    "line": 4,
-                    "column": 10
-                }
-            },
-            "value": "return"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                84,
-                85
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 10
-                },
-                "end": {
-                    "line": 4,
-                    "column": 11
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                85,
-                91
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 11
-                },
-                "end": {
-                    "line": 4,
-                    "column": 17
-                }
-            },
-            "value": "'hello"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                91,
-                92
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 17
-                },
-                "end": {
-                    "line": 4,
-                    "column": 18
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                92,
-                97
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 18
-                },
-                "end": {
-                    "line": 4,
-                    "column": 23
-                }
-            },
-            "value": "world"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                97,
-                98
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 23
-                },
-                "end": {
-                    "line": 4,
-                    "column": 24
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                98,
-                103
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 24
-                },
-                "end": {
-                    "line": 4,
-                    "column": 29
-                }
-            },
-            "value": "sjs';"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                103,
-                104
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 29
-                },
-                "end": {
-                    "line": 5,
-                    "column": 0
-                }
-            },
-            "value": "\n"
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                104,
-                106
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 0
-                },
-                "end": {
-                    "line": 5,
-                    "column": 2
-                }
-            },
-            "value": "};"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                106,
-                107
-            ],
-            "loc": {
-                "start": {
-                    "line": 5,
-                    "column": 2
-                },
-                "end": {
-                    "line": 6,
-                    "column": 0
-                }
-            },
-            "value": "\n"
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                107,
-                121
-            ],
-            "loc": {
-                "start": {
-                    "line": 6,
-                    "column": 0
-                },
-                "end": {
-                    "line": 6,
-                    "column": 14
-                }
-            },
-            "value": "module.exports"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                121,
-                122
-            ],
-            "loc": {
-                "start": {
-                    "line": 6,
-                    "column": 14
-                },
-                "end": {
-                    "line": 6,
-                    "column": 15
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                122,
-                123
-            ],
-            "loc": {
-                "start": {
-                    "line": 6,
-                    "column": 15
-                },
-                "end": {
-                    "line": 6,
-                    "column": 16
-                }
-            },
-            "value": "="
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                123,
-                124
-            ],
-            "loc": {
-                "start": {
-                    "line": 6,
-                    "column": 16
-                },
-                "end": {
-                    "line": 6,
-                    "column": 17
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                124,
-                125
-            ],
-            "loc": {
-                "start": {
-                    "line": 6,
-                    "column": 17
-                },
-                "end": {
-                    "line": 6,
-                    "column": 18
-                }
-            },
-            "value": "{"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                125,
-                130
-            ],
-            "loc": {
-                "start": {
-                    "line": 6,
-                    "column": 18
-                },
-                "end": {
-                    "line": 7,
-                    "column": 4
-                }
-            },
-            "value": "\n    "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                130,
-                137
-            ],
-            "loc": {
-                "start": {
-                    "line": 7,
-                    "column": 4
-                },
-                "end": {
-                    "line": 7,
-                    "column": 11
-                }
-            },
-            "value": "hello:,"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                137,
-                142
-            ],
-            "loc": {
-                "start": {
-                    "line": 7,
-                    "column": 11
-                },
-                "end": {
-                    "line": 8,
-                    "column": 4
-                }
-            },
-            "value": "\n    "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                142,
-                148
-            ],
-            "loc": {
-                "start": {
-                    "line": 8,
-                    "column": 4
-                },
-                "end": {
-                    "line": 8,
-                    "column": 10
-                }
-            },
-            "value": "world:"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                148,
-                149
-            ],
-            "loc": {
-                "start": {
-                    "line": 8,
-                    "column": 10
-                },
-                "end": {
-                    "line": 8,
-                    "column": 11
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                149,
-                154
-            ],
-            "loc": {
-                "start": {
-                    "line": 8,
-                    "column": 11
-                },
-                "end": {
-                    "line": 8,
-                    "column": 16
-                }
-            },
-            "value": "world"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                154,
-                155
-            ],
-            "loc": {
-                "start": {
-                    "line": 8,
-                    "column": 16
-                },
-                "end": {
-                    "line": 9,
-                    "column": 0
-                }
-            },
-            "value": "\n"
-        },
-        {
-            "type": "HTMLRawText",
-            "range": [
-                155,
-                157
-            ],
-            "loc": {
-                "start": {
-                    "line": 9,
-                    "column": 0
-                },
-                "end": {
-                    "line": 9,
-                    "column": 2
-                }
-            },
-            "value": "};"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                157,
-                158
-            ],
-            "loc": {
-                "start": {
-                    "line": 9,
-                    "column": 2
-                },
-                "end": {
-                    "line": 10,
-                    "column": 0
-                }
-            },
-            "value": "\n"
-        },
-        {
-            "type": "HTMLEndTagOpen",
-            "range": [
-                158,
-                170
-            ],
-            "loc": {
-                "start": {
-                    "line": 10,
-                    "column": 0
-                },
-                "end": {
-                    "line": 10,
-                    "column": 12
-                }
-            },
-            "value": "import-sjs"
-        },
-        {
-            "type": "HTMLTagClose",
-            "range": [
-                170,
-                171
-            ],
-            "loc": {
-                "start": {
-                    "line": 10,
-                    "column": 12
-                },
-                "end": {
-                    "line": 10,
-                    "column": 13
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                171,
-                173
-            ],
-            "loc": {
-                "start": {
-                    "line": 10,
-                    "column": 13
-                },
-                "end": {
-                    "line": 12,
-                    "column": 0
-                }
-            },
-            "value": "\n\n"
-        },
-        {
-            "type": "HTMLTagOpen",
-            "range": [
-                173,
-                184
-            ],
-            "loc": {
-                "start": {
-                    "line": 12,
-                    "column": 0
-                },
-                "end": {
-                    "line": 12,
-                    "column": 11
-                }
-            },
-            "value": "import-sjs"
-        },
-        {
-            "type": "HTMLIdentifier",
-            "range": [
-                185,
-                191
-            ],
-            "loc": {
-                "start": {
-                    "line": 12,
-                    "column": 12
-                },
-                "end": {
-                    "line": 12,
-                    "column": 18
-                }
-            },
-            "value": "module"
-        },
-        {
-            "type": "HTMLAssociation",
-            "range": [
-                191,
-                192
-            ],
-            "loc": {
-                "start": {
-                    "line": 12,
-                    "column": 18
-                },
-                "end": {
-                    "line": 12,
-                    "column": 19
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "HTMLQuote",
-            "range": [
-                192,
-                193
-            ],
-            "loc": {
-                "start": {
-                    "line": 12,
-                    "column": 19
-                },
-                "end": {
-                    "line": 12,
-                    "column": 20
-                }
-            },
-            "value": "\""
-        },
-        {
-            "type": "HTMLAttrLiteral",
-            "range": [
-                193,
-                196
-            ],
-            "loc": {
-                "start": {
-                    "line": 12,
-                    "column": 20
-                },
-                "end": {
-                    "line": 12,
-                    "column": 23
-                }
-            },
-            "value": "sjs"
-        },
-        {
-            "type": "HTMLQuote",
-            "range": [
-                196,
-                197
-            ],
-            "loc": {
-                "start": {
-                    "line": 12,
-                    "column": 23
-                },
-                "end": {
-                    "line": 12,
-                    "column": 24
-                }
-            },
-            "value": "\""
-        },
-        {
-            "type": "HTMLTagClose",
-            "range": [
-                197,
-                198
-            ],
-            "loc": {
-                "start": {
-                    "line": 12,
-                    "column": 24
-                },
-                "end": {
-                    "line": 12,
-                    "column": 25
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "HTMLEndTagOpen",
-            "range": [
-                198,
-                210
-            ],
-            "loc": {
-                "start": {
-                    "line": 12,
-                    "column": 25
-                },
-                "end": {
-                    "line": 12,
-                    "column": 37
-                }
-            },
-            "value": "import-sjs"
-        },
-        {
-            "type": "HTMLTagClose",
-            "range": [
-                210,
-                211
-            ],
-            "loc": {
-                "start": {
-                    "line": 12,
-                    "column": 37
-                },
-                "end": {
-                    "line": 12,
-                    "column": 38
-                }
-            },
-            "value": ""
-        }
-    ],
     "comments": []
 }

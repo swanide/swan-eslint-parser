@@ -38,6 +38,7 @@ function resolveParserOptions(options: ParserOptions) {
                 ecmaVersion: 2018,
                 range: true,
                 loc: true,
+                tokens: true,
             }
         },
         options

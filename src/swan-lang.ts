@@ -9,7 +9,7 @@ import {
     Token, XAttribute, XDirective, XDirectiveKey, XDocument, XElement, XExpression,
     XIdentifier, XModule, XMustache, XNode, XStartTag 
 } from '../types/ast';
-import { ScriptParserOptions } from '../types/parser';
+import { ParserOptions, ScriptParserOptions } from '../types/parser';
 import { Identifier, Reference, ArrayExpression} from '../types/script';
 import {debug, ParseError} from './common';
 import { LocationCalculator } from './location-calculator';
@@ -300,12 +300,17 @@ type ForBlock = {
 };
 
 export function processForExpression(
-    parserOptions: ScriptParserOptions,
+    rawParserOptions: ScriptParserOptions,
     globalLocationCalculator: LocationCalculator,
     node: XExpression,
     code: string
 ): void {
     debug('[template] convert expression {{%s}} %j', code, node.range);
+    const parserOptions = {
+        ...rawParserOptions,
+        // TODO: s-for 指令不属于标准语法，本次不进行 token 替换
+        tokens: false
+    };
 
     let forLeft = null as unknown as ForBlock;
     let forRight = null as unknown as ForBlock;
@@ -420,6 +425,7 @@ export function processForExpression(
         swanForExpression.parent = node;
         node.expression = swanForExpression;
         node.references = references;
+        
         if (tokens.length) {
             replaceTokens(document, {range: node.range}, tokens);
         }
@@ -446,16 +452,16 @@ export function processForExpression(
  * @param node The expression container node. This function modifies the `expression` and `references` properties of this node.
  */
 export function processScriptModule(
-    parserOptions: any,
+    rawParserOptions: ScriptParserOptions,
     globalLocationCalculator: LocationCalculator,
     node: XElement
 ) {
-    // TODO:
     debug('[template] parse import-sjs module %s %j', node.name, node.range);
-    parserOptions = Object.assign({
+    const parserOptions = {
         tokens: true,
-        comment: true
-    }, parserOptions)
+        comment: true,
+        ...rawParserOptions
+    };
     const document = getOwnerDocument(node);
     try {
         const {ast} = parseScriptElement(node, globalLocationCalculator, parserOptions);

@@ -18,6 +18,368 @@
     ],
     "body": [],
     "sourceType": "module",
+    "tokens": [
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                0,
+                6
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 0
+                },
+                "end": {
+                    "line": 1,
+                    "column": 6
+                }
+            },
+            "value": "block"
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                6,
+                7
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 6
+                },
+                "end": {
+                    "line": 1,
+                    "column": 7
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                7,
+                12
+            ],
+            "loc": {
+                "start": {
+                    "line": 1,
+                    "column": 7
+                },
+                "end": {
+                    "line": 2,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLTagOpen",
+            "range": [
+                12,
+                17
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 4
+                },
+                "end": {
+                    "line": 2,
+                    "column": 9
+                }
+            },
+            "value": "view"
+        },
+        {
+            "type": "HTMLIdentifier",
+            "range": [
+                18,
+                19
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 10
+                },
+                "end": {
+                    "line": 2,
+                    "column": 11
+                }
+            },
+            "value": "a"
+        },
+        {
+            "type": "HTMLAssociation",
+            "range": [
+                19,
+                20
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 11
+                },
+                "end": {
+                    "line": 2,
+                    "column": 12
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                20,
+                21
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 12
+                },
+                "end": {
+                    "line": 2,
+                    "column": 13
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "XMustacheStart",
+            "range": [
+                21,
+                23
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 13
+                },
+                "end": {
+                    "line": 2,
+                    "column": 15
+                }
+            },
+            "value": "{{"
+        },
+        {
+            "type": "HTMLAttrLiteral",
+            "range": [
+                23,
+                28
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 15
+                },
+                "end": {
+                    "line": 2,
+                    "column": 20
+                }
+            },
+            "value": "cond}"
+        },
+        {
+            "type": "HTMLQuote",
+            "range": [
+                28,
+                29
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 20
+                },
+                "end": {
+                    "line": 2,
+                    "column": 21
+                }
+            },
+            "value": "\""
+        },
+        {
+            "type": "HTMLTagClose",
+            "range": [
+                29,
+                30
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 21
+                },
+                "end": {
+                    "line": 2,
+                    "column": 22
+                }
+            },
+            "value": ""
+        },
+        {
+            "type": "HTMLText",
+            "range": [
+                30,
+                37
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 22
+                },
+                "end": {
+                    "line": 2,
+                    "column": 29
+                }
+            },
+            "value": "</view>"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                37,
+                42
+            ],
+            "loc": {
+                "start": {
+                    "line": 2,
+                    "column": 29
+                },
+                "end": {
+                    "line": 3,
+                    "column": 4
+                }
+            },
+            "value": "\n    "
+        },
+        {
+            "type": "HTMLText",
+            "range": [
+                42,
+                47
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 4
+                },
+                "end": {
+                    "line": 3,
+                    "column": 9
+                }
+            },
+            "value": "<view"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                47,
+                48
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 9
+                },
+                "end": {
+                    "line": 3,
+                    "column": 10
+                }
+            },
+            "value": " "
+        },
+        {
+            "type": "HTMLText",
+            "range": [
+                48,
+                54
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 10
+                },
+                "end": {
+                    "line": 3,
+                    "column": 16
+                }
+            },
+            "value": "s-if=\""
+        },
+        {
+            "type": "XMustacheStart",
+            "range": [
+                54,
+                56
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 16
+                },
+                "end": {
+                    "line": 3,
+                    "column": 18
+                }
+            },
+            "value": "{{"
+        },
+        {
+            "type": "HTMLText",
+            "range": [
+                56,
+                69
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 18
+                },
+                "end": {
+                    "line": 3,
+                    "column": 31
+                }
+            },
+            "value": "cond\"></view>"
+        },
+        {
+            "type": "HTMLWhitespace",
+            "range": [
+                69,
+                70
+            ],
+            "loc": {
+                "start": {
+                    "line": 3,
+                    "column": 31
+                },
+                "end": {
+                    "line": 4,
+                    "column": 0
+                }
+            },
+            "value": "\n"
+        },
+        {
+            "type": "HTMLText",
+            "range": [
+                70,
+                78
+            ],
+            "loc": {
+                "start": {
+                    "line": 4,
+                    "column": 0
+                },
+                "end": {
+                    "line": 4,
+                    "column": 8
+                }
+            },
+            "value": "</block>"
+        }
+    ],
     "templateBody": {
         "type": "XDocument",
         "range": [
@@ -592,367 +954,5 @@
         ],
         "xmlType": "swan"
     },
-    "tokens": [
-        {
-            "type": "HTMLTagOpen",
-            "range": [
-                0,
-                6
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 0
-                },
-                "end": {
-                    "line": 1,
-                    "column": 6
-                }
-            },
-            "value": "block"
-        },
-        {
-            "type": "HTMLTagClose",
-            "range": [
-                6,
-                7
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 6
-                },
-                "end": {
-                    "line": 1,
-                    "column": 7
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                7,
-                12
-            ],
-            "loc": {
-                "start": {
-                    "line": 1,
-                    "column": 7
-                },
-                "end": {
-                    "line": 2,
-                    "column": 4
-                }
-            },
-            "value": "\n    "
-        },
-        {
-            "type": "HTMLTagOpen",
-            "range": [
-                12,
-                17
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 4
-                },
-                "end": {
-                    "line": 2,
-                    "column": 9
-                }
-            },
-            "value": "view"
-        },
-        {
-            "type": "HTMLIdentifier",
-            "range": [
-                18,
-                19
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 10
-                },
-                "end": {
-                    "line": 2,
-                    "column": 11
-                }
-            },
-            "value": "a"
-        },
-        {
-            "type": "HTMLAssociation",
-            "range": [
-                19,
-                20
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 11
-                },
-                "end": {
-                    "line": 2,
-                    "column": 12
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "HTMLQuote",
-            "range": [
-                20,
-                21
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 12
-                },
-                "end": {
-                    "line": 2,
-                    "column": 13
-                }
-            },
-            "value": "\""
-        },
-        {
-            "type": "XMustacheStart",
-            "range": [
-                21,
-                23
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 13
-                },
-                "end": {
-                    "line": 2,
-                    "column": 15
-                }
-            },
-            "value": "{{"
-        },
-        {
-            "type": "HTMLAttrLiteral",
-            "range": [
-                23,
-                28
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 15
-                },
-                "end": {
-                    "line": 2,
-                    "column": 20
-                }
-            },
-            "value": "cond}"
-        },
-        {
-            "type": "HTMLQuote",
-            "range": [
-                28,
-                29
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 20
-                },
-                "end": {
-                    "line": 2,
-                    "column": 21
-                }
-            },
-            "value": "\""
-        },
-        {
-            "type": "HTMLTagClose",
-            "range": [
-                29,
-                30
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 21
-                },
-                "end": {
-                    "line": 2,
-                    "column": 22
-                }
-            },
-            "value": ""
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                30,
-                37
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 22
-                },
-                "end": {
-                    "line": 2,
-                    "column": 29
-                }
-            },
-            "value": "</view>"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                37,
-                42
-            ],
-            "loc": {
-                "start": {
-                    "line": 2,
-                    "column": 29
-                },
-                "end": {
-                    "line": 3,
-                    "column": 4
-                }
-            },
-            "value": "\n    "
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                42,
-                47
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 4
-                },
-                "end": {
-                    "line": 3,
-                    "column": 9
-                }
-            },
-            "value": "<view"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                47,
-                48
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 9
-                },
-                "end": {
-                    "line": 3,
-                    "column": 10
-                }
-            },
-            "value": " "
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                48,
-                54
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 10
-                },
-                "end": {
-                    "line": 3,
-                    "column": 16
-                }
-            },
-            "value": "s-if=\""
-        },
-        {
-            "type": "XMustacheStart",
-            "range": [
-                54,
-                56
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 16
-                },
-                "end": {
-                    "line": 3,
-                    "column": 18
-                }
-            },
-            "value": "{{"
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                56,
-                69
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 18
-                },
-                "end": {
-                    "line": 3,
-                    "column": 31
-                }
-            },
-            "value": "cond\"></view>"
-        },
-        {
-            "type": "HTMLWhitespace",
-            "range": [
-                69,
-                70
-            ],
-            "loc": {
-                "start": {
-                    "line": 3,
-                    "column": 31
-                },
-                "end": {
-                    "line": 4,
-                    "column": 0
-                }
-            },
-            "value": "\n"
-        },
-        {
-            "type": "HTMLText",
-            "range": [
-                70,
-                78
-            ],
-            "loc": {
-                "start": {
-                    "line": 4,
-                    "column": 0
-                },
-                "end": {
-                    "line": 4,
-                    "column": 8
-                }
-            },
-            "value": "</block>"
-        }
-    ],
     "comments": []
 }
