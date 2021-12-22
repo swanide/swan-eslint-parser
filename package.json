@@ -1,6 +1,6 @@
 {
   "name": "@baidu/swan-eslint-parser",
-  "version": "0.0.1-beta.1",
+  "version": "0.0.1-beta.2",
   "description": "swan eslint parser",
   "main": "index.js",
   "files": [
@@ -10,8 +10,8 @@
   "scripts": {
     "prepublish": "npm run build",
     "prebuild": "npm run -s clean",
-    "build:es": "tsc --module es2015",
-    "build": "tsc --module es2015 && rollup -c -o index.js",
+    "build:es": "tsc --module es6",
+    "build": "tsc --module es6 && rollup -c -o index.js",
     "clean": "rm -rf .nyc_output .temp coverage index.js",
     "pretest": "npm run -s build",
     "test": "npm run -s test:mocha",
