@@ -1,7 +1,7 @@
 [
     {
         "type": "XDocument",
-        "text": "<template name=\"msgItem\">\n    <div class=\"id-{{className}}-value\"></div>\n</template>\n\n<import src=\"item.swan\" />\n<include src=\"header.swan\" />\n\n<template is=\"msgItem\" data=\"{{{...data}}}\"></template>\n<template is=\"msgItem\" data=\"{{{data, data1}}}\"></template>\n<template is=\"{{'msgItem'}}\" data=\"{{data}}\"></template>\n\n<template data=\"{{item}}\"></template>",
+        "text": "<template name=\"msgItem\">\n    <div class=\"id-{{className}}-value\"></div>\n</template>\n\n<import src=\"item.swan\" />\n<include src=\"header.swan\" />\n\n<template is=\"msgItem\" data=\"{{{...data}}}\"></template>\n<template is=\"msgItem\" data=\"{{{data, data1}}}\"></template>\n<template is=\"{{msgItem}}\" data=\"{{data}}\"></template>\n<template is=\"{{a > 0 ? 'msgItem' : 'msgItem1'}}\" data=\"{{data}}\"></template>\n\n<template data=\"{{item}}\"></template>",
         "children": [
             {
                 "type": "XElement",
@@ -230,19 +230,63 @@
             },
             {
                 "type": "XElement",
-                "text": "<template is=\"{{'msgItem'}}\" data=\"{{data}}\"></template>",
+                "text": "<template is=\"{{msgItem}}\" data=\"{{data}}\"></template>",
                 "children": [
                     {
                         "type": "XStartTag",
-                        "text": "<template is=\"{{'msgItem'}}\" data=\"{{data}}\">",
+                        "text": "<template is=\"{{msgItem}}\" data=\"{{data}}\">",
                         "children": [
                             {
                                 "type": "XAttribute",
-                                "text": "is=\"{{'msgItem'}}\"",
+                                "text": "is=\"{{msgItem}}\"",
                                 "children": [
                                     {
                                         "type": "XMustache",
-                                        "text": "{{'msgItem'}}",
+                                        "text": "{{msgItem}}",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XAttribute",
+                                "text": "data=\"{{data}}\"",
+                                "children": [
+                                    {
+                                        "type": "XMustache",
+                                        "text": "{{data}}",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</template>",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            },
+            {
+                "type": "XElement",
+                "text": "<template is=\"{{a > 0 ? 'msgItem' : 'msgItem1'}}\" data=\"{{data}}\"></template>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<template is=\"{{a > 0 ? 'msgItem' : 'msgItem1'}}\" data=\"{{data}}\">",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "is=\"{{a > 0 ? 'msgItem' : 'msgItem1'}}\"",
+                                "children": [
+                                    {
+                                        "type": "XMustache",
+                                        "text": "{{a > 0 ? 'msgItem' : 'msgItem1'}}",
                                         "children": []
                                     }
                                 ]

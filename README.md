@@ -1,4 +1,4 @@
-swan-eslint-parser
+@baidu/swan-eslint-parser
 ----
 
 Swan 模板解析器，将 Swan 模板解析成 AST 语法树，给代码检查工具和小程序编辑器插件使用。

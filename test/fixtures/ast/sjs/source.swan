@@ -1,6 +1,6 @@
 <import-sjs module="sjs">
-var hello = true;
-var world = function () {
+const hello = true;
+const world = function () {
     return 'hello world sjs';
 };
 module.exports = {
@@ -15,5 +15,12 @@ module.exports = {
 <import-sjs module="sjs"></import-sjs>
 
 <filter module="sjs">
-    module.exports = 1;
+const hello = true;
+const world = function () {
+    return 'hello world sjs';
+};
+module.exports = {
+    hello: hello,
+    world: world
+};
 </filter>

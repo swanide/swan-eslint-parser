@@ -1,11 +1,11 @@
 [
     {
         "type": "XDocument",
-        "text": "<block>\n    <view s-if=\"{{}}\"></view>\n    <view s-if=\"ab && cd\"></view>\n    <view s-for=\"abc\"></view>\n    <view s-for=\"item,index in list trackBy item.id\"></view>\n    <view s-for-index=\"abc\"></view>\n    <view s-for-item=\"abc\"></view>\n\n    <view bindtap=\"tap\"></view>\n    <view bind:tap=\"tap\"></view>\n    <view catchtap=\"tap\"></view>\n    <view catch:tap=\"tap\"></view>\n    <view capture-bind:tap=\"tap\"></view>\n    <view capture-catch:tap=\"tap\"></view>\n    <view mut-bind:tap=\"tap\"></view>\n    <view bind:touchmove.stop=\"stop\"></view>\n    <view bind:touch-move.stop=\"stop\"></view>\n    <input model:value=\"{{value}}\" />\n</block>\n",
+        "text": "<block>\n    <view s-if=\"{{}}\"></view>\n    <view s-if=\"ab && cd\"></view>\n    <view s-elif=\"{{abc}}\"></view>\n    <view s-elif=\"ab && cd\"></view>\n    <view s-else></view>\n\n    <view s-for=\"list\"></view>\n    <view s-for=\"item, index in list\"></view>\n    <view s-for=\"item,index in list trackBy item.id\"></view>\n    <view s-for-index=\"abc\"></view>\n    <view s-for-item=\"abc\"></view>\n\n    <view bindtap=\"tap\"></view>\n    <view bind:tap=\"tap\"></view>\n    <view bind:tap=\"{{tap}}\"></view>\n    <view bind:tap=\"{{'tap'}}\"></view>\n    <view catchtap=\"tap\"></view>\n    <view catch:tap=\"{{tap}}\"></view>\n    <view capture-bind:tap=\"tap\"></view>\n    <view capture-catch:tap=\"{{tap}}\"></view>\n    <view mut-bind:tap=\"tap\"></view>\n    <view bind:touchmove.stop=\"stop\"></view>\n    <view bind:touch-move.stop=\"{{stop}}\"></view>\n    \n</block>\n",
         "children": [
             {
                 "type": "XElement",
-                "text": "<block>\n    <view s-if=\"{{}}\"></view>\n    <view s-if=\"ab && cd\"></view>\n    <view s-for=\"abc\"></view>\n    <view s-for=\"item,index in list trackBy item.id\"></view>\n    <view s-for-index=\"abc\"></view>\n    <view s-for-item=\"abc\"></view>\n\n    <view bindtap=\"tap\"></view>\n    <view bind:tap=\"tap\"></view>\n    <view catchtap=\"tap\"></view>\n    <view catch:tap=\"tap\"></view>\n    <view capture-bind:tap=\"tap\"></view>\n    <view capture-catch:tap=\"tap\"></view>\n    <view mut-bind:tap=\"tap\"></view>\n    <view bind:touchmove.stop=\"stop\"></view>\n    <view bind:touch-move.stop=\"stop\"></view>\n    <input model:value=\"{{value}}\" />\n</block>",
+                "text": "<block>\n    <view s-if=\"{{}}\"></view>\n    <view s-if=\"ab && cd\"></view>\n    <view s-elif=\"{{abc}}\"></view>\n    <view s-elif=\"ab && cd\"></view>\n    <view s-else></view>\n\n    <view s-for=\"list\"></view>\n    <view s-for=\"item, index in list\"></view>\n    <view s-for=\"item,index in list trackBy item.id\"></view>\n    <view s-for-index=\"abc\"></view>\n    <view s-for-item=\"abc\"></view>\n\n    <view bindtap=\"tap\"></view>\n    <view bind:tap=\"tap\"></view>\n    <view bind:tap=\"{{tap}}\"></view>\n    <view bind:tap=\"{{'tap'}}\"></view>\n    <view catchtap=\"tap\"></view>\n    <view catch:tap=\"{{tap}}\"></view>\n    <view capture-bind:tap=\"tap\"></view>\n    <view capture-catch:tap=\"{{tap}}\"></view>\n    <view mut-bind:tap=\"tap\"></view>\n    <view bind:touchmove.stop=\"stop\"></view>\n    <view bind:touch-move.stop=\"{{stop}}\"></view>\n    \n</block>",
                 "children": [
                     {
                         "type": "XStartTag",
@@ -73,15 +73,123 @@
                     },
                     {
                         "type": "XElement",
-                        "text": "<view s-for=\"abc\"></view>",
+                        "text": "<view s-elif=\"{{abc}}\"></view>",
                         "children": [
                             {
                                 "type": "XStartTag",
-                                "text": "<view s-for=\"abc\">",
+                                "text": "<view s-elif=\"{{abc}}\">",
                                 "children": [
                                     {
                                         "type": "XDirective",
-                                        "text": "s-for=\"abc\"",
+                                        "text": "s-elif=\"{{abc}}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-elif=\"ab && cd\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-elif=\"ab && cd\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-elif=\"ab && cd\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-else></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-else>",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-else",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-for=\"list\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-for=\"list\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"list\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-for=\"item, index in list\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-for=\"item, index in list\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-for=\"item, index in list\"",
                                         "children": []
                                     }
                                 ]
@@ -235,6 +343,60 @@
                     },
                     {
                         "type": "XElement",
+                        "text": "<view bind:tap=\"{{tap}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view bind:tap=\"{{tap}}\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "bind:tap=\"{{tap}}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view bind:tap=\"{{'tap'}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view bind:tap=\"{{'tap'}}\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "bind:tap=\"{{'tap'}}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
                         "text": "<view catchtap=\"tap\"></view>",
                         "children": [
                             {
@@ -262,15 +424,15 @@
                     },
                     {
                         "type": "XElement",
-                        "text": "<view catch:tap=\"tap\"></view>",
+                        "text": "<view catch:tap=\"{{tap}}\"></view>",
                         "children": [
                             {
                                 "type": "XStartTag",
-                                "text": "<view catch:tap=\"tap\">",
+                                "text": "<view catch:tap=\"{{tap}}\">",
                                 "children": [
                                     {
                                         "type": "XDirective",
-                                        "text": "catch:tap=\"tap\"",
+                                        "text": "catch:tap=\"{{tap}}\"",
                                         "children": []
                                     }
                                 ]
@@ -316,15 +478,15 @@
                     },
                     {
                         "type": "XElement",
-                        "text": "<view capture-catch:tap=\"tap\"></view>",
+                        "text": "<view capture-catch:tap=\"{{tap}}\"></view>",
                         "children": [
                             {
                                 "type": "XStartTag",
-                                "text": "<view capture-catch:tap=\"tap\">",
+                                "text": "<view capture-catch:tap=\"{{tap}}\">",
                                 "children": [
                                     {
                                         "type": "XDirective",
-                                        "text": "capture-catch:tap=\"tap\"",
+                                        "text": "capture-catch:tap=\"{{tap}}\"",
                                         "children": []
                                     }
                                 ]
@@ -403,15 +565,15 @@
                     },
                     {
                         "type": "XElement",
-                        "text": "<view bind:touch-move.stop=\"stop\"></view>",
+                        "text": "<view bind:touch-move.stop=\"{{stop}}\"></view>",
                         "children": [
                             {
                                 "type": "XStartTag",
-                                "text": "<view bind:touch-move.stop=\"stop\">",
+                                "text": "<view bind:touch-move.stop=\"{{stop}}\">",
                                 "children": [
                                     {
                                         "type": "XDirective",
-                                        "text": "bind:touch-move.stop=\"stop\"",
+                                        "text": "bind:touch-move.stop=\"{{stop}}\"",
                                         "children": []
                                     }
                                 ]
@@ -425,35 +587,7 @@
                     },
                     {
                         "type": "XText",
-                        "text": "\n    ",
-                        "children": []
-                    },
-                    {
-                        "type": "XElement",
-                        "text": "<input model:value=\"{{value}}\" />",
-                        "children": [
-                            {
-                                "type": "XStartTag",
-                                "text": "<input model:value=\"{{value}}\" />",
-                                "children": [
-                                    {
-                                        "type": "XAttribute",
-                                        "text": "model:value=\"{{value}}\"",
-                                        "children": [
-                                            {
-                                                "type": "XMustache",
-                                                "text": "{{value}}",
-                                                "children": []
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "type": "XText",
-                        "text": "\n",
+                        "text": "\n    \n",
                         "children": []
                     },
                     {

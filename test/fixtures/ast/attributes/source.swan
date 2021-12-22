@@ -3,7 +3,7 @@
 
     <view a="c{{b}}d"></view>
 
-    <view a="{{c}}{{b}}{{d}}"></view>
+    <view a="{{c}} {{b}}{{d}}"></view>
 
     <view if="{{cond + '1'}}"></view>
     <view s-if="{{cond + 1}}"></view>

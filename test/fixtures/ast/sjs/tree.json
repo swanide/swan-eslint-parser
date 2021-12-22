@@ -1,11 +1,11 @@
 [
     {
         "type": "XDocument",
-        "text": "<import-sjs module=\"sjs\">\nvar hello = true;\nvar world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n</import-sjs>\n\n<import-sjs src=\"./module.sjs\" module=\"sjsModule\"/>\n<import-sjs src=\"./module.sjs\" module=\"sjsModule\"></import-sjs>\n<import-sjs></import-sjs>\n<import-sjs module=\"sjs\"></import-sjs>\n\n<filter module=\"sjs\">\n    module.exports = 1;\n</filter>",
+        "text": "<import-sjs module=\"sjs\">\nconst hello = true;\nconst world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n</import-sjs>\n\n<import-sjs src=\"./module.sjs\" module=\"sjsModule\"/>\n<import-sjs src=\"./module.sjs\" module=\"sjsModule\"></import-sjs>\n<import-sjs></import-sjs>\n<import-sjs module=\"sjs\"></import-sjs>\n\n<filter module=\"sjs\">\nconst hello = true;\nconst world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n</filter>",
         "children": [
             {
                 "type": "XElement",
-                "text": "<import-sjs module=\"sjs\">\nvar hello = true;\nvar world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n</import-sjs>",
+                "text": "<import-sjs module=\"sjs\">\nconst hello = true;\nconst world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n</import-sjs>",
                 "children": [
                     {
                         "type": "XStartTag",
@@ -26,11 +26,11 @@
                     },
                     {
                         "type": "XModule",
-                        "text": "\nvar hello = true;\nvar world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n",
+                        "text": "\nconst hello = true;\nconst world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n",
                         "children": [
                             {
                                 "type": "VariableDeclaration",
-                                "text": "var hello = true;",
+                                "text": "const hello = true;",
                                 "children": [
                                     {
                                         "type": "VariableDeclarator",
@@ -52,7 +52,7 @@
                             },
                             {
                                 "type": "VariableDeclaration",
-                                "text": "var world = function () {\n    return 'hello world sjs';\n};",
+                                "text": "const world = function () {\n    return 'hello world sjs';\n};",
                                 "children": [
                                     {
                                         "type": "VariableDeclarator",
@@ -309,7 +309,7 @@
             },
             {
                 "type": "XElement",
-                "text": "<filter module=\"sjs\">\n    module.exports = 1;\n</filter>",
+                "text": "<filter module=\"sjs\">\nconst hello = true;\nconst world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n</filter>",
                 "children": [
                     {
                         "type": "XStartTag",
@@ -330,15 +330,77 @@
                     },
                     {
                         "type": "XModule",
-                        "text": "\n    module.exports = 1;\n",
+                        "text": "\nconst hello = true;\nconst world = function () {\n    return 'hello world sjs';\n};\nmodule.exports = {\n    hello: hello,\n    world: world\n};\n",
                         "children": [
                             {
+                                "type": "VariableDeclaration",
+                                "text": "const hello = true;",
+                                "children": [
+                                    {
+                                        "type": "VariableDeclarator",
+                                        "text": "hello = true",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "hello",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "true",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "VariableDeclaration",
+                                "text": "const world = function () {\n    return 'hello world sjs';\n};",
+                                "children": [
+                                    {
+                                        "type": "VariableDeclarator",
+                                        "text": "world = function () {\n    return 'hello world sjs';\n}",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "world",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "FunctionExpression",
+                                                "text": "function () {\n    return 'hello world sjs';\n}",
+                                                "children": [
+                                                    {
+                                                        "type": "BlockStatement",
+                                                        "text": "{\n    return 'hello world sjs';\n}",
+                                                        "children": [
+                                                            {
+                                                                "type": "ReturnStatement",
+                                                                "text": "return 'hello world sjs';",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "'hello world sjs'",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
                                 "type": "ExpressionStatement",
-                                "text": "module.exports = 1;",
+                                "text": "module.exports = {\n    hello: hello,\n    world: world\n};",
                                 "children": [
                                     {
                                         "type": "AssignmentExpression",
-                                        "text": "module.exports = 1",
+                                        "text": "module.exports = {\n    hello: hello,\n    world: world\n}",
                                         "children": [
                                             {
                                                 "type": "MemberExpression",
@@ -357,9 +419,42 @@
                                                 ]
                                             },
                                             {
-                                                "type": "Literal",
-                                                "text": "1",
-                                                "children": []
+                                                "type": "ObjectExpression",
+                                                "text": "{\n    hello: hello,\n    world: world\n}",
+                                                "children": [
+                                                    {
+                                                        "type": "Property",
+                                                        "text": "hello: hello",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "hello",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "hello",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    },
+                                                    {
+                                                        "type": "Property",
+                                                        "text": "world: world",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "world",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "world",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }

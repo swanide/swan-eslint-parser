@@ -1,0 +1,18 @@
+[
+    {
+        "type": "XDocument",
+        "text": "{{a,b}}\n",
+        "children": [
+            {
+                "type": "XMustache",
+                "text": "{{a,b}}",
+                "children": []
+            },
+            {
+                "type": "XText",
+                "text": "\n",
+                "children": []
+            }
+        ]
+    }
+]

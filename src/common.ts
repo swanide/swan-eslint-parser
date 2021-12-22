@@ -5,7 +5,7 @@
 
 import debugFactory from 'debug';
 import {ErrorCode, Location } from '../types/ast';
-export const debug = debugFactory('swan-eslint-parser');
+export const debug = debugFactory('@baidu/swan-eslint-parser');
 
 function isAcornStyleParseError(
     x: any,

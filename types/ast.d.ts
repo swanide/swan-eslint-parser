@@ -176,9 +176,8 @@ export type XNode =
     | XExpression
     | XModule
 
-export type Node =
-    | script.ScriptNode
-    | XNode
+export type ScriptNode = script.ScriptNode;
+export type Node = ScriptNode | XNode;
 
 export type ScriptProgram = script.ScriptProgram;
 

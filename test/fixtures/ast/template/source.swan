@@ -7,6 +7,7 @@
 
 <template is="msgItem" data="{{{...data}}}"></template>
 <template is="msgItem" data="{{{data, data1}}}"></template>
-<template is="{{'msgItem'}}" data="{{data}}"></template>
+<template is="{{msgItem}}" data="{{data}}"></template>
+<template is="{{a > 0 ? 'msgItem' : 'msgItem1'}}" data="{{data}}"></template>
 
 <template data="{{item}}"></template>

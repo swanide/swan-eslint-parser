@@ -1,11 +1,11 @@
 [
     {
         "type": "XDocument",
-        "text": "<block>\n    <view a=\"b\"></view>\n\n    <view a=\"c{{b}}d\"></view>\n\n    <view a=\"{{c}}{{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    \n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>\n<view>\n    <text class\n        =\n            \"value\"\n    ></text>\n    <text class\n        =\n            \"abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>\n    <text style=\"{{{color: '#ccc'}}}\"></text>\n    <view hover-class=\"{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}\"></view>\n</view>\n<view s-elif=\"a <b || c> 1\" s-if=\"{{a < b || c > 1}}\">{{a < b || c > 1}}</view>\n\n",
+        "text": "<block>\n    <view a=\"b\"></view>\n\n    <view a=\"c{{b}}d\"></view>\n\n    <view a=\"{{c}} {{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    \n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>\n<view>\n    <text class\n        =\n            \"value\"\n    ></text>\n    <text class\n        =\n            \"abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>\n    <text style=\"{{{color: '#ccc'}}}\"></text>\n    <view hover-class=\"{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}\"></view>\n</view>\n<view s-elif=\"a <b || c> 1\" s-if=\"{{a < b || c > 1}}\">{{a < b || c > 1}}</view>\n\n",
         "children": [
             {
                 "type": "XElement",
-                "text": "<block>\n    <view a=\"b\"></view>\n\n    <view a=\"c{{b}}d\"></view>\n\n    <view a=\"{{c}}{{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    \n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>",
+                "text": "<block>\n    <view a=\"b\"></view>\n\n    <view a=\"c{{b}}d\"></view>\n\n    <view a=\"{{c}} {{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    \n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>",
                 "children": [
                     {
                         "type": "XStartTag",
@@ -95,19 +95,24 @@
                     },
                     {
                         "type": "XElement",
-                        "text": "<view a=\"{{c}}{{b}}{{d}}\"></view>",
+                        "text": "<view a=\"{{c}} {{b}}{{d}}\"></view>",
                         "children": [
                             {
                                 "type": "XStartTag",
-                                "text": "<view a=\"{{c}}{{b}}{{d}}\">",
+                                "text": "<view a=\"{{c}} {{b}}{{d}}\">",
                                 "children": [
                                     {
                                         "type": "XAttribute",
-                                        "text": "a=\"{{c}}{{b}}{{d}}\"",
+                                        "text": "a=\"{{c}} {{b}}{{d}}\"",
                                         "children": [
                                             {
                                                 "type": "XMustache",
                                                 "text": "{{c}}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": " ",
                                                 "children": []
                                             },
                                             {
