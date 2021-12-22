@@ -1,0 +1,99 @@
+[
+    {
+        "type": "XDocument",
+        "text": "<view \n    class=\"cls-{{ abcd: abc && def }}\"\n    style1=\"{{abcd : 1,efgi : 2}}\"\n    style2=\"{{'abc-def' : 1}}\"\n    style3='{{\"abc-def\"  : abc && def, xxx: 1}}'>\n    {{\"abc-def\"  : abc && def, xxx: abc || def}}\n    {{  'abc-def'  : abc && def, \"xxx\": abc || def}}\n</view>",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<view \n    class=\"cls-{{ abcd: abc && def }}\"\n    style1=\"{{abcd : 1,efgi : 2}}\"\n    style2=\"{{'abc-def' : 1}}\"\n    style3='{{\"abc-def\"  : abc && def, xxx: 1}}'>\n    {{\"abc-def\"  : abc && def, xxx: abc || def}}\n    {{  'abc-def'  : abc && def, \"xxx\": abc || def}}\n</view>",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<view \n    class=\"cls-{{ abcd: abc && def }}\"\n    style1=\"{{abcd : 1,efgi : 2}}\"\n    style2=\"{{'abc-def' : 1}}\"\n    style3='{{\"abc-def\"  : abc && def, xxx: 1}}'>",
+                        "children": [
+                            {
+                                "type": "XAttribute",
+                                "text": "class=\"cls-{{ abcd: abc && def }}\"",
+                                "children": [
+                                    {
+                                        "type": "XLiteral",
+                                        "text": "cls-",
+                                        "children": []
+                                    },
+                                    {
+                                        "type": "XMustache",
+                                        "text": "{{ abcd: abc && def }}",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XAttribute",
+                                "text": "style1=\"{{abcd : 1,efgi : 2}}\"",
+                                "children": [
+                                    {
+                                        "type": "XMustache",
+                                        "text": "{{abcd : 1,efgi : 2}}",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XAttribute",
+                                "text": "style2=\"{{'abc-def' : 1}}\"",
+                                "children": [
+                                    {
+                                        "type": "XMustache",
+                                        "text": "{{'abc-def' : 1}}",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XAttribute",
+                                "text": "style3='{{\"abc-def\"  : abc && def, xxx: 1}}'",
+                                "children": [
+                                    {
+                                        "type": "XMustache",
+                                        "text": "{{\"abc-def\"  : abc && def, xxx: 1}}",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{\"abc-def\"  : abc && def, xxx: abc || def}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{  'abc-def'  : abc && def, \"xxx\": abc || def}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n",
+                        "children": []
+                    },
+                    {
+                        "type": "XEndTag",
+                        "text": "</view>",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,8 +1,12 @@
 <block>
     <view a="b"></view>
-
+    <view a="
+    b
+    "></view>
     <view a="c{{b}}d"></view>
-
+    <view a="c
+    {{b}}
+    d"></view>
     <view a="{{c}} {{b}}{{d}}"></view>
 
     <view if="{{cond + '1'}}"></view>
@@ -21,7 +25,11 @@
     <block s-for="item in [1, 2, 3] trackBy item.id"></block>
     <block s-for="[1, 2, 3] trackBy item.id"></block>
     <block s-for="[1, 2, 3]"></block>
-    
+    <block bindtap="class"></block>
+    <block bindtap="   class   "></block>
+    <block bindtap="{{class}}"></block>
+    <block bindtap="{{  class   }}"></block>
+    <block class="class-{{ in }}"></block>
     <view scroll-top="{=scrollTop=}">{=scrollTop=}</view>
     <view
         s-for="{{list}}"

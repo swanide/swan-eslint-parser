@@ -381,9 +381,10 @@
         },
         {
             "type": "Identifier",
-            "value": "b",
-            "start": 50,
-            "end": 51,
+            "range": [
+                50,
+                51
+            ],
             "loc": {
                 "start": {
                     "line": 5,
@@ -394,10 +395,7 @@
                     "column": 17
                 }
             },
-            "range": [
-                50,
-                51
-            ]
+            "value": "b"
         },
         {
             "type": "XMustacheEnd",
@@ -617,9 +615,10 @@
         },
         {
             "type": "Identifier",
-            "value": "c",
-            "start": 80,
-            "end": 81,
+            "range": [
+                80,
+                81
+            ],
             "loc": {
                 "start": {
                     "line": 7,
@@ -630,10 +629,7 @@
                     "column": 16
                 }
             },
-            "range": [
-                80,
-                81
-            ]
+            "value": "c"
         },
         {
             "type": "XMustacheEnd",
@@ -691,9 +687,10 @@
         },
         {
             "type": "Identifier",
-            "value": "b",
-            "start": 86,
-            "end": 87,
+            "range": [
+                86,
+                87
+            ],
             "loc": {
                 "start": {
                     "line": 7,
@@ -704,10 +701,7 @@
                     "column": 22
                 }
             },
-            "range": [
-                86,
-                87
-            ]
+            "value": "b"
         },
         {
             "type": "XMustacheEnd",
@@ -765,9 +759,10 @@
         },
         {
             "type": "Identifier",
-            "value": "d",
-            "start": 92,
-            "end": 93,
+            "range": [
+                92,
+                93
+            ],
             "loc": {
                 "start": {
                     "line": 7,
@@ -778,10 +773,7 @@
                     "column": 28
                 }
             },
-            "range": [
-                92,
-                93
-            ]
+            "value": "d"
         },
         {
             "type": "XMustacheEnd",
@@ -2255,9 +2247,10 @@
         },
         {
             "type": "Identifier",
-            "value": "list",
-            "start": 318,
-            "end": 322,
+            "range": [
+                318,
+                322
+            ],
             "loc": {
                 "start": {
                     "line": 18,
@@ -2268,10 +2261,7 @@
                     "column": 27
                 }
             },
-            "range": [
-                318,
-                322
-            ]
+            "value": "list"
         },
         {
             "type": "XMustacheEnd",
@@ -3387,8 +3377,11 @@
                                                 },
                                                 "expression": {
                                                     "type": "Identifier",
-                                                    "start": 50,
-                                                    "end": 51,
+                                                    "name": "b",
+                                                    "range": [
+                                                        50,
+                                                        51
+                                                    ],
                                                     "loc": {
                                                         "start": {
                                                             "line": 5,
@@ -3398,19 +3391,17 @@
                                                             "line": 5,
                                                             "column": 17
                                                         }
-                                                    },
-                                                    "range": [
-                                                        50,
-                                                        51
-                                                    ],
-                                                    "name": "b"
+                                                    }
                                                 },
                                                 "references": [
                                                     {
                                                         "id": {
                                                             "type": "Identifier",
-                                                            "start": 50,
-                                                            "end": 51,
+                                                            "name": "b",
+                                                            "range": [
+                                                                50,
+                                                                51
+                                                            ],
                                                             "loc": {
                                                                 "start": {
                                                                     "line": 5,
@@ -3420,14 +3411,10 @@
                                                                     "line": 5,
                                                                     "column": 17
                                                                 }
-                                                            },
-                                                            "range": [
-                                                                50,
-                                                                51
-                                                            ],
-                                                            "name": "b"
+                                                            }
                                                         },
-                                                        "mode": "r"
+                                                        "mode": "r",
+                                                        "variable": null
                                                     }
                                                 ]
                                             },
@@ -3634,8 +3621,11 @@
                                                 },
                                                 "expression": {
                                                     "type": "Identifier",
-                                                    "start": 80,
-                                                    "end": 81,
+                                                    "name": "c",
+                                                    "range": [
+                                                        80,
+                                                        81
+                                                    ],
                                                     "loc": {
                                                         "start": {
                                                             "line": 7,
@@ -3645,19 +3635,17 @@
                                                             "line": 7,
                                                             "column": 16
                                                         }
-                                                    },
-                                                    "range": [
-                                                        80,
-                                                        81
-                                                    ],
-                                                    "name": "c"
+                                                    }
                                                 },
                                                 "references": [
                                                     {
                                                         "id": {
                                                             "type": "Identifier",
-                                                            "start": 80,
-                                                            "end": 81,
+                                                            "name": "c",
+                                                            "range": [
+                                                                80,
+                                                                81
+                                                            ],
                                                             "loc": {
                                                                 "start": {
                                                                     "line": 7,
@@ -3667,14 +3655,10 @@
                                                                     "line": 7,
                                                                     "column": 16
                                                                 }
-                                                            },
-                                                            "range": [
-                                                                80,
-                                                                81
-                                                            ],
-                                                            "name": "c"
+                                                            }
                                                         },
-                                                        "mode": "r"
+                                                        "mode": "r",
+                                                        "variable": null
                                                     }
                                                 ]
                                             },
@@ -3767,8 +3751,11 @@
                                                 },
                                                 "expression": {
                                                     "type": "Identifier",
-                                                    "start": 86,
-                                                    "end": 87,
+                                                    "name": "b",
+                                                    "range": [
+                                                        86,
+                                                        87
+                                                    ],
                                                     "loc": {
                                                         "start": {
                                                             "line": 7,
@@ -3778,19 +3765,17 @@
                                                             "line": 7,
                                                             "column": 22
                                                         }
-                                                    },
-                                                    "range": [
-                                                        86,
-                                                        87
-                                                    ],
-                                                    "name": "b"
+                                                    }
                                                 },
                                                 "references": [
                                                     {
                                                         "id": {
                                                             "type": "Identifier",
-                                                            "start": 86,
-                                                            "end": 87,
+                                                            "name": "b",
+                                                            "range": [
+                                                                86,
+                                                                87
+                                                            ],
                                                             "loc": {
                                                                 "start": {
                                                                     "line": 7,
@@ -3800,14 +3785,10 @@
                                                                     "line": 7,
                                                                     "column": 22
                                                                 }
-                                                            },
-                                                            "range": [
-                                                                86,
-                                                                87
-                                                            ],
-                                                            "name": "b"
+                                                            }
                                                         },
-                                                        "mode": "r"
+                                                        "mode": "r",
+                                                        "variable": null
                                                     }
                                                 ]
                                             },
@@ -3900,8 +3881,11 @@
                                                 },
                                                 "expression": {
                                                     "type": "Identifier",
-                                                    "start": 92,
-                                                    "end": 93,
+                                                    "name": "d",
+                                                    "range": [
+                                                        92,
+                                                        93
+                                                    ],
                                                     "loc": {
                                                         "start": {
                                                             "line": 7,
@@ -3911,19 +3895,17 @@
                                                             "line": 7,
                                                             "column": 28
                                                         }
-                                                    },
-                                                    "range": [
-                                                        92,
-                                                        93
-                                                    ],
-                                                    "name": "d"
+                                                    }
                                                 },
                                                 "references": [
                                                     {
                                                         "id": {
                                                             "type": "Identifier",
-                                                            "start": 92,
-                                                            "end": 93,
+                                                            "name": "d",
+                                                            "range": [
+                                                                92,
+                                                                93
+                                                            ],
                                                             "loc": {
                                                                 "start": {
                                                                     "line": 7,
@@ -3933,14 +3915,10 @@
                                                                     "line": 7,
                                                                     "column": 28
                                                                 }
-                                                            },
-                                                            "range": [
-                                                                92,
-                                                                93
-                                                            ],
-                                                            "name": "d"
+                                                            }
                                                         },
-                                                        "mode": "r"
+                                                        "mode": "r",
+                                                        "variable": null
                                                     }
                                                 ]
                                             },
@@ -5257,8 +5235,11 @@
                                                 },
                                                 "expression": {
                                                     "type": "Identifier",
-                                                    "start": 318,
-                                                    "end": 322,
+                                                    "name": "list",
+                                                    "range": [
+                                                        318,
+                                                        322
+                                                    ],
                                                     "loc": {
                                                         "start": {
                                                             "line": 18,
@@ -5268,19 +5249,17 @@
                                                             "line": 18,
                                                             "column": 27
                                                         }
-                                                    },
-                                                    "range": [
-                                                        318,
-                                                        322
-                                                    ],
-                                                    "name": "list"
+                                                    }
                                                 },
                                                 "references": [
                                                     {
                                                         "id": {
                                                             "type": "Identifier",
-                                                            "start": 318,
-                                                            "end": 322,
+                                                            "name": "list",
+                                                            "range": [
+                                                                318,
+                                                                322
+                                                            ],
                                                             "loc": {
                                                                 "start": {
                                                                     "line": 18,
@@ -5290,14 +5269,10 @@
                                                                     "line": 18,
                                                                     "column": 27
                                                                 }
-                                                            },
-                                                            "range": [
-                                                                318,
-                                                                322
-                                                            ],
-                                                            "name": "list"
+                                                            }
                                                         },
-                                                        "mode": "r"
+                                                        "mode": "r",
+                                                        "variable": null
                                                     }
                                                 ]
                                             },
@@ -6316,9 +6291,10 @@
             },
             {
                 "type": "Identifier",
-                "value": "b",
-                "start": 50,
-                "end": 51,
+                "range": [
+                    50,
+                    51
+                ],
                 "loc": {
                     "start": {
                         "line": 5,
@@ -6329,10 +6305,7 @@
                         "column": 17
                     }
                 },
-                "range": [
-                    50,
-                    51
-                ]
+                "value": "b"
             },
             {
                 "type": "XMustacheEnd",
@@ -6552,9 +6525,10 @@
             },
             {
                 "type": "Identifier",
-                "value": "c",
-                "start": 80,
-                "end": 81,
+                "range": [
+                    80,
+                    81
+                ],
                 "loc": {
                     "start": {
                         "line": 7,
@@ -6565,10 +6539,7 @@
                         "column": 16
                     }
                 },
-                "range": [
-                    80,
-                    81
-                ]
+                "value": "c"
             },
             {
                 "type": "XMustacheEnd",
@@ -6626,9 +6597,10 @@
             },
             {
                 "type": "Identifier",
-                "value": "b",
-                "start": 86,
-                "end": 87,
+                "range": [
+                    86,
+                    87
+                ],
                 "loc": {
                     "start": {
                         "line": 7,
@@ -6639,10 +6611,7 @@
                         "column": 22
                     }
                 },
-                "range": [
-                    86,
-                    87
-                ]
+                "value": "b"
             },
             {
                 "type": "XMustacheEnd",
@@ -6700,9 +6669,10 @@
             },
             {
                 "type": "Identifier",
-                "value": "d",
-                "start": 92,
-                "end": 93,
+                "range": [
+                    92,
+                    93
+                ],
                 "loc": {
                     "start": {
                         "line": 7,
@@ -6713,10 +6683,7 @@
                         "column": 28
                     }
                 },
-                "range": [
-                    92,
-                    93
-                ]
+                "value": "d"
             },
             {
                 "type": "XMustacheEnd",
@@ -8190,9 +8157,10 @@
             },
             {
                 "type": "Identifier",
-                "value": "list",
-                "start": 318,
-                "end": 322,
+                "range": [
+                    318,
+                    322
+                ],
                 "loc": {
                     "start": {
                         "line": 18,
@@ -8203,10 +8171,7 @@
                         "column": 27
                     }
                 },
-                "range": [
-                    318,
-                    322
-                ]
+                "value": "list"
             },
             {
                 "type": "XMustacheEnd",

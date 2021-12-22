@@ -264,6 +264,7 @@ export function parseExpression(
     {allowEmpty = false} = {},
 ): ExpressionParseResult<Expression> {
     debug('[script] parse expression: "%s"', code);
+
     const codeLocationCalculator = locationCalculator.getSubCalculatorShift(-2);
     try {
         const {ast} = parseScriptFragment(

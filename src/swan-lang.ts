@@ -3,18 +3,18 @@
  * @author mengke01(kekee000@gmail.com)
  */
 
-import { sortedIndexBy, sortedLastIndexBy } from 'lodash';
-import { 
-    ControlDirectivePrefix, EventDirectivePrefix, HasParent, SwanForExpression, 
+import {sortedIndexBy, sortedLastIndexBy} from 'lodash';
+import {
+    ControlDirectivePrefix, EventDirectivePrefix, HasParent, OffsetRange, SwanForExpression, 
     Token, XAttribute, XDirective, XDirectiveKey, XDocument, XElement, XExpression,
-    XIdentifier, XModule, XMustache, XNode, XStartTag 
+    XIdentifier, XModule, XMustache, XNode 
 } from '../types/ast';
-import { ParserOptions, ScriptParserOptions } from '../types/parser';
-import { Identifier, Reference, ArrayExpression} from '../types/script';
+import {ScriptParserOptions} from '../types/parser';
+import {Identifier, Reference, ArrayExpression} from '../types/script';
 import {debug, ParseError} from './common';
-import { LocationCalculator } from './location-calculator';
-import { ExpressionParseResult, parseExpression, parseScriptElement } from './script/index';
-import { analyzeExternalReferences } from './script/scope-analyzer';
+import {LocationCalculator} from './location-calculator';
+import {ExpressionParseResult, parseExpression, parseScriptElement} from './script/index';
+import {analyzeExternalReferences} from './script/scope-analyzer';
 
 export const SWAN_CAN_BE_LEFT_OPEN_TAGS = new Set(['_']);
 export const SWAN_VOID_ELEMENT_TAGS = new Set(['include']);
@@ -194,6 +194,8 @@ export function convertToDirective(
     return directive;
 }
 
+const memberExpression = /^\s*(?:\w+\s*:|(["'])[\w.-]+\1\s*:)/;
+
 /**
  * Parse the content of the given mustache.
  * @param parserOptions The parser options to parse expressions.
@@ -209,7 +211,7 @@ export function processMustache(
 ): void {
     debug('[template] convert mustache {{%s}} %j', mustache.value, (mustache as any).range);
     let code = mustache.value;
-
+    
     node.value = {
         type: 'XExpression',
         range: [mustache.startToken.range[1], mustache.endToken.range[0]],
@@ -234,6 +236,7 @@ export function processMustache(
     
     // s-for 需要特殊处理
     if (node.parent.type === 'XDirective' && node.parent.key.name === 'for') {
+        debug('[template] convert for directive {{%s}} %j', mustache.value, (mustache as any).range);
         processForExpression(
             parserOptions, 
             globalLocationCalculator, 
@@ -242,6 +245,19 @@ export function processMustache(
         );
     }
     else {
+        // 支持 {{abc: 1,def: 2}} 差值语法
+        if (memberExpression.test(code) && mustache.startToken.value === '{{') {
+            debug('[template] convert mustache member expression {{%s}} %j', mustache.value, (mustache as any).range);
+            code = `{${code}}`;
+            mustache.startToken.range[1] -= 1;
+            mustache.startToken.loc.end.column -= 1;
+            mustache.startToken.value = '{';
+
+            mustache.endToken.range[0] += 1;
+            mustache.endToken.loc.start.column += 1;
+            mustache.endToken.value = '}';
+        }
+
         processExpression(
             parserOptions, 
             globalLocationCalculator, 
@@ -258,8 +274,44 @@ export function processExpression(
     code: string
 ): void {
     debug('[template] convert expression {{%s}} %j', code, node.range);
-    const range: [number, number] = [...node.range];
+    // 处理仅有 1 个变量的插值语法 "abc", "{{abc}}"
+    const identifierReg = /^(\s*)(\w+)\s*$/;
+    let identifierMatch: RegExpMatchArray = null;
+    if (identifierMatch = identifierReg.exec(code)) {
+        const [,identifierLeft, identifierName] = identifierMatch;
+        const range: OffsetRange = [
+            node.range[0] + identifierLeft.length,
+            node.range[0] + identifierLeft.length + identifierName.length
+        ];
+        const loc = {
+            start: globalLocationCalculator.getLocation(range[0]),
+            end: globalLocationCalculator.getLocation(range[1])
+        };
+        const identifier: Identifier = {
+            type: 'Identifier',
+            name: identifierName,
+            range,
+            loc
+        };
+        const token = {
+            type: 'Identifier',
+            range,
+            loc,
+            value: identifierName
+        };
+        node.expression = identifier;
+        node.references = [{
+            id: identifier,
+            mode: 'r',
+            variable: null,
+        }];
+        (node.expression as HasParent).parent = node;
+        replaceTokens(getOwnerDocument(node), {range: node.range}, [token]);
+        resolveReferences(node);
+        return;
+    }
 
+    const range: OffsetRange = [...node.range];
     const document = getOwnerDocument(node);
     try {
         const locationCalculator = globalLocationCalculator.getSubCalculatorAfter(
@@ -308,7 +360,7 @@ export function processForExpression(
     debug('[template] convert expression {{%s}} %j', code, node.range);
     const parserOptions = {
         ...rawParserOptions,
-        // TODO: s-for 指令不属于标准语法，本次不进行 token 替换
+        // TODO: s-for 指令不属于标准语法，不进行 token 替换
         tokens: false
     };
 
@@ -446,7 +498,7 @@ export function processForExpression(
 
 
 /**
- * Parse the content of the given mustache.
+ * Parse the content of the given script block.
  * @param parserOptions The parser options to parse expressions.
  * @param globalLocationCalculator The location calculator to adjust the locations of nodes.
  * @param node The expression container node. This function modifies the `expression` and `references` properties of this node.

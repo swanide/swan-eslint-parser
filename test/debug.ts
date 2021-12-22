@@ -21,7 +21,7 @@ function travels(node: any) {
 }
 
 const swanXml = 
-`<view s-for="{{item,index in list}}"><block s-if="index">{{item.id}}</block></view>`
+`<view bindtap=" abc "></view>`
 
 console.time('parse');
 const ast = parse(swanXml, {

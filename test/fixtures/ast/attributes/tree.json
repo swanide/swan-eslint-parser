@@ -1,11 +1,11 @@
 [
     {
         "type": "XDocument",
-        "text": "<block>\n    <view a=\"b\"></view>\n\n    <view a=\"c{{b}}d\"></view>\n\n    <view a=\"{{c}} {{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    \n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>\n<view>\n    <text class\n        =\n            \"value\"\n    ></text>\n    <text class\n        =\n            \"abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>\n    <text style=\"{{{color: '#ccc'}}}\"></text>\n    <view hover-class=\"{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}\"></view>\n</view>\n<view s-elif=\"a <b || c> 1\" s-if=\"{{a < b || c > 1}}\">{{a < b || c > 1}}</view>\n\n",
+        "text": "<block>\n    <view a=\"b\"></view>\n    <view a=\"\n    b\n    \"></view>\n    <view a=\"c{{b}}d\"></view>\n    <view a=\"c\n    {{b}}\n    d\"></view>\n    <view a=\"{{c}} {{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    <block bindtap=\"class\"></block>\n    <block bindtap=\"   class   \"></block>\n    <block bindtap=\"{{class}}\"></block>\n    <block bindtap=\"{{  class   }}\"></block>\n    <block class=\"class-{{ in }}\"></block>\n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>\n<view>\n    <text class\n        =\n            \"value\"\n    ></text>\n    <text class\n        =\n            \"abc-{{ cond ? 'class1' : 'class2' }}-def\"\n    ></text>\n    <text style=\"{{{color: '#ccc'}}}\"></text>\n    <view hover-class=\"{{status === 0 || status === 3 ? 'spin-hover-feedback' : ''}}\"></view>\n</view>\n<view s-elif=\"a <b || c> 1\" s-if=\"{{a < b || c > 1}}\">{{a < b || c > 1}}</view>\n\n",
         "children": [
             {
                 "type": "XElement",
-                "text": "<block>\n    <view a=\"b\"></view>\n\n    <view a=\"c{{b}}d\"></view>\n\n    <view a=\"{{c}} {{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    \n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>",
+                "text": "<block>\n    <view a=\"b\"></view>\n    <view a=\"\n    b\n    \"></view>\n    <view a=\"c{{b}}d\"></view>\n    <view a=\"c\n    {{b}}\n    d\"></view>\n    <view a=\"{{c}} {{b}}{{d}}\"></view>\n\n    <view if=\"{{cond + '1'}}\"></view>\n    <view s-if=\"{{cond + 1}}\"></view>\n    <view if=\"cond < 1\"></view>\n\n    <view s-for=\"{{[1,2,3,4]}}\"></view>\n    <view s-for=\"item in list\"></view>\n    <view s-for=\"list\" s-for-item=\"item\" s-for-index=\"index\"></view>\n    <view s-for=\"list trackBy item.id\"></view>\n    <block s-for=\"item,index in list trackBy item\"></block>\n    <block s-for=\"item in list trackBy item.id\"></block>\n    <block s-for=\"list trackBy item.id\"></block>\n    <block s-for=\"list\"></block>\n    <block s-for=\"item,index in [1, 2, 3] trackBy item\"></block>\n    <block s-for=\"item in [1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3] trackBy item.id\"></block>\n    <block s-for=\"[1, 2, 3]\"></block>\n    <block bindtap=\"class\"></block>\n    <block bindtap=\"   class   \"></block>\n    <block bindtap=\"{{class}}\"></block>\n    <block bindtap=\"{{  class   }}\"></block>\n    <block class=\"class-{{ in }}\"></block>\n    <view scroll-top=\"{=scrollTop=}\">{=scrollTop=}</view>\n    <view\n        s-for=\"{{list}}\"\n    ></view>\n</block>",
                 "children": [
                     {
                         "type": "XStartTag",
@@ -47,7 +47,40 @@
                     },
                     {
                         "type": "XText",
-                        "text": "\n\n    ",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view a=\"\n    b\n    \"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view a=\"\n    b\n    \">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "a=\"\n    b\n    \"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "\n    b\n    ",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
                         "children": []
                     },
                     {
@@ -90,7 +123,50 @@
                     },
                     {
                         "type": "XText",
-                        "text": "\n\n    ",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view a=\"c\n    {{b}}\n    d\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view a=\"c\n    {{b}}\n    d\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "a=\"c\n    {{b}}\n    d\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "c\n    ",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{b}}",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "\n    d",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
                         "children": []
                     },
                     {
@@ -565,7 +641,153 @@
                     },
                     {
                         "type": "XText",
-                        "text": "\n    \n    ",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block bindtap=\"class\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block bindtap=\"class\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "bindtap=\"class\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block bindtap=\"   class   \"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block bindtap=\"   class   \">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "bindtap=\"   class   \"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block bindtap=\"{{class}}\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block bindtap=\"{{class}}\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "bindtap=\"{{class}}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block bindtap=\"{{  class   }}\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block bindtap=\"{{  class   }}\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "bindtap=\"{{  class   }}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<block class=\"class-{{ in }}\"></block>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<block class=\"class-{{ in }}\">",
+                                "children": [
+                                    {
+                                        "type": "XAttribute",
+                                        "text": "class=\"class-{{ in }}\"",
+                                        "children": [
+                                            {
+                                                "type": "XLiteral",
+                                                "text": "class-",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{ in }}",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</block>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
                         "children": []
                     },
                     {
