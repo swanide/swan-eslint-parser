@@ -1,11 +1,11 @@
 [
     {
         "type": "XDocument",
-        "text": "<block>\n    {{a.b.c}}\n    <view>{{b ? c : d}}</view>\n    {{e}}{{f}}{{g}}\n    <view></view>{{h || 'text'}}\n    {{\n        i === j ? true: false\n    }}\n\n    {{i < 2}}\n    {{i << 2}}\n\n    {{i > 2}}\n    {{i >> 2}}\n    {{i >>> 2}}\n</block>\n",
+        "text": "<block>\n    {{a.b.c}}\n    {{public}}\n    <view>{{b ? c : d}}</view>\n    {{e}}{{f}}{{g}}\n    <view></view>{{h || 'text'}}\n    {{\n        i === j ? true: false\n    }}\n\n    {{i < 2}}\n    {{i << 2}}\n\n    {{i > 2}}\n    {{i >> 2}}\n    {{i >>> 2}}\n</block>\n",
         "children": [
             {
                 "type": "XElement",
-                "text": "<block>\n    {{a.b.c}}\n    <view>{{b ? c : d}}</view>\n    {{e}}{{f}}{{g}}\n    <view></view>{{h || 'text'}}\n    {{\n        i === j ? true: false\n    }}\n\n    {{i < 2}}\n    {{i << 2}}\n\n    {{i > 2}}\n    {{i >> 2}}\n    {{i >>> 2}}\n</block>",
+                "text": "<block>\n    {{a.b.c}}\n    {{public}}\n    <view>{{b ? c : d}}</view>\n    {{e}}{{f}}{{g}}\n    <view></view>{{h || 'text'}}\n    {{\n        i === j ? true: false\n    }}\n\n    {{i < 2}}\n    {{i << 2}}\n\n    {{i > 2}}\n    {{i >> 2}}\n    {{i >>> 2}}\n</block>",
                 "children": [
                     {
                         "type": "XStartTag",
@@ -20,6 +20,16 @@
                     {
                         "type": "XMustache",
                         "text": "{{a.b.c}}",
+                        "children": []
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{public}}",
                         "children": []
                     },
                     {

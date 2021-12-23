@@ -1,5 +1,6 @@
 <block>
     {{a.b.c}}
+    {{public}}
     <view>{{b ? c : d}}</view>
     {{e}}{{f}}{{g}}
     <view></view>{{h || 'text'}}

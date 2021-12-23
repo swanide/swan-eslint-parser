@@ -1,11 +1,11 @@
 [
     {
         "type": "XDocument",
-        "text": "<block>\n    <view s-if=\"{{}}\"></view>\n    <view s-if=\"ab && cd\"></view>\n    <view s-elif=\"{{abc}}\"></view>\n    <view s-elif=\"ab && cd\"></view>\n    <view s-else></view>\n\n    <view s-for=\"list\"></view>\n    <view s-for=\"item, index in list\"></view>\n    <view s-for=\"item,index in list trackBy item.id\"></view>\n    <view s-for-index=\"abc\"></view>\n    <view s-for-item=\"abc\"></view>\n\n    <view bindtap=\"tap\"></view>\n    <view bind:tap=\"tap\"></view>\n    <view bind:tap=\"{{tap}}\"></view>\n    <view bind:tap=\"{{'tap'}}\"></view>\n    <view catchtap=\"tap\"></view>\n    <view catch:tap=\"{{tap}}\"></view>\n    <view capture-bind:tap=\"tap\"></view>\n    <view capture-catch:tap=\"{{tap}}\"></view>\n    <view mut-bind:tap=\"tap\"></view>\n    <view bind:touchmove.stop=\"stop\"></view>\n    <view bind:touch-move.stop=\"{{stop}}\"></view>\n    \n</block>\n",
+        "text": "<block>\n    <view s-if=\"{{}}\"></view>\n    <view s-if=\"{{public}}\"></view>\n    <view s-if=\"ab && cd\"></view>\n    <view s-elif=\"{{abc}}\"></view>\n    <view s-elif=\"ab && cd\"></view>\n    <view s-else></view>\n\n    <view s-for=\"list\"></view>\n    <view s-for=\"item, index in list\"></view>\n    <view s-for=\"item,index in list trackBy item.id\"></view>\n    <view s-for-index=\"abc\"></view>\n    <view s-for-item=\"abc\"></view>\n\n    <view bindtap=\"package\"></view>\n    <view bindtap=\"tap\"></view>\n    <view bind:tap=\"tap\"></view>\n    <view bind:tap=\"{{tap}}\"></view>\n    <view bind:tap=\"{{'tap'}}\"></view>\n    <view catchtap=\"tap\"></view>\n    <view catch:tap=\"{{tap}}\"></view>\n    <view capture-bind:tap=\"tap\"></view>\n    <view capture-catch:tap=\"{{tap}}\"></view>\n    <view mut-bind:tap=\"tap\"></view>\n    <view bind:touchmove.stop=\"stop\"></view>\n    <view bind:touch-move.stop=\"{{stop}}\"></view>\n    \n</block>\n",
         "children": [
             {
                 "type": "XElement",
-                "text": "<block>\n    <view s-if=\"{{}}\"></view>\n    <view s-if=\"ab && cd\"></view>\n    <view s-elif=\"{{abc}}\"></view>\n    <view s-elif=\"ab && cd\"></view>\n    <view s-else></view>\n\n    <view s-for=\"list\"></view>\n    <view s-for=\"item, index in list\"></view>\n    <view s-for=\"item,index in list trackBy item.id\"></view>\n    <view s-for-index=\"abc\"></view>\n    <view s-for-item=\"abc\"></view>\n\n    <view bindtap=\"tap\"></view>\n    <view bind:tap=\"tap\"></view>\n    <view bind:tap=\"{{tap}}\"></view>\n    <view bind:tap=\"{{'tap'}}\"></view>\n    <view catchtap=\"tap\"></view>\n    <view catch:tap=\"{{tap}}\"></view>\n    <view capture-bind:tap=\"tap\"></view>\n    <view capture-catch:tap=\"{{tap}}\"></view>\n    <view mut-bind:tap=\"tap\"></view>\n    <view bind:touchmove.stop=\"stop\"></view>\n    <view bind:touch-move.stop=\"{{stop}}\"></view>\n    \n</block>",
+                "text": "<block>\n    <view s-if=\"{{}}\"></view>\n    <view s-if=\"{{public}}\"></view>\n    <view s-if=\"ab && cd\"></view>\n    <view s-elif=\"{{abc}}\"></view>\n    <view s-elif=\"ab && cd\"></view>\n    <view s-else></view>\n\n    <view s-for=\"list\"></view>\n    <view s-for=\"item, index in list\"></view>\n    <view s-for=\"item,index in list trackBy item.id\"></view>\n    <view s-for-index=\"abc\"></view>\n    <view s-for-item=\"abc\"></view>\n\n    <view bindtap=\"package\"></view>\n    <view bindtap=\"tap\"></view>\n    <view bind:tap=\"tap\"></view>\n    <view bind:tap=\"{{tap}}\"></view>\n    <view bind:tap=\"{{'tap'}}\"></view>\n    <view catchtap=\"tap\"></view>\n    <view catch:tap=\"{{tap}}\"></view>\n    <view capture-bind:tap=\"tap\"></view>\n    <view capture-catch:tap=\"{{tap}}\"></view>\n    <view mut-bind:tap=\"tap\"></view>\n    <view bind:touchmove.stop=\"stop\"></view>\n    <view bind:touch-move.stop=\"{{stop}}\"></view>\n    \n</block>",
                 "children": [
                     {
                         "type": "XStartTag",
@@ -28,6 +28,33 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-if=\"{{}}\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view s-if=\"{{public}}\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view s-if=\"{{public}}\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "s-if=\"{{public}}\"",
                                         "children": []
                                     }
                                 ]
@@ -285,6 +312,33 @@
                     {
                         "type": "XText",
                         "text": "\n\n    ",
+                        "children": []
+                    },
+                    {
+                        "type": "XElement",
+                        "text": "<view bindtap=\"package\"></view>",
+                        "children": [
+                            {
+                                "type": "XStartTag",
+                                "text": "<view bindtap=\"package\">",
+                                "children": [
+                                    {
+                                        "type": "XDirective",
+                                        "text": "bindtap=\"package\"",
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "XEndTag",
+                                "text": "</view>",
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "type": "XText",
+                        "text": "\n    ",
                         "children": []
                     },
                     {

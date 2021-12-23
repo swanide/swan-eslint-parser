@@ -1,5 +1,6 @@
 <block>
     <view s-if="{{}}"></view>
+    <view s-if="{{public}}"></view>
     <view s-if="ab && cd"></view>
     <view s-elif="{{abc}}"></view>
     <view s-elif="ab && cd"></view>
@@ -11,6 +12,7 @@
     <view s-for-index="abc"></view>
     <view s-for-item="abc"></view>
 
+    <view bindtap="package"></view>
     <view bindtap="tap"></view>
     <view bind:tap="tap"></view>
     <view bind:tap="{{tap}}"></view>

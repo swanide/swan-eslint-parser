@@ -261,7 +261,7 @@ export function parseExpression(
     code: string,
     locationCalculator: LocationCalculator,
     parserOptions: ScriptParserOptions,
-    {allowEmpty = false} = {},
+    allowEmpty = false
 ): ExpressionParseResult<Expression> {
     debug('[script] parse expression: "%s"', code);
 
@@ -282,6 +282,7 @@ export function parseExpression(
         if (!allowEmpty && !expression) {
             return throwEmptyError(locationCalculator, 'an expression');
         }
+
         if ((expression as unknown as SpreadElement).type === 'SpreadElement') {
             return throwUnexpectedTokenError('...', expression as HasLocation);
         }

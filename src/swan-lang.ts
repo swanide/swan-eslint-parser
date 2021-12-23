@@ -313,15 +313,14 @@ export function processExpression(
 
     const range: OffsetRange = [...node.range];
     const document = getOwnerDocument(node);
+    const locationCalculator = globalLocationCalculator.getSubCalculatorAfter(
+        range[0],
+    );
     try {
-        const locationCalculator = globalLocationCalculator.getSubCalculatorAfter(
-            range[0],
-        );
         const ret = parseExpression(
             code,
             locationCalculator,
-            parserOptions,
-            {allowEmpty: true},
+            parserOptions
         );
 
         node.expression = ret.expression || null;
@@ -336,9 +335,38 @@ export function processExpression(
     }
     catch (e) {
         debug('[template] Parse error: %s', e);
-
         if (ParseError.isParseError(e)) {
-            insertError(document, e);
+            // javascript reserved keyword 需要特殊处理
+            if (/^The keyword '\w+' is reserved/.test(e.message)) {
+                try {
+                    const ret = parseExpression(
+                        code,
+                        locationCalculator,
+                        {
+                            ...parserOptions,
+                            ecmaVersion: 3,
+                            allowReserved: true,
+                            sourceType: 'script'
+                        }
+                    );
+
+                    node.expression = ret.expression || null;
+                    node.references = ret.references;
+                    if (ret.expression != null) {
+                        (ret.expression as HasParent).parent = node;
+                    }
+                    if (ret.tokens.length) {
+                        replaceTokens(document, {range}, ret.tokens);
+                    }
+                    resolveReferences(node);
+                }
+                catch (kew) {
+                    insertError(document, e);
+                }
+            }
+            else {
+                insertError(document, e);
+            }
         }
         else {
             throw e;
@@ -418,8 +446,7 @@ export function processForExpression(
             const ret = parseExpression(
                 `[${forLeft.code}]`,
                 locationCalculator,
-                parserOptions,
-                {allowEmpty: false}
+                parserOptions
             ) as ExpressionParseResult<ArrayExpression>;
             references.push(...ret.references);
             if (ret.expression.elements.length) {
