@@ -16,6 +16,11 @@
                                 "text": "class=\"cls-{{ abcd: abc && def }}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "class",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "cls-",
                                         "children": []
@@ -23,7 +28,47 @@
                                     {
                                         "type": "XMustache",
                                         "text": "{{ abcd: abc && def }}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": " abcd: abc && def ",
+                                                "children": [
+                                                    {
+                                                        "type": "ObjectExpression",
+                                                        "text": " abcd: abc && def }}",
+                                                        "children": [
+                                                            {
+                                                                "type": "Property",
+                                                                "text": "bcd: abc && def ",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "bcd:",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "LogicalExpression",
+                                                                        "text": "bc && def ",
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "Identifier",
+                                                                                "text": "bc ",
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "type": "Identifier",
+                                                                                "text": "ef ",
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -32,9 +77,59 @@
                                 "text": "style1=\"{{abcd : 1,efgi : 2}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "style1",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{abcd : 1,efgi : 2}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "abcd : 1,efgi : 2",
+                                                "children": [
+                                                    {
+                                                        "type": "ObjectExpression",
+                                                        "text": "abcd : 1,efgi : 2}}",
+                                                        "children": [
+                                                            {
+                                                                "type": "Property",
+                                                                "text": "bcd : 1,",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "bcd ",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": ",",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "Property",
+                                                                "text": "fgi : 2}",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "fgi ",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "}",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -43,9 +138,43 @@
                                 "text": "style2=\"{{'abc-def' : 1}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "style2",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{'abc-def' : 1}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "'abc-def' : 1",
+                                                "children": [
+                                                    {
+                                                        "type": "ObjectExpression",
+                                                        "text": "'abc-def' : 1}}",
+                                                        "children": [
+                                                            {
+                                                                "type": "Property",
+                                                                "text": "abc-def' : 1}",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "abc-def' ",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "}",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -54,9 +183,70 @@
                                 "text": "style3='{{\"abc-def\"  : abc && def, xxx: 1}}'",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "style3",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{\"abc-def\"  : abc && def, xxx: 1}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "\"abc-def\"  : abc && def, xxx: 1",
+                                                "children": [
+                                                    {
+                                                        "type": "ObjectExpression",
+                                                        "text": "\"abc-def\"  : abc && def, xxx: 1}}",
+                                                        "children": [
+                                                            {
+                                                                "type": "Property",
+                                                                "text": "abc-def\"  : abc && def,",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "abc-def\" ",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "LogicalExpression",
+                                                                        "text": "bc && def,",
+                                                                        "children": [
+                                                                            {
+                                                                                "type": "Identifier",
+                                                                                "text": "bc ",
+                                                                                "children": []
+                                                                            },
+                                                                            {
+                                                                                "type": "Identifier",
+                                                                                "text": "ef,",
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "Property",
+                                                                "text": "xx: 1}",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "xx:",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "}",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -70,7 +260,74 @@
                     {
                         "type": "XMustache",
                         "text": "{{\"abc-def\"  : abc && def, xxx: abc || def}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "\"abc-def\"  : abc && def, xxx: abc || def",
+                                "children": [
+                                    {
+                                        "type": "ObjectExpression",
+                                        "text": "\"abc-def\"  : abc && def, xxx: abc || def}}",
+                                        "children": [
+                                            {
+                                                "type": "Property",
+                                                "text": "abc-def\"  : abc && def,",
+                                                "children": [
+                                                    {
+                                                        "type": "Literal",
+                                                        "text": "abc-def\" ",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "LogicalExpression",
+                                                        "text": "bc && def,",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "bc ",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "ef,",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Property",
+                                                "text": "xx: abc || def}",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "xx:",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "LogicalExpression",
+                                                        "text": "bc || def}",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "bc ",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "ef}",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -80,7 +337,74 @@
                     {
                         "type": "XMustache",
                         "text": "{{  'abc-def'  : abc && def, \"xxx\": abc || def}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "  'abc-def'  : abc && def, \"xxx\": abc || def",
+                                "children": [
+                                    {
+                                        "type": "ObjectExpression",
+                                        "text": "  'abc-def'  : abc && def, \"xxx\": abc || def}}",
+                                        "children": [
+                                            {
+                                                "type": "Property",
+                                                "text": "abc-def'  : abc && def,",
+                                                "children": [
+                                                    {
+                                                        "type": "Literal",
+                                                        "text": "abc-def' ",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "LogicalExpression",
+                                                        "text": "bc && def,",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "bc ",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "ef,",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Property",
+                                                "text": "xxx\": abc || def}",
+                                                "children": [
+                                                    {
+                                                        "type": "Literal",
+                                                        "text": "xxx\":",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "LogicalExpression",
+                                                        "text": "bc || def}",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "bc ",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "ef}",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",

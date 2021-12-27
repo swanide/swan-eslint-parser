@@ -3,26 +3,23 @@
  * @copyright 2017 Toru Nagashima. All rights reserved.
  * See LICENSE file in root directory for full license.
  */
-import {unionWith, VisitorKeys} from 'eslint-visitor-keys';
+import Evk, {VisitorKeys} from 'eslint-visitor-keys';
 import {Node} from '../../types/ast';
 
 //------------------------------------------------------------------------------
 // Helpers
 //------------------------------------------------------------------------------
 
-const KEYS = unionWith({
-    XAttribute: ['value'],
+const KEYS = Evk.unionWith({
+    XAttribute: ['key', 'value'],
+    XDirective: ['key', 'value'],
     XDocument: ['children'],
     XElement: ['startTag', 'children', 'endTag'],
-    XDirective: [],
-    XEndTag: [],
+    XMustache: ['value'],
     XExpression: ['expression'],
-    XIdentifier: [],
-    XLiteral: [],
+    SwanForExpression: ['left', 'index', 'right', 'trackBy'],
     XStartTag: ['attributes'],
-    XText: [],
-    XMustache: ['expression'],
-    XModule: ['body']
+    XModule: ['body'],
 });
 
 /**
@@ -52,7 +49,7 @@ function fallbackKeysFilter(this: any, key: string): boolean {
  * @param node The node to get.
  * @returns The keys to traverse.
  */
-function getFallbackKeys(node: object): string[] {
+function getFallbackKeys(node: Node): string[] {
     return Object.keys(node).filter(fallbackKeysFilter, node);
 }
 

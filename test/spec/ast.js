@@ -162,7 +162,7 @@ describe('Template AST', () => {
         const actual = parser.parseForESLint(
             source,
             {filePath: sourcePath}
-        ); 
+        );
 
         describe(`'test/fixtures/ast/${name}/source.swan'`, () => {
             it('should be parsed to valid AST.', () => {
@@ -242,14 +242,14 @@ describe('Template AST', () => {
                 }
             });
 
-            // it('should traverse AST in the correct order.', () => {
-            //     const resultPath = path.join(ROOT, `${name}/tree.json`);
-            //     const expectedText = fs.readFileSync(resultPath, 'utf8');
-            //     const tokens = getTree(source);
-            //     const actualText = JSON.stringify(tokens, null, 4);
+            it('should traverse AST in the correct order.', () => {
+                const resultPath = path.join(ROOT, `${name}/tree.json`);
+                const expectedText = fs.readFileSync(resultPath, 'utf8');
+                const tokens = getTree(source);
+                const actualText = JSON.stringify(tokens, null, 4);
 
-            //     assert.strictEqual(actualText, expectedText);
-            // });
+                assert.strictEqual(actualText, expectedText);
+            });
 
             it('should have correct parent properties.', () => {
                 validateParent(source);

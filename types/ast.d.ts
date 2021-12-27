@@ -66,7 +66,7 @@ export interface XMustache extends HasLocation, HasParent {
     value: XExpression;
 }
 
-export interface Mustache extends HasLocation {
+export interface Mustache extends HasLocation, HasParent {
     type: 'Mustache';
     value: string;
     startToken: Token;
@@ -129,7 +129,7 @@ export interface XDocument extends HasLocation, HasParent {
     type: 'XDocument';
     xmlType: 'swan' | 'unknown';
     parent: null;
-    children: (XElement | XText | XMustache)[];
+    children: (XElement | XText | XMustache | Mustache)[];
     tokens: Token[];
     comments: Token[];
     errors: ParseError[];
@@ -142,7 +142,7 @@ export interface XElement extends HasLocation, HasParent {
     name: string;
     rawName: string;
     startTag: XStartTag;
-    children: (XElement | XText | XMustache | XModule)[];
+    children: (XElement | XText | XMustache | Mustache | XModule)[];
     endTag: XEndTag | null;
     variables: script.Variable[];
 }

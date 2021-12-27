@@ -29,7 +29,8 @@ const ast = parser.parse(
     code,
     {
         filePath: mpxmlFile.filePath,
-        noOpenTag: true
+        noOpenTag: true,
+        parseExpression: false
     }
 );
 console.timeEnd('parse');

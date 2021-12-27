@@ -10,7 +10,7 @@ import {
     ESLintProgram,
     XDocument,
 } from './ast';
-import {traverseNodes} from './traverse';
+import {traverseNodes} from '../script/traverse';
 
 //------------------------------------------------------------------------------
 // Helpers

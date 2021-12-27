@@ -16,6 +16,8 @@ import {
     XExpression,
     XMustache,
     XNode,
+    Mustache,
+    XDirective,
 } from '../types/ast';
 import {ParserOptions} from '../types/parser';
 
@@ -38,7 +40,6 @@ import IntermediateTokenizer, {
     EndTag,
     StartTag,
     Text,
-    Mustache,
 } from './intermediate-tokenizer';
 import Tokenizer from './tokenizer';
 
@@ -224,69 +225,71 @@ export default class Parser {
      */
     private processAttribute(node: XAttribute): void {
         const attrName = node.key.name;
+        let isDirective = false;
         if (DIRECTIVE_NAME.test(attrName)) {
-            const directiveNode = convertToDirective(node);
-            if (node.value.length === 1 && node.value[0].type === 'XLiteral') {
-                const token = node.value[0];
-                const expressionNode: XExpression = {
-                    type: 'XExpression',
-                    range: token.range,
-                    loc: token.loc,
-                    parent: directiveNode,
-                    expression: null,
-                    references: []
-                };
-                if (token.value.trim()) {
-                    // 转换控制语句, for 需要单独处理
-                    if (directiveNode.key.name !== 'for') {
-                        processExpression(
-                            this.parserOptions.script!,
-                            this.locationCalculator,
-                            expressionNode,
-                            token.value
-                        );
-                    }
-                    else {
-                        processForExpression(
-                            this.parserOptions.script!,
-                            this.locationCalculator,
-                            expressionNode,
-                            token.value
-                        );
-                    }
-                }
-                node.value[0] = expressionNode;
-            }
+            convertToDirective(node);
+            isDirective = true;
         }
         else if (attrName.startsWith('s-') || attrName.startsWith('bind:')) {
             this.reportParseError(node.key, 'x-invalid-directive');
         }
 
-        const values = node.value.map(token => {
-            if (token.type === 'Mustache') {
+        const values = node.value.map((token, index) => {
+            if (this.parserOptions.parseExpression) {
+                if (token.type === 'Mustache') {
+                    const mustacheNode: XMustache = {
+                        type: 'XMustache',
+                        range: token.range,
+                        loc: token.loc,
+                        parent: node,
+                        value: null,
+                        startToken: token.startToken,
+                        endToken: token.endToken
+                    };
 
-                const mustacheNode: XMustache = {
-                    type: 'XMustache',
-                    range: token.range,
-                    loc: token.loc,
-                    parent: node,
-                    value: null,
-                    startToken: token.startToken,
-                    endToken: token.endToken
-                };
-            
-                processMustache(
-                    this.parserOptions.script!,
-                    this.locationCalculator,
-                    mustacheNode,
-                    token
-                );
-                return mustacheNode;
+                    processMustache(
+                        this.parserOptions.script!,
+                        this.locationCalculator,
+                        mustacheNode,
+                        token
+                    );
+                    return mustacheNode;
+                }
+                else if (isDirective && token.type === 'XLiteral' && index === 0) {
+                    const expressionNode: XExpression = {
+                        type: 'XExpression',
+                        range: token.range,
+                        loc: token.loc,
+                        parent: node as unknown as XDirective,
+                        expression: null,
+                        references: []
+                    };
+                    if (token.value.trim()) {
+                        // 转换控制语句, for 需要单独处理
+                        if (node.key.name !== 'for') {
+                            processExpression(
+                                this.parserOptions.script!,
+                                this.locationCalculator,
+                                expressionNode,
+                                token.value
+                            );
+                        }
+                        else {
+                            processForExpression(
+                                this.parserOptions.script!,
+                                this.locationCalculator,
+                                expressionNode,
+                                token.value
+                            );
+                        }
+                    }
+                    return expressionNode;
+                }
             }
 
+            token.parent = node;
             return token;
         });
-
         node.value = values;
     }
 
@@ -405,8 +408,9 @@ export default class Parser {
             value: token.value,
         });
 
-        // wxs module parse, with no src attribute
-        if (parent.type === 'XElement'
+        // sjs module parse, with no src attribute
+        if (this.parserOptions.parseExpression
+            && parent.type === 'XElement'
             && (parent.name === 'import-sjs' || parent.name === 'filter')
             && parent.children[0].type === 'XText'
             && !parent.startTag.attributes.some(attr => attr.key.name === 'src')) {
@@ -426,21 +430,27 @@ export default class Parser {
         debug('[swan] Mustache %j', token);
 
         const parent = this.currentNode;
-        const mustacheNode: XMustache = {
-            type: 'XMustache',
-            range: token.range,
-            loc: token.loc,
-            parent,
-            value: null,
-            startToken: token.startToken,
-            endToken: token.endToken
-        };
-        processMustache(
-            this.parserOptions.script!,
-            this.locationCalculator,
-            mustacheNode,
-            token,
-        );
-        parent.children.push(mustacheNode);
+        if (this.parserOptions.parseExpression) {
+            const mustacheNode: XMustache = {
+                type: 'XMustache',
+                range: token.range,
+                loc: token.loc,
+                parent,
+                value: null,
+                startToken: token.startToken,
+                endToken: token.endToken
+            };
+            processMustache(
+                this.parserOptions.script!,
+                this.locationCalculator,
+                mustacheNode,
+                token,
+            );
+            parent.children.push(mustacheNode);
+        }
+        else {
+            token.parent = parent;
+            parent.children.push(token);
+        }
     }
 }

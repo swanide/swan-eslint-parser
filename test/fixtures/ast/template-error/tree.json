@@ -16,9 +16,20 @@
                                 "text": "is=\"{{...data}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "is",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{...data}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "...data",
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             }

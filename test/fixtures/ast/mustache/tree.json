@@ -20,7 +20,41 @@
                     {
                         "type": "XMustache",
                         "text": "{{a.b.c}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "a.b.c",
+                                "children": [
+                                    {
+                                        "type": "MemberExpression",
+                                        "text": "a.b.c",
+                                        "children": [
+                                            {
+                                                "type": "MemberExpression",
+                                                "text": "a.b",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "a",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "b",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Identifier",
+                                                "text": "c",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -30,7 +64,19 @@
                     {
                         "type": "XMustache",
                         "text": "{{public}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "public",
+                                "children": [
+                                    {
+                                        "type": "Identifier",
+                                        "text": "public",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -49,7 +95,35 @@
                             {
                                 "type": "XMustache",
                                 "text": "{{b ? c : d}}",
-                                "children": []
+                                "children": [
+                                    {
+                                        "type": "XExpression",
+                                        "text": "b ? c : d",
+                                        "children": [
+                                            {
+                                                "type": "ConditionalExpression",
+                                                "text": "b ? c : d",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "b",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "c",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "d",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
                                 "type": "XEndTag",
@@ -66,17 +140,53 @@
                     {
                         "type": "XMustache",
                         "text": "{{e}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "e",
+                                "children": [
+                                    {
+                                        "type": "Identifier",
+                                        "text": "e",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XMustache",
                         "text": "{{f}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "f",
+                                "children": [
+                                    {
+                                        "type": "Identifier",
+                                        "text": "f",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XMustache",
                         "text": "{{g}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "g",
+                                "children": [
+                                    {
+                                        "type": "Identifier",
+                                        "text": "g",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -102,7 +212,30 @@
                     {
                         "type": "XMustache",
                         "text": "{{h || 'text'}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "h || 'text'",
+                                "children": [
+                                    {
+                                        "type": "LogicalExpression",
+                                        "text": "h || 'text'",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "h",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "'text'",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -112,7 +245,46 @@
                     {
                         "type": "XMustache",
                         "text": "{{\n        i === j ? true: false\n    }}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "\n        i === j ? true: false\n    ",
+                                "children": [
+                                    {
+                                        "type": "ConditionalExpression",
+                                        "text": "i === j ? true: false",
+                                        "children": [
+                                            {
+                                                "type": "BinaryExpression",
+                                                "text": "i === j",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "i",
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "j",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "true",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "false",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -122,7 +294,30 @@
                     {
                         "type": "XMustache",
                         "text": "{{i < 2}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "i < 2",
+                                "children": [
+                                    {
+                                        "type": "BinaryExpression",
+                                        "text": "i < 2",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "i",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "2",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -132,7 +327,30 @@
                     {
                         "type": "XMustache",
                         "text": "{{i << 2}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "i << 2",
+                                "children": [
+                                    {
+                                        "type": "BinaryExpression",
+                                        "text": "i << 2",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "i",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "2",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -142,7 +360,30 @@
                     {
                         "type": "XMustache",
                         "text": "{{i > 2}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "i > 2",
+                                "children": [
+                                    {
+                                        "type": "BinaryExpression",
+                                        "text": "i > 2",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "i",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "2",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -152,7 +393,30 @@
                     {
                         "type": "XMustache",
                         "text": "{{i >> 2}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "i >> 2",
+                                "children": [
+                                    {
+                                        "type": "BinaryExpression",
+                                        "text": "i >> 2",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "i",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "2",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",
@@ -162,7 +426,30 @@
                     {
                         "type": "XMustache",
                         "text": "{{i >>> 2}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "i >>> 2",
+                                "children": [
+                                    {
+                                        "type": "BinaryExpression",
+                                        "text": "i >>> 2",
+                                        "children": [
+                                            {
+                                                "type": "Identifier",
+                                                "text": "i",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "Literal",
+                                                "text": "2",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XText",

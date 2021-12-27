@@ -32,6 +32,7 @@ function resolveParserOptions(options: ParserOptions) {
     return Object.assign(
         {
             noOpenTag: false,
+            parseExpression: true,
             script: {
                 parser: 'espree',
                 sourceType: 'module',
@@ -52,7 +53,7 @@ export function parse(code: string, options: ParserOptions): ast.XDocument {
 }
 
 export function parseForESLint(code: string, options: ParserOptions): ESLintExtendedProgram {
-    
+
     const parserOptions = resolveParserOptions(options);
 
     // eslint-disable-next-line no-param-reassign
@@ -69,7 +70,7 @@ export function parseForESLint(code: string, options: ParserOptions): ESLintExte
         result.ast.range = rootAST.range;
         result.ast.tokens = rootAST.tokens;
         result.ast.comments = rootAST.comments;
-        
+
         const sjsModules = rootAST.children
             .filter(node => node.type === 'XElement' && isInlineSjsModule(node)) as ast.XElement[];
         const moduleBody: (script.Statement | script.ModuleDeclaration)[] = [];

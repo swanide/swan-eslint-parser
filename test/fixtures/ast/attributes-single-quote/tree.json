@@ -35,6 +35,11 @@
                                         "text": "a='b'",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "a",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "b",
                                                 "children": []
@@ -68,6 +73,11 @@
                                         "text": "a='c{{b}}d'",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "a",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "c",
                                                 "children": []
@@ -75,7 +85,19 @@
                                             {
                                                 "type": "XMustache",
                                                 "text": "{{b}}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "b",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "b",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "type": "XLiteral",
@@ -111,9 +133,26 @@
                                         "text": "a='{{c}}-{{b}}-{{d}}'",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "a",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XMustache",
                                                 "text": "{{c}}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "c",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "c",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "type": "XLiteral",
@@ -123,7 +162,19 @@
                                             {
                                                 "type": "XMustache",
                                                 "text": "{{b}}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "b",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "b",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "type": "XLiteral",
@@ -133,7 +184,19 @@
                                             {
                                                 "type": "XMustache",
                                                 "text": "{{d}}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "d",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "d",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -164,9 +227,37 @@
                                         "text": "if='{{cond + \"1\"}}'",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "if",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XMustache",
                                                 "text": "{{cond + \"1\"}}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "cond + \"1\"",
+                                                        "children": [
+                                                            {
+                                                                "type": "BinaryExpression",
+                                                                "text": "cond + \"1\"",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "cond",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "\"1\"",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -195,7 +286,41 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-if='{{cond + 1}}'",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-if",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{cond + 1}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "cond + 1",
+                                                        "children": [
+                                                            {
+                                                                "type": "BinaryExpression",
+                                                                "text": "cond + 1",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "cond",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "1",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -222,7 +347,51 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-for-items='{{[1,2,3,4]}}'",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-for-items",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{[1,2,3,4]}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "[1,2,3,4]",
+                                                        "children": [
+                                                            {
+                                                                "type": "ArrayExpression",
+                                                                "text": "[1,2,3,4]",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "1",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "2",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "3",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "4",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -249,7 +418,51 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-for-items='{{[1,2,3,4]}}'",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-for-items",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{[1,2,3,4]}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "[1,2,3,4]",
+                                                        "children": [
+                                                            {
+                                                                "type": "ArrayExpression",
+                                                                "text": "[1,2,3,4]",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "1",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "2",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "3",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "4",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -276,7 +489,30 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-for-items='{{list}}'",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-for-items",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{list}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "list",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "list",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -331,6 +567,11 @@
                                         "text": "class\n        =\n            'value'",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "class",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "value",
                                                 "children": []
@@ -364,6 +605,11 @@
                                         "text": "class\n        =\n            'abc-{{ cond ? \"class1\" : \"class2\" }}-def'",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "class",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "abc-",
                                                 "children": []
@@ -371,7 +617,35 @@
                                             {
                                                 "type": "XMustache",
                                                 "text": "{{ cond ? \"class1\" : \"class2\" }}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": " cond ? \"class1\" : \"class2\" ",
+                                                        "children": [
+                                                            {
+                                                                "type": "ConditionalExpression",
+                                                                "text": "cond ? \"class1\" : \"class2\"",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "cond",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "\"class1\"",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "\"class2\"",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "type": "XLiteral",

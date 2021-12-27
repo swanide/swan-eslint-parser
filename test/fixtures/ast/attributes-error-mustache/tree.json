@@ -30,6 +30,11 @@
                                         "text": "a=\"{{cond}\"",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "a",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "{{cond}",
                                                 "children": []

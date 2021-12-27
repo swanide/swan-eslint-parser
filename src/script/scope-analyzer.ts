@@ -65,7 +65,7 @@ function analyze(ast: ScriptProgram, parserOptions: any): escope.Scope {
         impliedStrict: ecmaFeatures.impliedStrict,
         ecmaVersion,
         sourceType,
-        fallback: getFallbackKeys,
+        fallback: getFallbackKeys as any,
     });
 
     return result.globalScope;

@@ -11,6 +11,11 @@ export interface ParserOptions {
     noOpenTag: boolean;
 
     /**
+     * should parse expression
+     */
+    parseExpression: boolean;
+
+    /**
      * script parser options, default acron
      */
     script?: ScriptParserOptions

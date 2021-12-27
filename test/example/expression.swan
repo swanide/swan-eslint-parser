@@ -1,3 +1,4 @@
-<view bindtap=" 
-
-abc "></view>
+<view s-if="{{sif}}-def">{{abc}}</view>
+<import-sjs module="abc">
+exports.abc = 1;
+</import-sjs>

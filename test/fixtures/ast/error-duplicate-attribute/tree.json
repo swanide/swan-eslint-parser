@@ -30,6 +30,11 @@
                                         "text": "id=\"a\"",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "id",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "a",
                                                 "children": []
@@ -40,6 +45,11 @@
                                         "type": "XAttribute",
                                         "text": "id=\"b\"",
                                         "children": [
+                                            {
+                                                "type": "XIdentifier",
+                                                "text": "id",
+                                                "children": []
+                                            },
                                             {
                                                 "type": "XLiteral",
                                                 "text": "b",

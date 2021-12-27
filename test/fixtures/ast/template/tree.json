@@ -16,6 +16,11 @@
                                 "text": "name=\"msgItem\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "name",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "msgItem",
                                         "children": []
@@ -42,6 +47,11 @@
                                         "text": "class=\"id-{{className}}-value\"",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "class",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "id-",
                                                 "children": []
@@ -49,7 +59,19 @@
                                             {
                                                 "type": "XMustache",
                                                 "text": "{{className}}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "className",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "className",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "type": "XLiteral",
@@ -97,6 +119,11 @@
                                 "text": "src=\"item.swan\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "src",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "item.swan",
                                         "children": []
@@ -124,6 +151,11 @@
                                 "type": "XAttribute",
                                 "text": "src=\"header.swan\"",
                                 "children": [
+                                    {
+                                        "type": "XIdentifier",
+                                        "text": "src",
+                                        "children": []
+                                    },
                                     {
                                         "type": "XLiteral",
                                         "text": "header.swan",
@@ -153,6 +185,11 @@
                                 "text": "is=\"msgItem\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "is",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "msgItem",
                                         "children": []
@@ -164,9 +201,38 @@
                                 "text": "data=\"{{{...data}}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "data",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{{...data}}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "{...data}",
+                                                "children": [
+                                                    {
+                                                        "type": "ObjectExpression",
+                                                        "text": "{...data}",
+                                                        "children": [
+                                                            {
+                                                                "type": "SpreadElement",
+                                                                "text": "...data",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "data",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -197,6 +263,11 @@
                                 "text": "is=\"msgItem\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "is",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "msgItem",
                                         "children": []
@@ -208,9 +279,59 @@
                                 "text": "data=\"{{{data, data1}}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "data",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{{data, data1}}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "{data, data1}",
+                                                "children": [
+                                                    {
+                                                        "type": "ObjectExpression",
+                                                        "text": "{data, data1}",
+                                                        "children": [
+                                                            {
+                                                                "type": "Property",
+                                                                "text": "data",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "data",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "data",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "Property",
+                                                                "text": "data1",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "data1",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "data1",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -241,9 +362,26 @@
                                 "text": "is=\"{{msgItem}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "is",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{msgItem}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "msgItem",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "msgItem",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -252,9 +390,26 @@
                                 "text": "data=\"{{data}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "data",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{data}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "data",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "data",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -285,9 +440,53 @@
                                 "text": "is=\"{{a > 0 ? 'msgItem' : 'msgItem1'}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "is",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{a > 0 ? 'msgItem' : 'msgItem1'}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "a > 0 ? 'msgItem' : 'msgItem1'",
+                                                "children": [
+                                                    {
+                                                        "type": "ConditionalExpression",
+                                                        "text": "a > 0 ? 'msgItem' : 'msgItem1'",
+                                                        "children": [
+                                                            {
+                                                                "type": "BinaryExpression",
+                                                                "text": "a > 0",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "a",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "0",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                "type": "Literal",
+                                                                "text": "'msgItem'",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Literal",
+                                                                "text": "'msgItem1'",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -296,9 +495,26 @@
                                 "text": "data=\"{{data}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "data",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{data}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "data",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "data",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -329,9 +545,26 @@
                                 "text": "data=\"{{item}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "data",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{item}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "item",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "item",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }

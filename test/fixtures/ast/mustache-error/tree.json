@@ -6,7 +6,30 @@
             {
                 "type": "XMustache",
                 "text": "{{ a < b}}",
-                "children": []
+                "children": [
+                    {
+                        "type": "XExpression",
+                        "text": " a < b",
+                        "children": [
+                            {
+                                "type": "BinaryExpression",
+                                "text": "a < b",
+                                "children": [
+                                    {
+                                        "type": "Identifier",
+                                        "text": "a",
+                                        "children": []
+                                    },
+                                    {
+                                        "type": "Identifier",
+                                        "text": "b",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "type": "XText",
@@ -30,7 +53,13 @@
                     {
                         "type": "XMustache",
                         "text": "{{a.b.c\n    {{d}\n    ad}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "a.b.c\n    {{d}\n    ad",
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "type": "XText",

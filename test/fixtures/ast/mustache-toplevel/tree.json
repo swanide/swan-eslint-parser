@@ -6,7 +6,19 @@
             {
                 "type": "XMustache",
                 "text": "{{abc}}",
-                "children": []
+                "children": [
+                    {
+                        "type": "XExpression",
+                        "text": "abc",
+                        "children": [
+                            {
+                                "type": "Identifier",
+                                "text": "abc",
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "type": "XText",
@@ -16,7 +28,19 @@
             {
                 "type": "XMustache",
                 "text": "{{def}}",
-                "children": []
+                "children": [
+                    {
+                        "type": "XExpression",
+                        "text": "def",
+                        "children": [
+                            {
+                                "type": "Identifier",
+                                "text": "def",
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "type": "XText",
@@ -36,9 +60,26 @@
                                 "text": "class=\"{{expr}}\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "class",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XMustache",
                                         "text": "{{expr}}",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XExpression",
+                                                "text": "expr",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "expr",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -47,7 +88,19 @@
                     {
                         "type": "XMustache",
                         "text": "{{ghi}}",
-                        "children": []
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "ghi",
+                                "children": [
+                                    {
+                                        "type": "Identifier",
+                                        "text": "ghi",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
                     },
                     {
                         "type": "XEndTag",

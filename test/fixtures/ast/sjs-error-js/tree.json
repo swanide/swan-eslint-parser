@@ -16,6 +16,11 @@
                                 "text": "module=\"sjs\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "module",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "sjs",
                                         "children": []
@@ -53,6 +58,11 @@
                                 "type": "XAttribute",
                                 "text": "module=\"sjs\"",
                                 "children": [
+                                    {
+                                        "type": "XIdentifier",
+                                        "text": "module",
+                                        "children": []
+                                    },
                                     {
                                         "type": "XLiteral",
                                         "text": "sjs",

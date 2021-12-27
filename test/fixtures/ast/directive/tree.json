@@ -28,7 +28,24 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-if=\"{{}}\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-if",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -55,7 +72,30 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-if=\"{{public}}\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-if",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{public}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "public",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "public",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -82,7 +122,35 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-if=\"ab && cd\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-if",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "ab && cd",
+                                                "children": [
+                                                    {
+                                                        "type": "LogicalExpression",
+                                                        "text": "ab && cd",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "ab",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "cd",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -109,7 +177,30 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-elif=\"{{abc}}\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-elif",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{abc}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "abc",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "abc",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -136,7 +227,35 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-elif=\"ab && cd\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-elif",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "ab && cd",
+                                                "children": [
+                                                    {
+                                                        "type": "LogicalExpression",
+                                                        "text": "ab && cd",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "ab",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "cd",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -163,7 +282,13 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-else",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-else",
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -190,7 +315,30 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-for=\"list\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-for",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "list",
+                                                "children": [
+                                                    {
+                                                        "type": "SwanForExpression",
+                                                        "text": "list",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "list",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -217,7 +365,40 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-for=\"item, index in list\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-for",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "item, index in list",
+                                                "children": [
+                                                    {
+                                                        "type": "SwanForExpression",
+                                                        "text": "item, index in list",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "tem,",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "ndex ",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "list",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -244,7 +425,56 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-for=\"item,index in list trackBy item.id\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-for",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "item,index in list trackBy item.id",
+                                                "children": [
+                                                    {
+                                                        "type": "SwanForExpression",
+                                                        "text": "item,index in list trackBy item.id",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "tem,",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "ndex ",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "list",
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "type": "MemberExpression",
+                                                                "text": "item.id",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "item",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "id",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -271,7 +501,24 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-for-index=\"abc\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-for-index",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "abc",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "abc",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -298,7 +545,24 @@
                                     {
                                         "type": "XDirective",
                                         "text": "s-for-item=\"abc\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "s-for-item",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "abc",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "abc",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -325,7 +589,24 @@
                                     {
                                         "type": "XDirective",
                                         "text": "bindtap=\"package\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "bindtap",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "package",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "package",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -352,7 +633,24 @@
                                     {
                                         "type": "XDirective",
                                         "text": "bindtap=\"tap\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "bindtap",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "tap",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "tap",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -379,7 +677,24 @@
                                     {
                                         "type": "XDirective",
                                         "text": "bind:tap=\"tap\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "bind:tap",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "tap",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "tap",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -406,7 +721,30 @@
                                     {
                                         "type": "XDirective",
                                         "text": "bind:tap=\"{{tap}}\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "bind:tap",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{tap}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "tap",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "tap",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -433,7 +771,30 @@
                                     {
                                         "type": "XDirective",
                                         "text": "bind:tap=\"{{'tap'}}\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "bind:tap",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{'tap'}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "'tap'",
+                                                        "children": [
+                                                            {
+                                                                "type": "Literal",
+                                                                "text": "'tap'",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -460,7 +821,24 @@
                                     {
                                         "type": "XDirective",
                                         "text": "catchtap=\"tap\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "catchtap",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "tap",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "tap",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -487,7 +865,30 @@
                                     {
                                         "type": "XDirective",
                                         "text": "catch:tap=\"{{tap}}\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "catch:tap",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{tap}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "tap",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "tap",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -514,7 +915,24 @@
                                     {
                                         "type": "XDirective",
                                         "text": "capture-bind:tap=\"tap\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "capture-bind:tap",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "tap",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "tap",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -541,7 +959,30 @@
                                     {
                                         "type": "XDirective",
                                         "text": "capture-catch:tap=\"{{tap}}\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "capture-catch:tap",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{tap}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "tap",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "tap",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -569,6 +1010,11 @@
                                         "type": "XAttribute",
                                         "text": "mut-bind:tap=\"tap\"",
                                         "children": [
+                                            {
+                                                "type": "XIdentifier",
+                                                "text": "mut-bind:tap",
+                                                "children": []
+                                            },
                                             {
                                                 "type": "XLiteral",
                                                 "text": "tap",
@@ -601,7 +1047,24 @@
                                     {
                                         "type": "XDirective",
                                         "text": "bind:touchmove.stop=\"stop\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "bind:touchmove.stop",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XExpression",
+                                                "text": "stop",
+                                                "children": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "text": "stop",
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -628,7 +1091,30 @@
                                     {
                                         "type": "XDirective",
                                         "text": "bind:touch-move.stop=\"{{stop}}\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XDirectiveKey",
+                                                "text": "bind:touch-move.stop",
+                                                "children": []
+                                            },
+                                            {
+                                                "type": "XMustache",
+                                                "text": "{{stop}}",
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "stop",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "stop",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        ]
                                     }
                                 ]
                             },

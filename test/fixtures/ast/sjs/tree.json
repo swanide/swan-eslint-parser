@@ -16,6 +16,11 @@
                                 "text": "module=\"sjs\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "module",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "sjs",
                                         "children": []
@@ -183,6 +188,11 @@
                                 "text": "src=\"./module.sjs\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "src",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "./module.sjs",
                                         "children": []
@@ -193,6 +203,11 @@
                                 "type": "XAttribute",
                                 "text": "module=\"sjsModule\"",
                                 "children": [
+                                    {
+                                        "type": "XIdentifier",
+                                        "text": "module",
+                                        "children": []
+                                    },
                                     {
                                         "type": "XLiteral",
                                         "text": "sjsModule",
@@ -222,6 +237,11 @@
                                 "text": "src=\"./module.sjs\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "src",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "./module.sjs",
                                         "children": []
@@ -232,6 +252,11 @@
                                 "type": "XAttribute",
                                 "text": "module=\"sjsModule\"",
                                 "children": [
+                                    {
+                                        "type": "XIdentifier",
+                                        "text": "module",
+                                        "children": []
+                                    },
                                     {
                                         "type": "XLiteral",
                                         "text": "sjsModule",
@@ -287,6 +312,11 @@
                                 "text": "module=\"sjs\"",
                                 "children": [
                                     {
+                                        "type": "XIdentifier",
+                                        "text": "module",
+                                        "children": []
+                                    },
+                                    {
                                         "type": "XLiteral",
                                         "text": "sjs",
                                         "children": []
@@ -319,6 +349,11 @@
                                 "type": "XAttribute",
                                 "text": "module=\"sjs\"",
                                 "children": [
+                                    {
+                                        "type": "XIdentifier",
+                                        "text": "module",
+                                        "children": []
+                                    },
                                     {
                                         "type": "XLiteral",
                                         "text": "sjs",

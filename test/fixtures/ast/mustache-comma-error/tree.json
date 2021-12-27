@@ -6,7 +6,13 @@
             {
                 "type": "XMustache",
                 "text": "{{a,b}}",
-                "children": []
+                "children": [
+                    {
+                        "type": "XExpression",
+                        "text": "a,b",
+                        "children": []
+                    }
+                ]
             },
             {
                 "type": "XText",

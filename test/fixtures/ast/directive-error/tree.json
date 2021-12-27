@@ -30,9 +30,26 @@
                                         "text": "bind:-=\"{{cond}}\"",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "bind:-",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XMustache",
                                                 "text": "{{cond}}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "cond",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "cond",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -63,9 +80,26 @@
                                         "text": "s-=\"{{cond}}\"",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "s-",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XMustache",
                                                 "text": "{{cond}}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "cond",
+                                                        "children": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "text": "cond",
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }

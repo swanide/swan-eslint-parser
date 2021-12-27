@@ -15,14 +15,6 @@ const parser = require('../../');
 
 const ROOT = path.join(__dirname, '../fixtures/document-fragment');
 const TARGETS = fs.readdirSync(ROOT);
-const PARSER_OPTIONS = {
-    comment: true,
-    ecmaVersion: 2018,
-    loc: true,
-    range: true,
-    tokens: true,
-    sourceType: 'module',
-};
 
 /**
  * Remove `parent` proeprties from the given AST.
@@ -58,7 +50,7 @@ describe('services.getDocumentFragment', () => {
         const source = fs.readFileSync(sourcePath, 'utf8');
         const result = parser.parseForESLint(
             source,
-            {filePath: sourcePath, ...PARSER_OPTIONS}
+            {filePath: sourcePath}
         );
         const actual = result.services.getDocumentFragment();
 

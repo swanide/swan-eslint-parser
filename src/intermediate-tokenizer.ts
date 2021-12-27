@@ -9,7 +9,8 @@ import {
     ErrorCode,
     HasLocation,
     Token,
-    XAttribute
+    XAttribute,
+    Mustache
 } from '../types/ast';
 import {debug, ParseError} from './common';
 import Tokenizer, {TokenizerState, TokenType} from './tokenizer';
@@ -24,11 +25,6 @@ const DUMMY_PARENT: any = Object.freeze({});
 function concat(text: string, token: Token): string {
     return text + token.value;
 }
-
-/**
- * The type of intermediate tokens.
- */
-export type IntermediateToken = StartTag | EndTag | Text | Mustache
 
 /**
  * The type of start tags.
@@ -57,12 +53,10 @@ export interface Text extends HasLocation {
     value: string;
 }
 
-export interface Mustache extends HasLocation {
-    type: 'Mustache';
-    value: string;
-    startToken: Token;
-    endToken: Token;
-}
+/**
+ * The type of intermediate tokens.
+ */
+export type IntermediateToken = StartTag | EndTag | Text | Mustache
 
 /**
  * The class to create HTML tokens from ESTree-like tokens which are created by a Tokenizer.
@@ -671,6 +665,7 @@ export default class IntermediateTokenizer {
 
         // Create token.
         const result = this.currentToken != null ? this.commit() : null;
+
         this.currentToken = {
             type: 'Mustache',
             range: [start.range[0], token.range[1]],
@@ -679,7 +674,6 @@ export default class IntermediateTokenizer {
             startToken: start,
             endToken: token,
         };
-
         return result || this.commit();
     }
 }

@@ -30,6 +30,11 @@
                                         "text": "style=1",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "style",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "1",
                                                 "children": []
@@ -63,6 +68,11 @@
                                         "text": "style=\"{{\"",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "style",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "{{",
                                                 "children": []
@@ -72,7 +82,13 @@
                                     {
                                         "type": "XAttribute",
                                         "text": "123\"}}\"",
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "type": "XIdentifier",
+                                                "text": "123\"}}\"",
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -84,7 +100,19 @@
                             {
                                 "type": "XMustache",
                                 "text": "{{'123'}}",
-                                "children": []
+                                "children": [
+                                    {
+                                        "type": "XExpression",
+                                        "text": "'123'",
+                                        "children": [
+                                            {
+                                                "type": "Literal",
+                                                "text": "'123'",
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
                                 "type": "XText",
@@ -116,6 +144,11 @@
                                         "text": "class\n        =\n            \"\n            abc-{{ cond ? 'class1' : 'class2' }}-def\"",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "class",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "\n            abc-",
                                                 "children": []
@@ -123,7 +156,35 @@
                                             {
                                                 "type": "XMustache",
                                                 "text": "{{ cond ? 'class1' : 'class2' }}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": " cond ? 'class1' : 'class2' ",
+                                                        "children": [
+                                                            {
+                                                                "type": "ConditionalExpression",
+                                                                "text": "cond ? 'class1' : 'class2'",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "cond",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "'class1'",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "'class2'",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "type": "XLiteral",
@@ -159,6 +220,11 @@
                                         "text": "class\n        =\n            \"abc-{{\n                cond\n                ? 'class1'\n                : 'class2'\n            }}-def\"",
                                         "children": [
                                             {
+                                                "type": "XIdentifier",
+                                                "text": "class",
+                                                "children": []
+                                            },
+                                            {
                                                 "type": "XLiteral",
                                                 "text": "abc-",
                                                 "children": []
@@ -166,7 +232,35 @@
                                             {
                                                 "type": "XMustache",
                                                 "text": "{{\n                cond\n                ? 'class1'\n                : 'class2'\n            }}",
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "type": "XExpression",
+                                                        "text": "\n                cond\n                ? 'class1'\n                : 'class2'\n            ",
+                                                        "children": [
+                                                            {
+                                                                "type": "ConditionalExpression",
+                                                                "text": "cond\n                ? 'class1'\n                : 'class2'",
+                                                                "children": [
+                                                                    {
+                                                                        "type": "Identifier",
+                                                                        "text": "cond",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "'class1'",
+                                                                        "children": []
+                                                                    },
+                                                                    {
+                                                                        "type": "Literal",
+                                                                        "text": "'class2'",
+                                                                        "children": []
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
                                             },
                                             {
                                                 "type": "XLiteral",
