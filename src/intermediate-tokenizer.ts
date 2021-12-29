@@ -353,7 +353,8 @@ export default class IntermediateTokenizer {
         this.tokens.push(token);
 
         if (this.currentStartTag == null) {
-            this.throwParseError(token, 'unreachable');
+            this.reportParseError(token, 'unreachable');
+            return;
         }
 
         if (this.attributeNames.has(token.value)) {

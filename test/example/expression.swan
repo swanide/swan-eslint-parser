@@ -1,4 +1,1 @@
-<view s-if="{{sif}}-def">{{abc}}</view>
-<import-sjs module="abc">
-exports.abc = 1;
-</import-sjs>
+<view ></vie w>

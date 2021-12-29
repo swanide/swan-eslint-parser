@@ -1,6 +1,6 @@
 {
   "name": "@baidu/swan-eslint-parser",
-  "version": "0.0.1-beta.6",
+  "version": "0.0.1-beta.7",
   "description": "swan eslint parser",
   "main": "index.js",
   "files": [

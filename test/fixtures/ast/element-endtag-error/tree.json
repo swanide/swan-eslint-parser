@@ -1,0 +1,36 @@
+[
+    {
+        "type": "XDocument",
+        "text": "<block>{{abc}}",
+        "children": [
+            {
+                "type": "XElement",
+                "text": "<block>{{abc}}",
+                "children": [
+                    {
+                        "type": "XStartTag",
+                        "text": "<block>",
+                        "children": []
+                    },
+                    {
+                        "type": "XMustache",
+                        "text": "{{abc}}",
+                        "children": [
+                            {
+                                "type": "XExpression",
+                                "text": "abc",
+                                "children": [
+                                    {
+                                        "type": "Identifier",
+                                        "text": "abc",
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
