@@ -39,9 +39,9 @@ if (ast.errors.length) {
 
 // travels(ast);
 // delete ast.tokens;
-// console.log(JSON.stringify(ast, function (key, value) {
-//     if (key === 'parent') {
-//         return void 0;
-//     }
-//     return value;
-// }, 2));
+console.log(JSON.stringify(ast.tokens, function (key, value) {
+    if (key === 'parent') {
+        return void 0;
+    }
+    return value;
+}, 2));

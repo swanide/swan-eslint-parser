@@ -1,1 +1,1 @@
-<view ></vie w>
+<view s-for="abc      in list.xxx"></view>

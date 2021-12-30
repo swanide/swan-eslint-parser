@@ -5,14 +5,15 @@
 
 import {sortedIndexBy, sortedLastIndexBy} from 'lodash';
 import {
-    ControlDirectivePrefix, EventDirectivePrefix, HasParent, OffsetRange, SwanForExpression, 
+    ControlDirectivePrefix, EventDirectivePrefix, HasParent, OffsetRange, SwanForExpression,
     Token, XAttribute, XDirective, XDirectiveKey, XDocument, XElement, XExpression,
-    XIdentifier, XModule, XMustache, XNode 
+    XIdentifier, XModule, XMustache, XNode
 } from '../types/ast';
 import {ScriptParserOptions} from '../types/parser';
 import {Identifier, Reference, ArrayExpression} from '../types/script';
 import {debug, ParseError} from './common';
 import {LocationCalculator} from './location-calculator';
+import { HasLocation } from './parser-services/ast';
 import {ExpressionParseResult, parseExpression, parseScriptElement} from './script/index';
 import {analyzeExternalReferences} from './script/scope-analyzer';
 
@@ -211,7 +212,7 @@ export function processMustache(
 ): void {
     debug('[template] convert mustache {{%s}} %j', mustache.value, (mustache as any).range);
     let code = mustache.value;
-    
+
     node.value = {
         type: 'XExpression',
         range: [mustache.startToken.range[1], mustache.endToken.range[0]],
@@ -233,13 +234,13 @@ export function processMustache(
     if (!code.trim()) {
         return;
     }
-    
+
     // s-for 需要特殊处理
     if (node.parent.type === 'XDirective' && node.parent.key.name === 'for') {
         debug('[template] convert for directive {{%s}} %j', mustache.value, (mustache as any).range);
         processForExpression(
-            parserOptions, 
-            globalLocationCalculator, 
+            parserOptions,
+            globalLocationCalculator,
             node.value,
             code
         );
@@ -259,8 +260,8 @@ export function processMustache(
         }
 
         processExpression(
-            parserOptions, 
-            globalLocationCalculator, 
+            parserOptions,
+            globalLocationCalculator,
             node.value,
             code
         );
@@ -379,6 +380,11 @@ type ForBlock = {
     range: [number, number];
 };
 
+interface KeywordToken<T extends string> extends HasRange, HasLocation {
+    type: 'Keyword';
+    value: T;
+};
+
 export function processForExpression(
     rawParserOptions: ScriptParserOptions,
     globalLocationCalculator: LocationCalculator,
@@ -389,38 +395,62 @@ export function processForExpression(
     const parserOptions = {
         ...rawParserOptions,
         // TODO: s-for 指令不属于标准语法，不进行 token 替换
-        tokens: false
+        // tokens: false
     };
 
     let forLeft = null as unknown as ForBlock;
     let forRight = null as unknown as ForBlock;
     let forTrackBy = null as unknown as ForBlock;
-    const keyReg = /\s(in|trackBy)\s/g;
+    const keyReg = /(?<ws>\s)(?<keyword>in|trackBy)\s/g;
     let match: RegExpMatchArray = null;
     let forLeftEndIndex = 0;
-    let forTrackByStartIndex = code.length;
+    let forTrackByStartOffset = code.length;
+    let inToken: KeywordToken<'in'> = null;
+    let trackByToken: KeywordToken<'trackBy'> = null;
     while (match = keyReg.exec(code)) {
         // item in list
         // item,index in list
-        if (match[1] === 'in') {
+        if (match.groups.keyword === 'in') {
             forLeft = {
                 code: code.slice(0, match.index),
                 range: [node.range[0], node.range[0] + match.index]
             };
             forLeftEndIndex = match.index + match[0].length;
+            // remove white space
+            const inOffset = node.range[0] + match.index + match.groups.ws.length;
+            inToken = {
+                type: 'Keyword',
+                value: 'in',
+                range: [inOffset, inOffset + 2],
+                loc: {
+                    start: globalLocationCalculator.getLocation(inOffset),
+                    end: globalLocationCalculator.getLocation(inOffset + 2)
+                }
+            };
         }
         // list trackBy item.id
-        else if (match[1] === 'trackBy') {
+        else if (match.groups.keyword === 'trackBy') {
             forTrackBy = {
                 code: code.slice(match.index + match[0].length),
                 range: [node.range[0] + match.index + match[0].length, node.range[1]]
             };
-            forTrackByStartIndex = match.index;
+            forTrackByStartOffset = match.index;
+
+            const trackByOffset = node.range[0] + match.index + match.groups.ws.length;
+            trackByToken = {
+                type: 'Keyword',
+                value: 'trackBy',
+                range: [trackByOffset, trackByOffset + 7],
+                loc: {
+                    start: globalLocationCalculator.getLocation(trackByOffset),
+                    end: globalLocationCalculator.getLocation(trackByOffset + 7)
+                }
+            };
         }
     }
     forRight = {
-        code: code.slice(forLeftEndIndex, forTrackByStartIndex),
-        range: [node.range[0] + forLeftEndIndex, node.range[0] + forTrackByStartIndex]
+        code: code.slice(forLeftEndIndex, forTrackByStartOffset),
+        range: [node.range[0] + forLeftEndIndex, node.range[0] + forTrackByStartOffset]
     };
 
     const document = getOwnerDocument(node);
@@ -458,10 +488,13 @@ export function processForExpression(
                 }
             }
             if (ret.tokens.length) {
+                ret.tokens.shift();
+                ret.tokens.pop();
                 tokens.push(...ret.tokens);
+                tokens.push(inToken);
             }
         }
-
+        // for right
         {
             const locationCalculator = globalLocationCalculator.getSubCalculatorAfter(
                 forRight.range[0],
@@ -480,7 +513,7 @@ export function processForExpression(
                 tokens.push(...ret.tokens);
             }
         }
-        
+
 
         if (forTrackBy) {
            const locationCalculator = globalLocationCalculator.getSubCalculatorAfter(
@@ -497,6 +530,7 @@ export function processForExpression(
                 (swanForExpression.trackBy as any).parent = swanForExpression;
             }
             if (ret.tokens.length) {
+                tokens.push(trackByToken);
                 tokens.push(...ret.tokens);
             }
         }
@@ -504,7 +538,7 @@ export function processForExpression(
         swanForExpression.parent = node;
         node.expression = swanForExpression;
         node.references = references;
-        
+
         if (tokens.length) {
             replaceTokens(document, {range: node.range}, tokens);
         }
