@@ -205,8 +205,8 @@ export function parseScript(
     code: string,
     parserOptions: ScriptParserOptions,
 ): ExtendedProgram {
-    const parser = parserOptions.parser 
-        ? require(parserOptions.parser) 
+    const parser = parserOptions.parser !== 'espree'
+        ? require(parserOptions.parser)
         : require('espree');
     const result: any = typeof parser.parseForESLint === 'function'
         ? parser.parseForESLint(code, parserOptions)

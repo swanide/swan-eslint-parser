@@ -2,8 +2,8 @@
  * @file parser-service.d.ts
  * @author mengke01(kekee000@gmail.com)
  */
-
-import {HasLocation, Token, XDocument} from "./ast";
+import * as estree from 'estree';
+import {HasLocation, HasParent, Token, XDocument} from "./ast";
 
 export namespace ParserServices {
 
@@ -18,6 +18,8 @@ export namespace ParserServices {
         count?: number
     }
 
+    type XToken = HasLocation | estree.Node | HasParent;
+
     class TokenStore {
         private _tokens;
         private _comments;
@@ -26,26 +28,26 @@ export namespace ParserServices {
         getTokenByRangeStart(offset: number, options?: {
             includeComments: boolean;
         }): Token | null;
-        getFirstToken(node: HasLocation, options?: SkipOptions): Token | null;
-        getLastToken(node: HasLocation, options?: SkipOptions): Token | null;
-        getTokenBefore(node: HasLocation, options?: SkipOptions): Token | null;
-        getTokenAfter(node: HasLocation, options?: SkipOptions): Token | null;
-        getFirstTokenBetween(left: HasLocation, right: HasLocation, options?: SkipOptions): Token | null;
-        getLastTokenBetween(left: HasLocation, right: HasLocation, options?: SkipOptions): Token | null;
-        getTokenOrCommentBefore(node: HasLocation, skip?: number): Token | null;
-        getTokenOrCommentAfter(node: HasLocation, skip?: number): Token | null;
-        getFirstTokens(node: HasLocation, options?: CountOptions): Token[];
-        getLastTokens(node: HasLocation, options?: CountOptions): Token[];
-        getTokensBefore(node: HasLocation, options?: CountOptions): Token[];
-        getTokensAfter(node: HasLocation, options?: CountOptions): Token[];
-        getFirstTokensBetween(left: HasLocation, right: HasLocation, options?: CountOptions): Token[];
-        getLastTokensBetween(left: HasLocation, right: HasLocation, options?: CountOptions): Token[];
-        getTokens(node: HasLocation, beforeCount?: CountOptions, afterCount?: number): Token[];
-        getTokensBetween(left: HasLocation, right: HasLocation, padding?: CountOptions): Token[];
-        commentsExistBetween(left: HasLocation, right: HasLocation): boolean;
-        getCommentsBefore(nodeOrToken: HasLocation): Token[];
-        getCommentsAfter(nodeOrToken: HasLocation): Token[];
-        getCommentsInside(node: HasLocation): Token[];
+        getFirstToken(node: XToken, options?: SkipOptions): Token | null;
+        getLastToken(node: XToken, options?: SkipOptions): Token | null;
+        getTokenBefore(node: XToken, options?: SkipOptions): Token | null;
+        getTokenAfter(node: XToken, options?: SkipOptions): Token | null;
+        getFirstTokenBetween(left: XToken, right: XToken, options?: SkipOptions): Token | null;
+        getLastTokenBetween(left: XToken, right: XToken, options?: SkipOptions): Token | null;
+        getTokenOrCommentBefore(node: XToken, skip?: number): Token | null;
+        getTokenOrCommentAfter(node: XToken, skip?: number): Token | null;
+        getFirstTokens(node: XToken, options?: CountOptions): Token[];
+        getLastTokens(node: XToken, options?: CountOptions): Token[];
+        getTokensBefore(node: XToken, options?: CountOptions): Token[];
+        getTokensAfter(node: XToken, options?: CountOptions): Token[];
+        getFirstTokensBetween(left: XToken, right: XToken, options?: CountOptions): Token[];
+        getLastTokensBetween(left: XToken, right: XToken, options?: CountOptions): Token[];
+        getTokens(node: XToken, beforeCount?: CountOptions, afterCount?: number): Token[];
+        getTokensBetween(left: XToken, right: XToken, padding?: CountOptions): Token[];
+        commentsExistBetween(left: XToken, right: XToken): boolean;
+        getCommentsBefore(nodeOrToken: XToken): Token[];
+        getCommentsAfter(nodeOrToken: XToken): Token[];
+        getCommentsInside(node: XToken): Token[];
     }
 }
 
