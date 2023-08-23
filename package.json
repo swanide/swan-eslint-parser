@@ -1,5 +1,5 @@
 {
-  "name": "@baidu/swan-eslint-parser",
+  "name": "@swanide/swan-eslint-parser",
   "version": "0.0.1",
   "description": "swan eslint parser",
   "main": "index.js",
